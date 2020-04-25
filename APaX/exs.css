@@ -1,13 +1,19 @@
 body
-{
-	
-	overflow:auto;
-	width:100%;
-	height:100%;
-	
+{ 
+  font-family: 'Roboto', sans-serif; 
+    color:DarkSlateGray;
+		
 }
 
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/*
 header {
+height:75px;
 
     width:100%;
   overflow:hidden;
@@ -19,7 +25,6 @@ header {
 header a {
 	background:  lightBlue;
 	float: left;
-
   text-align: center;
   padding:20px 10px;
   text-decoration: none;
@@ -30,23 +35,45 @@ header a {
    
 }
 .header-right {
-	display:flex;
-	flex:1 ;
+	
   float: right;
-  flex-wrap:wrap;
+ 
 }
+*/
+header {
+  width:100%;
+  overflow:hidden;
+  background:  lightBlue;
+ 
+ 
+}
+header a {
+  float: left;
+  text-align: center;
+  padding:30px 10px;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 15px;
+  color:DarkSlateGray;
+  
+}
+header a:hover {
+  background-color:LightSteelBlue;
+  
+}
+.header-right {
+  float: right;
+}
+
 .logo{
-	display:flex;
-	flex:1 ;
+	
 	border:0;
 	padding:0;
+	margin-bottom:0;
 	
 }
 .logoimg {
-	
-	
-position:relative;
-  width:130px;
+ width:90px;
   height:75px;
 }
 
@@ -54,22 +81,35 @@ a:hover {
    background-color:LightSteelBlue;
 }
 
-table {
+div.tabelul{
 	
+	position:relative;
+	margin-top:20px;
+	/*overflow-x:auto;*/
+	
+
+}
+/*
+table {
+	 
+display:block;
 	 padding-top: 12px;
   padding-bottom: 12px;
 	border: 1px solid black;
 	border-collapse:collapse;
+	
+	  border-spacing: 0;
 	position:relative;
 	float:center;
-	top:100px;
-	left:150px;
+	margin:auto;
+	
+	
 	
 	
 }
 table th
 { 	 
-
+display:block;
 background-color:lightBlue;
 padding-top: 12px;
   padding-bottom: 12px;
@@ -84,7 +124,7 @@ border: 1px solid #ddd;
 table td
 { 
 		
-	
+	display:block;
 	padding-top: 10px;
   padding-bottom: 10px;
   padding-left:10px;
@@ -93,18 +133,80 @@ table td
 	color:DarkSlateGray;
 }
 
+table tr{
+	display:block;
+	
+	
+	
+	
+}
+*/
 
 
- .formular
-  { display:flex;
-  flex:1;
+table {
+	 
+
+	 
+	 padding-top: 12px;
+  padding-bottom: 12px;
+	
+	border-collapse:collapse;
+	
+	  border-spacing: 0;
+	position:relative;
+	float:center;
+	margin:auto;
+	
+	
+	
+	
+}
+table th
+{ 	 
+
+
+  background-color:lightBlue;
+padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left:12px;
+  padding-right:12px;
+border: 1px solid #ddd;
+  
+	
+}
+
+table td
+{ 
+		
+	
+	padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:10px;
+  padding-right:10px;
+	border: 1px solid #ddd;
+	
+}
+
+
+
+div.descriere-tabel{
+	font-size:13px;
+	position:relative;
+	margin-left:750px;
+	margin-top:10px;
+	
+}
+
+ div.formular
+  { 
   position:relative;
   top:10px;
-  left:10px;
+ margin:auto;
+ width: 50%;
+ padding: 10px;
 	  font-size: 17px; 
   	line-height: 35px;
-  	color:DarkSlateGray;
-  	font-family:Georgia;
+  
   	text-decoration-style: solid;
   }
   
@@ -115,28 +217,55 @@ table td
 	  left:10px;
 	  
 	  
+	
+	  
   }
-  .oras .marca .categorie 
+ 
+  div.form-judet
   {
-	  display:flex;
-	  flex-wrap:wrap;
-	  flex:1;
+	  
+	margin-left:250px;
+	 
   }
   
   
+  div.form-marca
+  {
+	
+	  position:absolute;
+	  top:137px;
+	  margin-left:670px;
+	 
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {
+	  margin-left:250px;
+	   text-align:left;
+	  
+   }
+  
+  div.form-an
+  {position:absolute;
+  top:194px;
+	  
+	    margin-left:670px;
+	  
+  }
+	  
  
   input[type=submit]{
 	  position:relative;
 	  top:10px;
-	  
 	background-color:lightBlue;
-	color: DarkSlateGray;
-	font-family: 'Palatino';
 	font-size :17px;
 	border-radius: 6px;
 	/*width: 10%;*/
 	padding: 10px 20px;
-  	margin: 10px 630px;
+  	margin: 10px 610px;
   	cursor:pointer;
   	border-style: 1 px solid;
   	border-color: DarkSlateGray;
@@ -145,7 +274,7 @@ input[type=submit]:hover {
   background-color:LightSteelBlue;
 }
 input[type=text], select {
-  width: 20%;
+  width: 170px;
   padding: 10px 10px;
   margin: 8px 0;
   display: inline-block;
@@ -154,74 +283,49 @@ input[type=text], select {
   box-sizing: border-box;
   font-size: 15px
 }
-
-@media screen and (max-width:768px)
-{
-input[type=submit]
-{
+input[id=an]{
 	
-	display:flex;
-	flex:1;
+	width: 210px;
+	
+}
+#top{
+	
 	position:fixed;
-	top:300px;
-	left:100px;
+ bottom:40px;
+ right:10px;
+	background-color:lightBlue;
 	
-}
-div.tabelul
-{
-	display:flex;
-	flex:1;
-	position:absolute;
-	left:-90px;
-	top:450px;
+	font-size :10px;
+	border-radius: 6px;
 	
-	
-}
+	padding: 10px 10px;
   
-table th{
-	
-	display:flex;
-	flex:1;
-
-	
-	
+  	cursor:pointer;
+  	border-style: 1 px solid;
+  	border-color: DarkSlateGray;
 }
-table td
-{ 
-display:flex;
-flex:1;
-
-
-
-}
-	
-	
-	
-}
-
-
 .about {
 	
-	position: absolute;
+	 position:fixed;
+	 bottom:0;
 	background:lightBlue;
-    bottom: -545px;
-    color: DarkSlateGray;
+    margin-top:100px;
+    
     cursor: pointer;
-    height: 35px;
+    height: 30px;
     font-weight: 700;
     left: 0;
     line-height: 35px;
-    
     text-align: center;
     width: 100%;
-    z-index: 1;
+    
     
    
 }
 .about-button
 {
 	background: lightBlue;
-	color:DarkSlateGray;
+	
 	border:0;
 	font-weight: 700;
 	cursor: pointer;
@@ -236,9 +340,547 @@ flex:1;
 	
 	
 }
+
 .about-button:hover:after
 { 
-	content:'APaX is a site.' ;
+	content:'  APaX este un instrument Web de vizualizare adecvata si de comparare multi-criteriala a datelor publice privind parcul auto din Romania pe ultimii 5 ani. ' ;
 	text-align:right;
 	
+}
+
+@media screen and (max-width:420px)
+{
+	
+	div.tabelul{
+	
+	position:absolute;
+	top:750px;
+	
+} 
+table {
+display:block;
+}
+
+table th
+{ 	 
+display:block;
+}
+
+table td
+{ 	
+display:block;
+
+}
+
+table tr{
+	display:block;
+}
+
+div.descriere-tabel{
+	position:absolute;
+	margin-left:0px;
+	margin-top:530px;
+	
+	
+}
+
+logo{
+	 position: absolute;
+    right: 0;
+    top: 0;
+	
+}
+.header-right{
+	float:left;
+}
+
+.formular
+{position:absolute;
+	float:left;
+	text-align:left;
+}
+
+
+div.form-judet
+  {
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:250px;
+	margin-left:0;
+
+	 
+  }
+  
+  
+  div.form-marca
+  {
+	
+	 position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:300px;
+	margin-left:0;
+	  
+	  
+	  
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:300px;
+	margin-left:0;
+   }
+  
+  div.form-an
+  {
+	 
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:395px;
+	margin-left:0;
+  }
+  
+  input[type=submit]
+{position:relative;
+	
+	margin-top:250px;
+	margin-left:0;
+	float:left;
+	text-align:left;
+}
+  
+
+}
+
+
+@media screen and (max-width:320px)
+
+{
+	
+	div.tabelul{
+	
+	position:absolute;
+	top:960px;
+	
+} 
+	div.descriere-tabel{
+	position:absolute;
+	margin-left:0px;
+	margin-top:730px;
+	
+	
+}
+	div.form-judet
+  {
+	  position:absolute;
+	text-align:left;
+	float:left;
+	top:250px;
+	
+	 margin-left:0px;
+	margin-right:0px;
+  }
+  
+  
+  div.form-marca
+  {
+	
+	 position:absolute;
+	text-align:left;
+	float:left;
+	top:300px;
+	 
+	  
+	  margin-left:0px;
+	margin-right:0px;
+	  
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {position:absolute;
+	text-align:left;
+	float:left;
+	top:400px;
+	margin-left:0px;
+	margin-right:0px;
+   }
+  
+  div.form-an
+  {
+	 
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:600px;
+	margin-left:0px;
+	margin-right:0px;
+  }
+  
+  input[type=submit]
+{
+	position:relative;
+	text-align:left;
+	float:left;
+	margin-top:400px;
+	margin-left:0px;
+	
+}
+}
+
+
+
+
+@media screen and  (min-width: 421px) and  (max-width:549px)
+
+{
+	div.descriere-tabel{
+	
+	margin-top:400px;
+	margin-left:0;
+	
+}
+	table {
+display:block;
+}
+
+table th
+{ 	 
+display:block;
+}
+
+table td
+{ 	
+display:block;
+
+}
+
+table tr{
+	display:block;
+}
+	.formular
+{position:absolute;
+	float:center;
+	text-align:center;
+}
+
+
+div.form-judet
+  {
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:50px;
+	margin-left:0;
+
+	 
+  }
+  
+  
+  div.form-marca
+  {
+	
+	 position:relative;
+	text-align:left;
+	float:left;
+	margin-top:-35px;
+	margin-left:0;
+	  
+	  
+	  
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:150px;
+	margin-left:0;
+   }
+  
+  div.form-an
+  {
+	 
+	  position:absolute;
+	text-align:left;
+	margin-left:0px;
+	margin-top:300px;
+	
+
+	
+	
+  }
+  
+  input[type=submit]
+{position:relative;
+	
+	margin-top:270px;
+	margin-left:0;
+	float:left;
+	text-align:left;
+}
+  
+
+}
+	
+@media screen and  (min-width: 550px) and  (max-width:767px)
+
+{
+	div.descriere-tabel{
+	
+	margin-top:400px;
+	margin-left:0;
+	
+}
+
+	div.tabelul{
+	overflow-x:auto;
+}
+.formular
+{position:absolute;
+	float:center;
+	text-align:center;
+}
+
+
+div.form-judet
+  {
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:50px;
+	margin-left:0;
+
+	 
+  }
+  
+  
+  div.form-marca
+  {
+	
+	 position:relative;
+	text-align:left;
+	float:left;
+	margin-top:-35px;
+	margin-left:0;
+	  
+	  
+	  
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:150px;
+	margin-left:0;
+   }
+  
+  div.form-an
+  {
+	 
+	  position:absolute;
+	text-align:left;
+	margin-left:0px;
+	margin-top:300px;
+	
+
+	
+	
+  }
+  
+  input[type=submit]
+{position:relative;
+	
+	margin-top:270px;
+	margin-left:0;
+	float:left;
+	text-align:left;
+}
+  
+
+	
+}
+	@media screen and  (min-width: 768px) and  (max-width:1023px)
+
+{
+	
+	div.tabelul{
+	
+	position:relative;
+	top:230px;
+	overflow-x:auto;
+}
+
+	div.descriere-tabel{
+	position:absolute;
+	margin-left:320px;
+	margin-top:230px;
+	
+	
+}
+	
+	.formular
+{position:absolute;
+	float:center;
+	text-align:center;
+}
+
+
+div.form-judet
+  {
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:10px;
+	margin-left:0;
+
+	 
+  }
+  
+  
+  div.form-marca
+  {
+	
+	 position:absolute;
+	text-align:left;
+	float:center;
+	margin-top:45px;
+	
+	margin-left:400px;
+	
+	  
+	  
+	  
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:65px;
+	margin-left:0;
+   }
+  
+  div.form-an
+  {
+	 
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:40px;
+	margin-left:400px;
+  }
+  
+  input[type=submit]
+{position:absolute;
+	
+	margin-top:300px;
+	margin-left:300px;
+	
+}
+  
+
+}
+	
+
+@media screen and  (min-width: 1024px) and  (max-width:1354px)
+
+{
+	div.tabelul{
+	
+	position:relative;
+	top:230px;
+	overflow-x:auto;
+}
+	
+	div.descriere-tabel{
+	position:absolute;
+	margin-left:460px;
+	margin-top:230px;
+	
+	
+}
+	.formular
+{position:absolute;
+	float:center;
+	text-align:center;
+}
+
+
+div.form-judet
+  {
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:10px;
+	margin-left:100px;
+
+	 
+  }
+  
+  
+  div.form-marca
+  {
+	
+	 position:absolute;
+	text-align:left;
+	float:center;
+	margin-top:45px;
+	
+	margin-left:500px;
+	
+	  
+	  
+	  
+   }
+   
+   
+   
+  
+  div.form-categorie
+  {position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:65px;
+	margin-left:100px;
+   }
+  
+  div.form-an
+  {
+	 
+	  position:absolute;
+	text-align:left;
+	float:left;
+	margin-top:40px;
+	margin-left:500px;
+  }
+  
+  input[type=submit]
+{position:absolute;
+	
+	margin-top:300px;
+	margin-left:400px;
+	
+}
+  
+
 }

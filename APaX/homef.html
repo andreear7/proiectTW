@@ -11,37 +11,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body >
-<!--<button> Vizualizare Informatii </button><button> Vizualizare statistici</button><button> Harta </button>
--->
+<a name="top"></a>
+
 <header class="menu">
 <!--sursa w3s
 -->
-<a class="logo"><img src="apaxlogo1.png" alt="APaX" class="logoimg"></a>
+<a class="logo"><img src="ap.jpg" alt="APaX" class="logoimg"></a>
   <div class="header-right">
-    <a class="active" href="home.html">Vizualizare informatii</a>
+    <a class="active" href="homef.html">Vizualizare informatii</a>
     <a href="statistici.html">Vizualizare statistici</a>
     <a href="harta.html">Harta</a>
 	</div>
 </header>
 
-<p class="formular">
-		Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</p>
-<div class="form">
+
+
+<div class="formular">
+		Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
+<!--<div class="form"> -->
   <form action="/action_page.php">
-    <label for="oras"style="color:DarkSlateGray; font-family:Georgia; font-size:18px;">In functie de oras</label>
-    <input type="text" id="oras" name="orasCautare" placeholder="Introuduceti orasul">
+  <div class="form-judet">
+    <label for="judet">In functie de judet</label>
+    <input type="text" id="oras" name="orasCautare"  placeholder="Introduceti judetul" >
+	</div>
+	
+  <div class="form-marca">
+    <label for="marca">In functie de marca</label>
+    <input type="text" id="marca" name="marcaCautare"  placeholder="Introduceti marca">
+	</div>
 
-    <label for="marca"style="color:DarkSlateGray; font-family:Georgia; font-size:18px;">In functie de marca</label>
-    <input type="text" id="marca" name="marcaCautare" placeholder="Introduceti marca">
-
-    <label for="categorie" style="color:DarkSlateGray; font-family:Georgia; font-size:18px;">In functie de categorie</label>
+	
+	<div class="form-categorie">
+    <label for="categorie" >In functie de categorie</label>
    	<input type="text" id="categorie" name="categorieCautare" placeholder="Introduceti categoria">
-  
+	</div>
+ 
+  <div class="form-an">
+    <label for="an" >In functie de an</label>
+   	<input type="text" id="an" name="anCautare" placeholder="Introduceti anul : 2015-2019">
+ </div>
     <input type="submit" id="submit" value="Filtreaza">
   </form>
   </div>
- 
   
+  <div class="descriere-tabel">*Tabelul urmator prezinta datele parcului auto din anul 2019.</div>
   <div class="tabelul">
    <table id="Table" >
   <tr >
@@ -52,19 +65,33 @@
 	<th>DESCRIERE_COMERCIALA</th>
 	<th>TOTAL_VEHICULE</th>
   </tr>
-  <!--
+
+
   <tr>
+    <td>cell 1</td>
     <td>cell 2</td>
+	<td>cell 3</td>
+	<td>cell 4</td>
+	<td>cell 5</td>
+	<td>cell 6</td>
+  </tr>
+  <tr>
+    <td>cell 1</td>
     <td>cell 2</td>
-	<td>cell 2</td>
-	<td>cell 2</td>
-	<td>cell 2</td>
-	<td>cell 2</td>
-  </tr>-->
+	<td>cell 3</td>
+	<td>cell 4</td>
+	<td>cell 5</td>
+	<td>cell 6</td>
+  </tr>
+ 
 </table>
 </div>
- 
-<div class="about"><button class="about-button">What is APaX?</button></div>
+
+<!--<button onclick="dark()">Dark mode</button>-->
+
+ <!--<button class="top"><a href="#top">TOP</a></button>-->
+ <button onclick="topFunction()" id="top" title="toTop">TOP</button>
+<div class="about"><button class="about-button">Ce este APaX?</button></div>
 
 </body>
 <script src="home.js"></script>
