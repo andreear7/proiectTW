@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<title>APaX</title>
+<meta charset="utf-8">
+<meta name="description" content="APaX"/>
+<link id="theme" rel="stylesheet" type="text/css" href="./exs.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+</head>
+<body >
+<!--<button> Vizualizare Informatii </button><button> Vizualizare statistici</button><button> Harta </button>
+-->
+<header class="menu">
+<!--sursa w3s
+-->
+<a class="logo"><img src="ap.jpg" alt="APaX" class="logoimg"></a>
+  <div class="header-right">
+    <a  href="homef.html">Vizualizare informatii</a>
+    <a href="statistici.html">Vizualizare statistici</a>
+    <a href="harta.html">Harta</a>
+	</div>
+</header>
+<!-- <div>frfefefeer</div>
+<button id="theme-toggle">Switch to dark mode</button> -->
+<button onclick="lineChart()">Line chart</button>
+<button onclick="pieChart()">Pie chart</button>
+<button onclick="barChart()">Bar chart</button>
+<!-- <canvas id="myCanvas" width="500" height="400"> </canvas> -->
+ <!-- <div id="chart"></div>  -->
+<canvas id="chart" ></canvas>
+ <div id="reprezinta"></div> 
+<!-- <legend for="chart"></legend> -->
+<div id="chartLegend"><ul>
+  <li class="cinci"> 2015</li>
+  <li class="sase">2016</li>
+  <li class="sapte">2017</li>
+  <li class="opt">2018</li>
+  <li class="noua">2019</li>
+
+</ul>
+
+</div>
+<div class="about"><button class="about-button">What is APaX?</button></div>
+</body>
+<!-- <script src="./home.js"></script> -->
+<script src="./chart.js"></script>
+</html>
