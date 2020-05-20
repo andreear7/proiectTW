@@ -1,3 +1,32 @@
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const themeStylesheet = document.getElementById('theme');
+  const storedTheme = localStorage.getItem('theme');
+  if(storedTheme){
+      themeStylesheet.href = storedTheme;
+  }
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', () => {
+      // if it's light -> go dark
+      if(themeStylesheet.href.includes('exs')){
+        themeStylesheet.href = 'dark.css';
+        themeToggle.innerText = 'Switch to light mode';
+    } else {
+        // if it's dark -> go light
+        themeStylesheet.href = 'exs.css';
+        themeToggle.innerText = 'Switch to dark mode';
+
+    }
+      // save the preference to localStorage
+      localStorage.setItem('theme',themeStylesheet.href)  
+  })
+})
+
+
+
+
 //inspiratie:https://codeburst.io/creating-and-drawing-on-an-html5-canvas-using-javascript-93da75f001c1
 
 function createGrid (canvas,ctx) {
@@ -53,7 +82,7 @@ var an=2015
   }
 
   function lineChart () {
-
+    
        var coordonate=[{x: 100, y: 87 }, 
     { x: 200, y: 81 }, 
     { x: 300, y: 76 }, 
@@ -313,3 +342,4 @@ var ctx = myCanvas.getContext("2d");
     myPiechart.draw();
     document.getElementById("reprezinta").innerText = "PieChart:Evoluția numărului de mașini în parcul auto din România în ultimii 5 ani";
 }
+module.exports = { lineChart,barChart,pieChart }

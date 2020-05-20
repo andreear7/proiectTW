@@ -4,26 +4,23 @@
 <title>APaX</title>
 <meta charset="utf-8">
 <meta name="description" content="APaX"/>
-<link rel="stylesheet" type="text/css" href="exs.css">
+<link id="theme" rel="stylesheet" type="text/css" href="./exs.css">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 </head>
-<body >
-<!--<button> Vizualizare Informatii </button><button> Vizualizare statistici</button><button> Harta </button>
--->
+<body>
 <header >
-<!--sursa w3s
--->
+<!--sursa w3s-->
 
 <a class="logo"><img src="ap.jpg" alt="APaX" class="logoimg"></a>
   <div class="header-right">
-    <a href="homef.html">Vizualizare informatii</a>
-    <a href="statistici.html">Vizualizare statistici</a>
-    <a href="harta.html">Harta</a>
+    <a href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
+    <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
+    <a href="http://127.0.0.1:1337/harta">Harta</a>
 	</div>
 	
 </header>
-
+<button id="theme-toggle">Switch mode</button>
 
 <div id="map" ></div>
 <script>
@@ -44,4 +41,5 @@ var map;
 </main>
 
 </body>
+<script  src="./harta.js"></script>
 </html>

@@ -1,5 +1,5 @@
 //sursa:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
-topButton = document.getElementById("top");
+var topButton = document.getElementById("top");
 
 // When the user scrolls down 150px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -34,49 +34,7 @@ function showPosition(position) {
 }
 
 
-let text="<autoturisme>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>525DA</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>525I</descriere_comerciala><total_vehicule>9</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>525TD</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>525TDS</descriere_comerciala><total_vehicule>12</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>525XD</descriere_comerciala><total_vehicule>3</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>528 I</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>528I</descriere_comerciala><total_vehicule>4</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>528I XDRIVE</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530</descriere_comerciala><total_vehicule>4</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530 D</descriere_comerciala><total_vehicule>32</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530 I</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530D</descriere_comerciala><total_vehicule>38</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530D XDRIVE</descriere_comerciala><total_vehicule>13</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530D XDRIVE TOURING</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530DA</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530I</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530XD</descriere_comerciala><total_vehicule>16</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>530XI</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>535 D</descriere_comerciala><total_vehicule>9</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>535 D GRAN TURISMO</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>535D</descriere_comerciala><total_vehicule>8</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>535D XDRIVE</descriere_comerciala><total_vehicule>6</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>535I</descriere_comerciala><total_vehicule>3</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>535I GRAN TURISMO</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>5ER</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>5ER REIHE (520D)</descriere_comerciala><total_vehicule>3</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>630I</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>635D</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>640D</descriere_comerciala><total_vehicule>3</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>640D XDRIVE</descriere_comerciala><total_vehicule>3</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>645 CI</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>724</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>724 TD</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>725</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>725 TDS</descriere_comerciala><total_vehicule>6</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>725TDS</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>728I</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>730</descriere_comerciala><total_vehicule>2</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>730 D</descriere_comerciala><total_vehicule>14</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>730 LD</descriere_comerciala><total_vehicule>1</total_vehicule></linie>"+
-"<linie><judet>ALBA</judet><categorie_nationala>AUTOTURISM</categorie_nationala><categorie_comunitara>M1  </categorie_comunitara><marca>BMW</marca><descriere_comerciala>730D</descriere_comerciala><total_vehicule>39</total_vehicule></linie>"+
-"</autoturisme>";
+
 
 //sursa:https://www.valentinog.com/blog/html-table/
 
@@ -636,6 +594,9 @@ let autoturisme=[
   }
 ]
 
+let tableData = Object.keys(autoturisme[0]);
+window.onload = loadTable(tableData,autoturisme);
+
 function generateTableHead(table, data) {
   let thead = table.createTHead();
   let row = thead.insertRow();
@@ -651,7 +612,7 @@ function generateTableHead(table, data) {
 function generateTable(table, data) {
   for (let element of data) {
     let row = table.insertRow();
-    for (key in element) {
+    for (let key in element) {
       let cell = row.insertCell();
       let text = document.createTextNode(element[key]);
       cell.appendChild(text);
@@ -659,38 +620,44 @@ function generateTable(table, data) {
   }
 }
 
+ function loadTable(head,data)
+{
 let table = document.querySelector("table");
-let data = Object.keys(autoturisme[0]);
-generateTableHead(table, data);
-generateTable(table, autoturisme);
 
+generateTableHead(table, head);
+generateTable(table,data );
 
-function dark() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-   
 }
-    
-document.addEventListener('DOMContentLoaded', () => {
+function makeGetForTable()
+{
+var judet=document.getElementById("judet").value;
+var marca=document.getElementById("marca").value;
+var categorie=document.getElementById("categorie").value;
+var an=document.getElementById("an").value;
+if (window.XMLHttpRequest) {
+  
+    var xmlHttp = new XMLHttpRequest(); 
+    var theUrl="/info/?judet="+judet+"&marca="+marca+"&categorie="+categorie+"&an="+an;
+    xmlHttp.open( "GET", theUrl, true ); 
+    xmlHttp.send();
+   //  data=xmlHttp.responseText;
+   //  alert(xmlHttp.status+"cd"+xmlHttp.readyState)
+    xmlHttp.onreadystatechange = function() {
+      if (xmlHttp.readyState==4 && xmlHttp.status==200)
+{info=JSON.parse(this.responseText)
+   console.log(info)
+let infos = Object.keys(info[0]);
+console.log(infos)
+let table = document.querySelector("table");
+table.innerHTML=null;
+loadTable(infos,info)}
 
-  const themeStylesheet = document.getElementById('theme');
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', () => {
-      // if it's light -> go dark
-      if(themeStylesheet.href.includes('exs')){
-          themeStylesheet.href = 'dark.css';
-          themeToggle.innerText = 'Switch to light mode';
-      } else {
-          // if it's dark -> go light
-          themeStylesheet.href = 'exs.css';
-          themeToggle.innerText = 'Switch to dark mode';
+    }
+     
+}
 
-      }
-  })
-})
+}
 
-/*
-localStorage.setItem('theme', 'exs.css');
 document.addEventListener('DOMContentLoaded', () => {
 
   const themeStylesheet = document.getElementById('theme');
@@ -703,25 +670,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // if it's light -> go dark
       if(themeStylesheet.href.includes('exs')){
         themeStylesheet.href = 'dark.css';
-        themeToggle.innerText = 'Switch to light mode';
+      //   themeToggle.innerText = 'Switch to light mode';
     } else {
         // if it's dark -> go light
         themeStylesheet.href = 'exs.css';
-        themeToggle.innerText = 'Switch to dark mode';
+      //   themeToggle.innerText = 'Switch to dark mode';
 
     }
       // save the preference to localStorage
       localStorage.setItem('theme',themeStylesheet.href)  
   })
 })
-*/
-/*
-function swapStyleSheet(sheet){
-  document.getElementById('theme').setAttribute('href', sheet);
-  localStorage.setItem("sheet", sheet);
-}
 
-window.onload = _ =>
- swapStyleSheet(
-  localStorage.getItem("sheet") || "dark.css"
- );*/
+

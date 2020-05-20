@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="description" content="APaX"/>
 <link id="theme" rel="stylesheet" type="text/css" href="./exs.css">
+
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
@@ -17,14 +18,14 @@
 <!--sursa w3s-->
 <a class="logo"><img src="./ap.jpg" alt="APaX" class="logoimg"></a>
   <div class="header-right">
-    <a class="active" href="homef.html">Vizualizare informatii</a>
-    <a href="statistici.html">Vizualizare statistici</a>
-    <a href="harta.html">Harta</a>
+    <a class="active" href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
+    <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
+    <a href="http://127.0.0.1:1337/harta">Harta</a>
 	</div>
 </header>
 
-<!-- <button id="theme-toggle">Switch to dark mode</button> -->
 
+<button id="theme-toggle">Switch mode</button>
 <div class="formular">
 		Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
 <!--<div class="form"> -->
@@ -54,52 +55,26 @@
       <option value="2017">2017</option>
       <option value="2018">2018</option>
        <option value="2019">2019</option>
-    </select>
+    </select> 
+    
  </div>
-    <input type="submit" id="submit" value="Filtreaza">
-  </form>
-  </div>
+    <!-- <input type="submit" id="submit" value="Filtreaza"> -->
   
+  </form>
+   <button id="filtreaza" class="filtreaza" onclick="makeGetForTable()">Filtreaza</button>
+  </div>
+  <!-- <button onclick="dark()">Dark mode</button> -->
   <div class="descriere-tabel">*Tabelul urmator prezinta datele parcului auto din anul 2019.</div>
   <div class="tabelul">
    <table id="Table" >
-  <!--<tr >
-  <th>JUDET</th>
-    <th>CATEGORIE_NATIONALA</th>
-	<th>CATEGORIE_COMUNITARA</th>
-	<th>MARCA</th>
-	<th>DESCRIERE_COMERCIALA</th>
-	<th>TOTAL_VEHICULE</th>
-  </tr>
-
-
-  <tr>
-    <td>cell 1</td>
-    <td>cell 2</td>
-	<td>cell 3</td>
-	<td>cell 4</td>
-	<td>cell 5</td>
-	<td>cell 6</td>
-  </tr>
-  <tr>
-    <td>cell 1</td>
-    <td>cell 2</td>
-	<td>cell 3</td>
-	<td>cell 4</td>
-	<td>cell 5</td>
-	<td>cell 6</td>
-  </tr>
--->
 </table>
 </div>
 
-<!--<button onclick="dark()">Dark mode</button>-->
-
- <!--<button class="top"><a href="#top">TOP</a></button>-->
 
  <button onclick="topFunction()" id="top" title="toTop">TOP</button>
 <div class="about"><button class="about-button">Ce este APaX?</button></div>
 
 </body>
-<script src="./home.js"></script>
+<script  src="./home.js"></script>
+<!-- <script   src="./infoController.js"></script> -->
 </html>
