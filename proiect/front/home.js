@@ -1,3 +1,5 @@
+
+
 //sursa:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 var topButton = document.getElementById("top");
 
@@ -33,7 +35,12 @@ function showPosition(position) {
   alert("am gasit locatia")
 }
 
+function noData()
+{
 
+   let table = document.querySelector("table");
+   table.innerHTML="Ne pare rau,nu au fost gasite rezultate conform cautarilor dumneavoastra."
+}
 
 
 //sursa:https://www.valentinog.com/blog/html-table/
@@ -644,13 +651,22 @@ if (window.XMLHttpRequest) {
    //  alert(xmlHttp.status+"cd"+xmlHttp.readyState)
     xmlHttp.onreadystatechange = function() {
       if (xmlHttp.readyState==4 && xmlHttp.status==200)
-{info=JSON.parse(this.responseText)
-   console.log(info)
+{  info=this.responseText
+   console.log("inf"+info);
+    if(info=="[]")
+    {
+noData();
+document.getElementById("desc-table").innerHTML=null;
+    }
+    else
+    { document.getElementById("desc-table").innerHTML=null;
+   info=JSON.parse(this.responseText)
+
 let infos = Object.keys(info[0]);
-console.log(infos)
+// console.log(infos)
 let table = document.querySelector("table");
 table.innerHTML=null;
-loadTable(infos,info)}
+loadTable(infos,info)} }
 
     }
      

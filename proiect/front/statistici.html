@@ -24,10 +24,37 @@
 </header>
 
 <button id="theme-toggle">Switch mode</button>
+<form action="/info/">
+  <div class="form-judet">
+    <label for="judet">In functie de judet <a id="locatie" onclick="getLocation()">sau locatie</a></label>
+    <input type="text" id="judet" name="judet"  placeholder="Introduceti judetul" >
+	</div>
+	
+  <div class="form-marca">
+    <label for="marca">In functie de marca</label>
+    <input type="text" id="marca" name="marca"  placeholder="Introduceti marca">
+	</div>
 
-<button onclick="lineChart()">Line chart</button>
-<button onclick="pieChart()">Pie chart</button>
-<button onclick="barChart()">Bar chart</button>
+	
+	<div class="form-categorie">
+    <label for="categorie" >In functie de categorie</label>
+   	<input type="text" id="categorie" name="categorie" placeholder="Introduceti categoria">
+	</div>
+ 
+  <div class="form-descriere">
+    <label for="an" >In functie de descriere</label>
+     <input type="text" id="descriere" name="descriere" placeholder="Descriere">
+     
+    
+ </div>
+    <!-- <input type="submit" id="submit" value="Filtreaza"> -->
+  
+  </form>
+   
+  </div>
+<button onclick="lineChartGet()">Line chart</button>
+<button onclick="pieChartGet()">Pie chart</button>
+<button onclick="barChartGet()">Bar chart</button>
 <!-- <canvas id="myCanvas" width="500" height="400"> </canvas> -->
  <!-- <div id="chart"></div>  -->
 <canvas id="chart" ></canvas>

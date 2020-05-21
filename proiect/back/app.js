@@ -4,46 +4,48 @@ var fs = require('fs');
 var url = require('url');
 var path = require('path');
 const sqlite3 = require('sqlite3').verbose();
-const query= require('./databaseConnection').query
+const infoService=require('./infoService')
+const statisticsService=require('./statisticsService')
 var map;
-function handle(request, response) {
+function delay(t) {
+    return new Promise(resolve => setTimeout(resolve, t));
+}
+async function handle(request, response) {
     console.log('request ', request.url);
 var purl=url.parse(request.url,true)
     var filePath = '.' + request.url;
+    if(filePath.includes('/?'))
+    {
     if(filePath.includes('./info/?'))
-{console.log("ok");
+{console.log("info");
 console.log(purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.an)
 response.writeHead(200, { 'Content-Type': 'application/json' });
-var raspuns=[{
-       "judet": "ALBA",
-       "categorie_nationala": "AUTOTURISM",
-       "categorie_comunitara": "M1",
-       "marca": "BMW",
-       "descriere_comerciala": "525DA",
-       "total_vehicule": "2"
-    },{
-        "judet": "ALBA",
-        "categorie_nationala": "AUTOTURISM",
-        "categorie_comunitara": "M1",
-        "marca": "BMW",
-        "descriere_comerciala": "525DA",
-        "total_vehicule": "2"
-     }];
-    // raspuns=JSON.parse(raspuns);
-    // var raspunsText=raspuns.toString();
-    // raspuns=query();
-    raspuns=JSON.stringify(raspuns)
-    
-// response.end(raspuns);
-response.end(raspuns)
- console.log(raspuns)
 
-} else {
+    infoService.tableQuery(purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.an,function(result) {
+        result=JSON.stringify(result)
+        response.end(result);
+    })
+  
+}
+else {
+    if(filePath.includes('./statistici/?'))
+    {
+        console.log("stat");
+        console.log(purl.query.tip,purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.descriere)
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        
+            statisticsService.chartsQuery(purl.query.tip,purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.descriere,function(result) {
+                
+                result=JSON.stringify(result) 
+                console.log("result",result);
+                response.end(result);
+            })
+
+    } } }
+ else {
 
     switch(filePath) {
     case ('./info') :  filePath = '../front/homef.html'; 
-    // var result=tabel();
-    // console.log("tabel",result);
     break;
     case ('./statistici') :   filePath = '../front/statistici.html';  
     break;
@@ -51,7 +53,7 @@ response.end(raspuns)
    break;
    default: filePath= '../front/'+ request.url;  
 }
-
+ 
 
 var extname = String(path.extname(filePath)).toLowerCase();
 console.log(extname)

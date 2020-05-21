@@ -284,7 +284,14 @@ table tr{
 }
 */
 /* "#F1C40F" ,"#a55ca5","#bccd7a","#eb9743","#67b6c7" */
-ul{
+/* #chartLegend
+{
+ position:absolute;
+margin-top:200px;
+	display:none; 
+}
+*/
+ul{ 
 
 	float:right;
 	margin-top:0;
@@ -295,30 +302,35 @@ li.cinci {
 	border-left :20px solid; 
 	border-color :#F1C40F;
 padding:5px;
+
 }
 li.sase { 
 	list-style:none;
 	border-left :20px solid; 
 	border-color :#a55ca5;
 padding:5px;
+
 }
 li.sapte{ 
 	list-style:none;
 	border-left :20px solid; 
 	border-color :#bccd7a;
 padding:5px;
+
 }
 li.opt { 
 	list-style:none;
 	border-left :20px solid; 
 	border-color :#eb9743;
 padding:5px;
+
 }
 li.noua { 
 	list-style:none;
 	border-left :20px solid; 
 	border-color :#67b6c7;
 padding:5px;
+
 }
 
 

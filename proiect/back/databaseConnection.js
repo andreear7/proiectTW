@@ -1,19 +1,34 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
-function query(){
-    console.log("ma apeleaza")
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("TW");
-  
-  var query = { JUDET: "VRANCEA" , MARCA : "BMW"};
-  result=dbo.collection("an-2019").find(query).count();
-//   toArray(function(err, result) {
-//     if (err) throw err;
-    console.log("nomoj",result);
-//     db.close();
-//   });
-db.close();
-});
+// var client={
+// get connected(){
+// return this.connected; },
+// set connected(ok) {
+//     this.connected=ok;
+// }
+// }
+// function Ab(n){
+//     this.connected= 0;
+// }
+// Object.defineProperty(Ab.prototype, "connected", {
+//     get: function(){ return this._connected},
+//     set: function(value){ this._connected = value }
+// });
+var client={
+"connection" : null,
+"connected" :0
 }
-module.exports={query}
+// Object.defineProperty(client, 'connected');
+// client.connected=0;
+
+async function connectToMongo(){
+    
+ client.connection=new MongoClient(url);
+ await client.connection.connect();
+ client.connected=1;
+return client;
+
+
+}
+// console.log(connectToMongo());
+module.exports={connectToMongo}
