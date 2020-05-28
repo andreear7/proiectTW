@@ -36,573 +36,27 @@ function showPosition(position) {
 }
 
 function noData()
-{
+{ 
 
    let table = document.querySelector("table");
    table.innerHTML="Ne pare rau,nu au fost gasite rezultate conform cautarilor dumneavoastra."
+  //  let image=document.getElementById("sad")
+  var image=document.createElement("img")
+image.id="sad"
+   image.src='./sad.jpg'
+   document.body.appendChild(image)
+   var loader=document.getElementById("loader")
+  document.body.removeChild(loader)
 }
 
 
 //sursa:https://www.valentinog.com/blog/html-table/
 
 
-let autoturisme=[
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "525DA",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "525I",
-     "total_vehicule": "9"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "525TD",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "525TDS",
-     "total_vehicule": "12"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "525XD",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "528 I",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "528I",
-     "total_vehicule": "4"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "528I XDRIVE",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530",
-     "total_vehicule": "4"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530 D",
-     "total_vehicule": "32"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530 I",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530D",
-     "total_vehicule": "38"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530D XDRIVE",
-     "total_vehicule": "13"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530D XDRIVE TOURING",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530DA",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530I",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530XD",
-     "total_vehicule": "16"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "530XI",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "535 D",
-     "total_vehicule": "9"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "535 D GRAN TURISMO",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "535D",
-     "total_vehicule": "8"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "535D XDRIVE",
-     "total_vehicule": "6"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "535I",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "535I GRAN TURISMO",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "5ER",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "5ER REIHE (520D)",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "630I",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "635D",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "640D",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "640D XDRIVE",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "645 CI",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "724",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "724 TD",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "725",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "725 TDS",
-     "total_vehicule": "6"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "725TDS",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "728I",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730 D",
-     "total_vehicule": "14"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730 LD",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730D",
-     "total_vehicule": "39"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730D XDRIVE",
-     "total_vehicule": "4"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730DA",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730DXDRIVE",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730IA",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730LD",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "730LD XDRIVE",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "735I",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "740",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "740 D X DRIVE",
-     "total_vehicule": "3"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "740D",
-     "total_vehicule": "6"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "740D XDRIVE",
-     "total_vehicule": "11"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "740IA",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "740LD XDRIVE",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "745D",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "750D XDRIVE",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "750LD XDRIVE",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "760 LI",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "BMW 118D",
-     "total_vehicule": "5"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "BMW116",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "GRAN TURISMO",
-     "total_vehicule": "4"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "M 550D XDRIVE",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "M3",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "M5",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "M5 COMPETITION",
-     "total_vehicule": "1"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "X DRIVE 23D",
-     "total_vehicule": "8"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "X REIHE",
-     "total_vehicule": "2"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "X1",
-     "total_vehicule": "20"
-  },
-  {
-     "judet": "ALBA",
-     "categorie_nationala": "AUTOTURISM",
-     "categorie_comunitara": "M1",
-     "marca": "BMW",
-     "descriere_comerciala": "X1 SDRIVE 1.8I",
-     "total_vehicule": "1"
-  }
-]
 
-let tableData = Object.keys(autoturisme[0]);
-window.onload = loadTable(tableData,autoturisme);
+
+// let tableData = Object.keys(autoturisme[0]);
+// window.onload = loadTable(tableData,autoturisme);
 
 function generateTableHead(table, data) {
   let thead = table.createTHead();
@@ -633,18 +87,72 @@ let table = document.querySelector("table");
 
 generateTableHead(table, head);
 generateTable(table,data );
+var loader=document.getElementById("loader")
+  document.body.removeChild(loader)
 
 }
 function makeGetForTable()
-{
+{ var info;
+  let image=document.getElementById("sad")
+  if(image)
+  document.body.removeChild(image)
+  let table = document.querySelector("table");
+table.innerHTML=null;
+  var loader=document.createElement("div")
+  loader.id="loader"
+  document.body.appendChild(loader)
+//   window.showDiv = function() {
+//   var loader=document.getElementById("loader")
+//   loader.setAttribute("display","inline-block") }
+//  console.log("disp", loader.getAttribute("display"))
 var judet=document.getElementById("judet").value;
 var marca=document.getElementById("marca").value;
 var categorie=document.getElementById("categorie").value;
 var an=document.getElementById("an").value;
+var theUrl="/info/?judet="+judet+"&marca="+marca+"&categorie="+categorie+"&an="+an;
+// fetch(theUrl).then(function (response) {
+//    // The API call was successful!
+//    console.log(response)
+//    if(response.status==204)
+//    return JSON.stringify(response.blob());
+//    else
+// 	return response.json();
+// // }).then(function (data) {
+// //    console.log("dataaaaa "+data)
+// //    if(!data)
+// //    return JSON.stringify(data);
+// //    else
+// //    return data;
+// }).then(function ( info)
+// {
+//    console.log("info"+info)
+//    if(info=='{}')
+//     {
+// noData();
+// document.getElementById("desc-table").innerHTML=null;
+//     }
+//     else
+//     { document.getElementById("desc-table").innerHTML=null;
+//    // info=JSON.parse(info)
+// image=document.getElementById("sad")
+// image.src=null;
+// let infos = Object.keys(info[0]);
+// // console.log(infos)
+// let table = document.querySelector("table");
+// table.innerHTML=null;
+// loadTable(infos,info)} 
+ 
+	
+// }).catch(function (err) {
+	
+// 	console.warn('Something went wrong.', err);
+// });
+
+
 if (window.XMLHttpRequest) {
   
     var xmlHttp = new XMLHttpRequest(); 
-    var theUrl="/info/?judet="+judet+"&marca="+marca+"&categorie="+categorie+"&an="+an;
+    
     xmlHttp.open( "GET", theUrl, true ); 
     xmlHttp.send();
    //  data=xmlHttp.responseText;
@@ -652,27 +160,36 @@ if (window.XMLHttpRequest) {
     xmlHttp.onreadystatechange = function() {
       if (xmlHttp.readyState==4 && xmlHttp.status==200)
 {  info=this.responseText
-   console.log("inf"+info);
-    if(info=="[]")
-    {
-noData();
-document.getElementById("desc-table").innerHTML=null;
-    }
-    else
-    { document.getElementById("desc-table").innerHTML=null;
+//    console.log("inf"+info);
+//     if(info=="[]")
+//     {
+// noData();
+// document.getElementById("desc-table").innerHTML=null;
+//     }
+//     else
+//     { 
+      // document.getElementById("desc-table").innerHTML=null;
    info=JSON.parse(this.responseText)
 
 let infos = Object.keys(info[0]);
 // console.log(infos)
 let table = document.querySelector("table");
 table.innerHTML=null;
-loadTable(infos,info)} }
+loadTable(infos,info)}
+else
+{
+  if (xmlHttp.readyState==4 && xmlHttp.status==204)
+  {
+    noData();
+  }
+
+} }
 
     }
      
 }
 
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 

@@ -22,8 +22,14 @@ console.log(purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.an
 response.writeHead(200, { 'Content-Type': 'application/json' });
 
     infoService.tableQuery(purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.an,function(result) {
+
         result=JSON.stringify(result)
-        response.end(result);
+        if(result=='[]')
+       {response.writeHead(204, "NO CONTENT",{ 'Content-Type': 'application/json' });
+       response.end("{}")}
+        else
+       { response.writeHead(200, { 'Content-Type': 'application/json' });
+        response.end(result); }
     })
   
 }
@@ -32,13 +38,19 @@ else {
     {
         console.log("stat");
         console.log(purl.query.tip,purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.descriere)
-        response.writeHead(200, { 'Content-Type': 'application/json' });
+        
         
             statisticsService.chartsQuery(purl.query.tip,purl.query.judet,purl.query.categorie,purl.query.marca,purl.query.descriere,function(result) {
-                
+                if(result==0)
+                {
+        response.writeHead(204, "NO CONTENT",{ 'Content-Type': 'application/json' });
+       response.end("{}")
+                }
+                else
+                { response.writeHead(200, { 'Content-Type': 'application/json' });
                 result=JSON.stringify(result) 
                 console.log("result",result);
-                response.end(result);
+                response.end(result); }
             })
 
     } } }
