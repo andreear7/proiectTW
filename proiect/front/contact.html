@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<title>APaX</title>
+<meta charset="utf-8">
+<meta name="description" content="APaX"/>
+<link id="theme" rel="stylesheet" type="text/css" href="./css/light.css">
+<link rel="icon" href="./photos/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body >
+<header class="menu">
+<a class="logo"><img src="./photos/ap.jpg" alt="APaX" class="logoimg"></a>
+  <div class="header-right">
+    <a class="active" href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
+    <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
+    <a href="http://127.0.0.1:1337/harta">Harta</a>
+     <a href="http://127.0.0.1:1337/contact">Contact</a>
+	</div>
+</header>
+<button id="theme-toggle">Switch mode</button>
+<div class="formular">
+		Pentru a ne da un feedback/comentariu, completati urmatorul formular:</div>
+  <form action="/contact/">
+  <div class="form-judet">
+    <label for="judet">Email</label>
+    <input type="text" id="email" name="judet"  placeholder="Email" >
+	</div>
+  <div class="form-marca">
+    <label for="marca">Nume</label>
+    <input type="text" id="nume" name="marca"  placeholder="Nume">
+	</div>
+
+	<div class="form-categorie">
+    <label for="categorie" >Comentariu</label>
+   	<input type="text" id="comentariu" name="categorie" placeholder="Comentariu">
+	</div>
+ 
+ 
+ </div> 
+  </form>
+   <button id="trimite" class="trimite" onclick="makePostForComment()">Trimite</button>
+  </div>
+  
+</div>
+<div id="raspuns"></div>
+
+ <button onclick="topFunction()" id="top" title="toTop">TOP</button>
+<div class="about"><button class="about-button">Ce este APaX?</button></div>
+
+</body>
+<script  src="./js/contact.js"></script>
+</html>

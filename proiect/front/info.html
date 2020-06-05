@@ -4,43 +4,34 @@
 <title>APaX</title>
 <meta charset="utf-8">
 <meta name="description" content="APaX"/>
-<link id="theme" rel="stylesheet" type="text/css" href="./exs.css">
-
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link id="theme" rel="stylesheet" type="text/css" href="./css/light.css">
+<link rel="icon" href="./photos/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body >
-<a name="top"></a>
-
 <header class="menu">
-<!--sursa w3s-->
-<a class="logo"><img src="./ap.jpg" alt="APaX" class="logoimg"></a>
+<a class="logo"><img src="./photos/ap.jpg" alt="APaX" class="logoimg"></a>
   <div class="header-right">
     <a class="active" href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
     <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
     <a href="http://127.0.0.1:1337/harta">Harta</a>
+     <a href="http://127.0.0.1:1337/contact">Contact</a>
 	</div>
 </header>
-
-
 <button id="theme-toggle">Switch mode</button>
 <div class="formular">
 		Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
-<!--<div class="form"> -->
   <form action="/info/">
   <div class="form-judet">
     <label for="judet">In functie de judet <a id="locatie" onclick="getLocation()">sau locatie</a></label>
     <input type="text" id="judet" name="judet"  placeholder="Introduceti judetul" >
 	</div>
-	
   <div class="form-marca">
     <label for="marca">In functie de marca</label>
     <input type="text" id="marca" name="marca"  placeholder="Introduceti marca">
 	</div>
 
-	
 	<div class="form-categorie">
     <label for="categorie" >In functie de categorie</label>
    	<input type="text" id="categorie" name="categorie" placeholder="Introduceti categoria">
@@ -48,7 +39,6 @@
  
   <div class="form-an">
     <label for="an" >In functie de an</label>
-     <!-- <input type="text" id="an" name="anCautare" placeholder="Introduceti anul : 2015-2019"> -->
      <select id="an" name="an" class="an">
       <option value="2015">2015</option>
       <option value="2016">2016</option>
@@ -56,28 +46,18 @@
       <option value="2018">2018</option>
        <option value="2019">2019</option>
     </select> 
-    
- </div>
-    <!-- <input type="submit" id="submit" value="Filtreaza"> -->
-  
+ </div> 
   </form>
    <button id="filtreaza" class="filtreaza" onclick="makeGetForTable()">Filtreaza</button>
   </div>
-  <!-- <button onclick="dark()">Dark mode</button> -->
-  <!-- <div class="descriere-tabel" id="desc-table">*Tabelul urmator prezinta datele parcului auto din anul 2019.</div> -->
   <div class="tabelul">
    <table id="Table" >
-     <!-- <div id="loader"></div> -->
-    
 </table>
- <!-- <img id="sad" src=""> -->
 </div>
-
 
  <button onclick="topFunction()" id="top" title="toTop">TOP</button>
 <div class="about"><button class="about-button">Ce este APaX?</button></div>
 
 </body>
-<script  src="./home.js"></script>
-<!-- <script   src="./infoController.js"></script> -->
+<script  src="./js/info.js"></script>
 </html>

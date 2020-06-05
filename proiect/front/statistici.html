@@ -4,22 +4,19 @@
 <title>APaX</title>
 <meta charset="utf-8">
 <meta name="description" content="APaX"/>
-<link id="theme" rel="stylesheet" type="text/css" href="./exs.css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link id="theme" rel="stylesheet" type="text/css" href="./css/light.css">
+<link rel="icon" href="./photos/favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 </head>
 <body >
-<!--<button> Vizualizare Informatii </button><button> Vizualizare statistici</button><button> Harta </button>
--->
 <header class="menu">
-<!--sursa w3s
--->
-<a class="logo"><img src="ap.jpg" alt="APaX" class="logoimg"></a>
+<a class="logo"><img src="./photos/ap.jpg" alt="APaX" class="logoimg"></a>
   <div class="header-right">
     <a  href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
     <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
     <a href="http://127.0.0.1:1337/harta">Harta</a>
+    <a href="http://127.0.0.1:1337/contact">Contact</a>
 	</div>
 </header>
 
@@ -45,30 +42,22 @@
     <label for="an" >In functie de descriere</label>
      <input type="text" id="descriere" name="descriere" placeholder="Descriere">
      
-    
  </div>
-    <!-- <input type="submit" id="submit" value="Filtreaza"> -->
-  
   </form>
    
   </div>
 <button onclick="lineChartGet()">Line chart</button>
 <button onclick="pieChartGet()">Pie chart</button>
 <button onclick="barChartGet()">Bar chart</button>
-<!-- <canvas id="myCanvas" width="500" height="400"> </canvas> -->
- <!-- <div id="chart"></div>  -->
 <canvas id="chart" ></canvas>
  <div id="reprezinta"></div> 
-<!-- <legend for="chart"></legend> -->
 <div id="chartLegend"><ul>
   <li id="cinci"> 2015</li>
   <li id="sase">2016</li>
   <li id="sapte">2017</li>
   <li id="opt">2018</li>
   <li id="noua">2019</li>
-
 </ul>
-<!-- <button id="vWEBP"> vezi webp </button> -->
 <img src="" id="wee"></img>
 <div id="svg"></div>
 <button onclick="downloadCSV()" id="dCSV">Download csv</button>
@@ -77,6 +66,5 @@
 </div>
 <div class="about"><button class="about-button">What is APaX?</button></div>
 </body>
-<!-- <script src="./home.js"></script> -->
-<script src="./chart.js"></script>
+<script src="./js/statistici.js"></script>
 </html>
