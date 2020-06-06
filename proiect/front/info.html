@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<title>APaX</title>
+<meta charset="utf-8">
+<meta name="description" content="APaX"/>
+<link id="theme" rel="stylesheet" type="text/css" href="./css/light.css">
+<link rel="icon" href="./photos/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body >
+<header class="menu">
+<a class="logo"><img src="./photos/ap.jpg" alt="APaX" class="logoimg"></a>
+  <div class="header-right">
+    <a class="active" href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
+    <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
+    <a href="http://127.0.0.1:1337/harta">Hartă</a>
+     <a href="http://127.0.0.1:1337/contact">Contact</a>
+	</div>
+</header>
+
+<div id="formdivs">
+<div class="formular">
+    Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
+   
+  <form action="/info/">
+  <div class="form-judet">
+    <label for="judet">In functie de judet <a id="locatie" onclick="getLocation()">sau locatie</a></label>
+    <input type="text" id="judet" name="judet"  placeholder="Introduceti judetul" >
+	</div>
+  <div class="form-marca">
+    <label for="marca">In functie de marca</label>
+    <input type="text" id="marca" name="marca"  placeholder="Introduceti marca">
+	</div>
+
+	<div class="form-categorie">
+    <label for="categorie" >In functie de categorie</label>
+   	<input type="text" id="categorie" name="categorie" placeholder="Introduceti categoria">
+	</div>
+ 
+  <div class="form-an">
+    <label for="an" >In functie de an</label>
+     <select id="an" name="an" class="an">
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+       <option value="2019">2019</option>
+    </select> 
+ </div> 
+  </form>
+   <button id="filtreaza" class="filtreaza" onclick="makeGetForTable()">Filtreaza</button>
+</div>
+<button id="theme-toggle">Switch mode</button> 
+  <div class="tabelul">
+   <table id="Table" >
+</table>
+</div>
+
+ <button onclick="topFunction()" id="top" title="toTop">TOP</button>
+<div class="about"><button class="about-button">Ce este APaX?</button></div>
+
+</body>
+<script  src="./js/info.js"></script>
+</html>

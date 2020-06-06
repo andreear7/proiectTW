@@ -1,0 +1,1439 @@
+body
+{
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(255,253,245,0.82);
+	color: #003399;
+}
+/* sursa:https://www.w3schools.com/howto/howto_css_loader.asp */
+
+#loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid blue;
+	border-bottom: 16px solid blue;
+	width: 50px;
+	height: 50px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	
+	
+  }
+  
+  @-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+
+#chart {
+  padding: 20px;
+}
+
+  .bar-chart {
+	margin:auto;
+	/* width: 100%; */
+	height: 100px;
+  }
+
+.charttitle {
+  text-align: center;
+}
+
+.bars td {
+  vertical-align: bottom;
+}
+
+.bars div:hover {
+  opacity: 0.6;
+}
+
+
+.legbox {
+  display: block;
+  clear: both;
+}
+
+.xaxisname {
+  margin: 5px;
+  color: #fff;
+  font-size: 77%;
+  padding: 5px;
+  float: left;
+}
+
+
+/*Flat UI colors*/
+
+.one {
+  background: #16A085;
+}
+
+.two {
+  background: #2ECC71;
+}
+
+.three {
+  background: #27AE60;
+}
+
+.four {
+  background: #3498DB;
+}
+
+.five {
+  background: #2980B9;
+}
+
+.six {
+  background: #9B59B6;
+}
+
+.seven {
+  background: #8E44AD;
+}
+
+.eight {
+  background: #34495E;
+}
+
+.nine {
+  background: #2C3E50;
+}
+
+.ten {
+  background: #22313f;
+}
+
+.eleven {
+  background: #F1C40F;
+}
+
+.twelve {
+  background: #F39C12;
+}
+
+.thirteen {
+  background: #E67E22;
+}
+
+.fourteen {
+  background: #D35400;
+}
+
+.fifteen {
+  background: #E74C3C;
+}
+
+.sixteen {
+  background: #C0392B;
+}
+
+.seventeen {
+  background: #ECF0F1;
+}
+
+.seventeen.clouds {
+  color: #BDC3C7;
+}
+
+.eighteen {
+  background: #BDC3C7;
+}
+
+.nineteen {
+  background: #95A5A6;
+}
+
+.twenty {
+  background: #7F8C8D;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+#locatie {
+font-size:12px;
+}
+select option:hover {
+	 /* box-shadow: 0 0 10px 100px rgb(246, 252, 255) inset;  */
+	 color:green; 
+}
+
+/* "#F1C40F" ,"#a55ca5","#bccd7a","#eb9743","#67b6c7" */
+ #chartLegend
+{
+     position:relative;
+	 max-width: 300px;
+	 max-height: 300px;
+	 margin-left: 1400px;
+	 margin-top: -350px;
+	 vertical-align: bottom;
+	 padding-left: 20px;
+	 text-align: left;
+}
+
+ul{ 
+
+	float:right;
+	margin-top:0;
+}
+#cinci { 
+	
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#F1C40F;
+padding:5px;
+/* display:none; */
+
+}
+#sase { 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#a55ca5;
+padding:5px;
+/* display:none; */
+
+}
+#sapte{ 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#bccd7a;
+padding:5px;
+/* display:none; */
+
+}
+#opt { 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#eb9743;
+padding:5px;
+/* display:none; */
+
+}
+#noua { 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#67b6c7;
+padding:5px;
+/* display:none; */
+
+}
+
+	/*  Define the background color for all the ODD background rows  */
+	table tr:nth-child(odd){ 
+		background:#ebf6f9 ;
+	}
+	/*  Define the background color for all the EVEN background rows  */
+	table tr:nth-child(even){
+		background: #ffffff;
+	}
+  .filtreaza{
+	  position:relative;
+	  top:10px;
+	background-color:lightBlue;
+	font-size :17px;
+	border-radius: 6px;
+	width: 10%;
+	padding: 10px 20px;
+  	margin: 10px 610px;
+  	cursor:pointer;
+  	border-style: 1 px solid;
+  	border-color: DarkSlateGray;
+}
+.filtreaza:hover {
+  background-color:LightSteelBlue;
+}
+input[type=text], select {
+  width: 170px;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px
+}
+
+input[id=an]{
+	
+	width: 210px;
+	
+}
+#top{
+	
+	position:fixed;
+ bottom:40px;
+ right:10px;
+	background-color:lightBlue;
+	
+	font-size :10px;
+	border-radius: 6px;
+	
+	padding: 10px 10px;
+  
+  	cursor:pointer;
+  	border-style: 1px solid;
+  	border-color: DarkSlateGray;
+}
+
+.about-button
+{
+	background: lightBlue;
+	
+	border:0;
+	font-weight: 700;
+	cursor: pointer;
+	
+	
+}
+.about-button:hover{
+	position:relative;
+	bottom:50px;
+	width:100%;
+	height:50px;
+	
+	
+}
+
+header {
+	width: 100%;
+	overflow: hidden;
+	/* background: lightBlue;
+        background-color: #05ACD3;
+     background-color: #1d65a6;
+     background-color: #05ACD3;*/
+	background-color:  #0099CC;
+	border-radius: 10px ;
+
+}
+
+header a {
+	float: left;
+	text-align: center;
+	padding: 30px 10px;
+	text-decoration: none;
+	font-size: 22px;
+	line-height: 15px;
+	/*color: DarkSlateGray;*/
+	color: #e8ffca;
+	transition-duration: 0.4s;
+	border-radius: 10px ;
+}
+
+header a:hover {
+	background-color:  #003399;
+	opacity: 0.2;
+
+
+}
+
+.header-right {
+	float: right;
+
+}
+
+.logo {
+
+	border: 0;
+	padding: 0;
+	margin-bottom: 0;
+
+}
+
+.logoimg {
+	width: 90px;
+	height: 75px;
+}
+
+a:hover {
+	background-color: LightSteelBlue;
+}
+
+div.tabelul {
+
+	position: relative;
+	margin-top: 20px;
+	/*overflow-x:auto;*/
+
+
+}
+
+
+table {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	position: relative;
+	float: center;
+	margin: auto;
+}
+
+table th {
+	background-color: lightBlue;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border: 1px solid #ddd;
+}
+
+table td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #ddd;
+}
+
+
+div.descriere-tabel {
+	font-size: 13px;
+	position: relative;
+	margin-left: 750px;
+	margin-top: 10px;
+}
+
+div.formular {
+	position: relative;
+	top: 10px;
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+	font-size: 17px;
+	line-height: 35px;
+	text-decoration-style: solid;
+}
+
+.form {
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+
+div.form-judet {
+	margin-left: 250px;
+}
+
+
+div.form-marca {
+	position: absolute;
+	top: 137px;
+	margin-left: 670px;
+}
+
+div.form-categorie {
+	margin-left: 250px;
+	text-align: left;
+
+}
+
+div.form-an {
+	position: absolute;
+	top: 194px;
+
+	margin-left: 670px;
+
+}
+
+
+input[type=submit] {
+	position: relative;
+	top: 10px;
+	background-color: #c1e9ff;
+	font-size: 17px;
+	border-radius: 6px;
+	padding: 10px 20px;
+	margin: 10px 610px;
+	cursor: pointer;
+	border-style: 1px solid;
+	border-color: DarkSlateGray;
+	transition-duration: 0.4s;
+}
+
+input[type=submit]:hover {
+	background-color: #e5e3ff;
+}
+
+input[type=text], select {
+	width: 170px;
+	padding: 10px 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 15px
+}
+
+input[id=an] {
+
+	width: 210px;
+
+}
+
+#top {
+
+	position: fixed;
+	bottom: 40px;
+	right: 10px;
+	background-color: lightBlue;
+
+	font-size: 10px;
+	border-radius: 6px;
+
+	padding: 10px 10px;
+
+	cursor: pointer;
+	border-style: 1px solid;
+	border-color: DarkSlateGray;
+}
+
+.about {
+
+	position: fixed;
+	bottom: 0;
+	/*
+    background-color: #8ebfed;*/
+	background-color:  #0099CC;
+	margin-top: 100px;
+
+	cursor: pointer;
+	height: 30px;
+	font-weight: 700;
+	left: 0;
+	line-height: 35px;
+	text-align: center;
+	width: 100%;
+	color: #e8ffca;
+
+}
+
+.about-button {
+	/* background-color: #8ebfed;*/
+	background-color:  #0099CC;
+	border: 0;
+	font-size: medium;
+	font-weight: 600;
+	cursor: pointer;
+	color: #e8ffca;
+	width: 100%;
+
+}
+
+.about-button:hover {
+	position: relative;
+	bottom: 50px;
+	width: 100%;
+	height: 50px;
+	transition: 10s;
+
+
+}
+
+.about-button:hover:after {
+	content: '  APaX este un instrument Web de vizualizare adecvata si de comparare multi-criteriala a datelor publice privind parcul auto din Romania pe ultimii 5 ani. ';
+	text-align: right;
+	width: 100%;
+	transition: width 4s;
+}
+
+@media screen and (max-width: 420px) {
+
+	div.tabelul {
+
+		position: absolute;
+		top: 750px;
+
+	}
+
+	table {
+		display: block;
+	}
+
+	table th {
+		display: block;
+	}
+
+	table td {
+		display: block;
+
+	}
+
+	table tr {
+		display: block;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 0px;
+		margin-top: 530px;
+
+
+	}
+
+	logo {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+	}
+
+	.header-right {
+		float: left;
+	}
+
+	.formular {
+		position: absolute;
+		float: left;
+		text-align: left;
+	}
+
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 250px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 300px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 300px;
+		margin-left: 0;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 395px;
+		margin-left: 0;
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 250px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+	}
+
+	/*STATISTICI*/
+	.descarcare-button .csv{
+		margin-left: 21px;
+	}
+	 .descarcare-button .svg{
+		 margin-left: 0px;
+	 }
+	 .format-button .radiala{
+		margin-left: 21px;
+	 }
+	 .format-button .coloana{
+		margin-left: 0px;
+	 }
+	 div.form-marca2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		
+		margin-right: 30%;
+
+	}
+	div.form-judet2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+
+	}
+	div.form-an2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 0px;
+		margin-right: 30%;
+	}
+	div.form-categorie2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+	}
+	.submit-filtre{
+		position: relative;
+		float: right;
+		margin-top: 30px;
+		margin-right: 70%;
+	}
+
+}
+/* responssive home*/
+
+@media  only screen and (max-width: 320px) {
+
+	div.tabelul {
+
+		position: absolute;
+		top: 960px;
+
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 0px;
+		margin-top: 730px;
+
+
+	}
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 250px;
+
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 300px;
+
+
+		margin-left: 0px;
+		margin-right: 0px;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 400px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 600px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	input[type=submit] {
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: 400px;
+		margin-left: 0px;
+
+	}
+
+	/*statistici*/
+
+	.descarcare-button .csv{
+		margin-left: 10px;
+	}
+	 .descarcare-button .svg{
+		 margin-left: 0px;
+	 }
+	 .format-button .radiala{
+		margin-left: 10px;
+	 }
+	 .format-button .coloana{
+		margin-left: 0px;
+	 }
+	 div.form-marca2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		
+		margin-right: 20%;
+
+	}
+	div.form-judet2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+
+	}
+	div.form-an2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 0px;
+		margin-right: 20%;
+	}
+	div.form-categorie2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+	}
+	.submit-filtre{
+		position: relative;
+		float: right;
+		margin-top: 30px;
+		margin-right: 70%;
+	}
+	
+}
+
+
+@media screen and  (min-width: 421px) and  (max-width: 549px) {
+	div.descriere-tabel {
+
+		margin-top: 400px;
+		margin-left: 0;
+
+	}
+
+	table {
+		display: block;
+	}
+
+	table th {
+		display: block;
+	}
+
+	table td {
+		display: block;
+
+	}
+
+	table tr {
+		display: block;
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 50px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -35px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 150px;
+		margin-left: 0;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 300px;
+
+
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 270px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+	}
+
+  /*STATISTICI*/
+  .descarcare-button .csv{
+	margin-left: 10px;
+}
+ .descarcare-button .svg{
+	 margin-left: 0px;
+ }
+ .descarcare-button .web{
+	margin-top:3px;
+	margin-left: 2px;
+}
+ .format-button .radiala{
+	margin-left: 21px;
+ }
+ 
+ .format-button .coloana{
+	margin-left: 0px;
+ }
+ div.form-marca2 {
+
+	position: relative;
+	text-align: left;
+	float: right;
+	top: 10px;
+	
+	margin-right: 20%;
+
+}
+div.form-judet2 {
+
+	position: relative;
+	text-align: match-parent;
+	float: right;
+	top: 10px;
+	margin-right: 20%;
+
+}
+div.form-an2{
+	position: relative;
+	text-align: left;
+	float: right;
+	top: 0px;
+	margin-right: 20%;
+}
+div.form-categorie2{
+	position: relative;
+	text-align: left;
+	float: right;
+	top: 10px;
+	margin-right: 20%;
+}
+.submit-filtre{
+	position: relative;
+	float: right;
+	margin-top: 30px;
+	margin-right: 70%;
+}
+}
+
+@media screen and  (min-width: 550px) and  (max-width: 767px) {
+	div.descriere-tabel {
+
+		margin-top: 400px;
+		margin-left: 0;
+
+	}
+
+	div.tabelul {
+		overflow-x: auto;
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 50px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -35px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 150px;
+		margin-left: 0;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 300px;
+
+
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 270px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+	}
+
+
+}
+
+@media screen and  (min-width: 768px) and  (max-width: 1023px) {
+
+	div.tabelul {
+
+		position: relative;
+		top: 230px;
+		overflow-x: auto;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 320px;
+		margin-top: 230px;
+
+
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 10px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: center;
+		margin-top: 45px;
+
+		margin-left: 400px;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 65px;
+		margin-left: 0;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 40px;
+		margin-left: 400px;
+	}
+
+	input[type=submit] {
+		position: absolute;
+
+		margin-top: 300px;
+		margin-left: 300px;
+
+	}
+
+
+}
+
+
+@media screen and  (min-width: 1024px) and  (max-width: 1354px) {
+	div.tabelul {
+
+		position: relative;
+		top: 230px;
+		overflow-x: auto;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 460px;
+		margin-top: 230px;
+
+
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 10px;
+		margin-left: 100px;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: center;
+		margin-top: 45px;
+
+		margin-left: 500px;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 65px;
+		margin-left: 100px;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 40px;
+		margin-left: 500px;
+	}
+
+	input[type=submit] {
+		position: absolute;
+
+		margin-top: 300px;
+		margin-left: 400px;
+
+	}
+
+}
+
+
+
+/*
+ VIZUALIZARE STATISTICI-formular statistici
+ */
+.formular2 {
+
+	background-color: rgba(255, 255, 170, 0.82);
+	position: relative;
+	top: 10px;
+	margin: auto;
+	width: 99.5%;
+	padding: 5px;
+	font-size:23px;
+	font-weight: 100;
+	line-height: 30px;
+	text-decoration-style: solid;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	text-align: center;
+
+}
+
+.form-statistici {
+
+	background-color: rgba(255, 255, 170, 0.82);
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+
+	padding: 10px;
+	width: 100%;
+
+
+}
+ div.form-judet2 {
+	margin-left: 40px;
+	margin-top: 0px;
+	font-size: 20px;
+}
+.form-statistici .form-judet2 .oras {
+	background-color: #fafadc;
+	text-align: center;
+	margin-left: 10px;
+	color: #0e1499;
+
+
+}
+.form-statistici .form-judet2 .oras:hover, .form-statistici .form-categorie2 .categorie:hover, .form-statistici .form-marca2 .marca:hover, .form-statistici .form-an2 .an:hover, .form-statistici.form-descriere2.descriere:hover{
+	border-radius: 40px;
+	background-color: #e3e8fd;
+	transition: 4ms ;
+	cursor: pointer;
+}
+ div.form-categorie2 {
+	margin-left: 40px;
+	margin-top: 20px;
+	font-size: 20px;
+}
+.form-statistici .form-categorie2 .categorie {
+	color:  #003399;
+	background-color: #fafadc;
+	text-align: center;
+	margin-left: 10px;
+}
+ div.form-marca2 {
+	margin-left: 1050px;
+	margin-top: 30px;
+	font-size: 20px;
+}
+.form-statistici .form-marca2 .marca {
+	color:  #003399;
+	background-color: #fafadc;
+	text-align: center;
+	margin-left: 10px;
+}
+ div.form-an2 {
+	margin-left: 1000px;
+	margin-top: 55px;
+	font-size: 20px;
+}
+.form-statistici .form-an2 .an {
+	color:  #003399;
+	background-color: #fafadc;
+	text-align: center;
+	margin-left: 10px;
+}
+ div.form-descriere2 {
+	margin-top: -100px;
+	margin-left: 500px;
+	font-size: 20px;
+}
+.form-statistici .form-descriere2 .descriere {
+	color:  #003399;
+	background-color: #fafadc;
+	text-align: center;
+	margin-left: 10px;
+}
+.submit-filtre {
+	margin-left: 690px;
+	background-color: #0099CC;
+	padding: 10px;
+	color: #e8ffca;
+	border: #a2e9ff;
+
+
+}
+.submit-filtre:hover{
+	width: 150px;
+	transition: 10ms ;
+	margin-left: 675px;
+	border-radius: 40px;
+	background-color: #e8ffca;
+	color:  #003399;
+	opacity: 2;
+}
+
+.submit-filtre:hover::after{
+	margin-left: 700px;
+	transition:  30ms ease-in;
+	height: 4px;
+	width: 10px;
+	overflow: hidden;
+	position: absolute;
+	align-content: center;
+	background-color: #e8ffca;
+}
+.filtre-button {
+	margin-bottom: 10px;
+}
+
+/*
+ VIZUALIZARE STATISTICI-chart
+ */
+.chart {
+	max-width: 50%;
+}
+
+.diagrama {
+	max-width: 50%;
+	width: 100%;
+	padding: 5px;
+	font-size: 25px;
+	line-height: 20px;
+	text-shadow: 2px 2px #e5e3ff;
+	border-radius: 10px;
+	text-align: left;
+
+}
+
+.diagrama .format-button .radiala, .diagrama .format-button .coloana, .diagrama .format-button .linie   {
+	cursor: pointer;
+	font-size: 25px;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 7px;
+	transition-duration: 0.4s;
+	background-color: #0099CC;
+	color: #e8ffca;
+	border: #a2e9ff;
+
+}
+.diagrama .format-button .radiala{
+	margin-top:2%;
+}
+.diagrama .format-button .linie, .diagrama .format-button .coloana{
+	margin-left: 10%;
+	margin-top:2%;
+}
+
+.diagrama .format-button .radiala:hover{
+	background-color: #ffafe9;
+	color: #0099CC;
+	border-radius: 50px;
+}
+
+.diagrama .format-button .coloana:hover{
+	background-color: #ffa7bf;
+	color: #0099CC;
+	border-radius: 50px;
+}
+
+.diagrama .format-button .linie:hover{
+	background-color: #ddb5ff;
+	color: #0099CC;
+	border-radius: 50px;
+}
+.descarcare {
+	max-width: 50%;
+	width: 100%;
+	padding: 5px;
+	font-size: 25px;
+	line-height: 20px;
+	text-shadow: 2px 2px #e5e3ff;
+	border-radius: 10px;
+	text-align: left;
+
+}
+
+.descarcare .descarcare-button .csv, .descarcare .descarcare-button .web , .descarcare .descarcare-button .svg {
+	cursor: pointer;
+	font-size: 25px;
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 7px;
+	transition-duration: 0.4s;
+	background-color: #0099CC;
+	color: #e8ffca;
+	border: #a2e9ff;
+
+
+}
+.descarcare .descarcare-button .csv:hover
+{
+	background-color: #ffafe9;
+	color: #0099CC;
+	border-radius: 50px;
+
+}
+.descarcare .descarcare-button .web , .descarcare .descarcare-button .svg {
+	margin-left: 10%;
+	margin-top:2%;
+
+}
+.descarcare .descarcare-button .csv{
+	margin-top:2%;
+}
+
+.descarcare .descarcare-button .web:hover
+{
+	background-color: #ffa7bf;
+	color: #0099CC;
+	border-radius: 50px;
+
+}
+
+.descarcare .descarcare-button .svg:hover
+{
+	background-color: #ddb5ff;
+	color: #0099CC;
+	border-radius: 50px;
+}
+
+.puncte
+{
+	padding-top: 10px;
+}
