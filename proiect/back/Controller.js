@@ -3,23 +3,25 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var path = require('path');
-const infoService = require('./service/infoService')
-const contactService = require('./service/contactService')
-const statisticsService = require('./service/statisticsService')
-// const databaseConnection = require('./databaseConnection')
-
+const infoService = require('./service/InfoService')
+const contactService = require('./service/ContactService')
+const statisticsService = require('./service/StatisticsService')
+const databaseConnection = require('./databaseConnection')
+var client;
 async function handle(request, response) {
     console.log('request ', request.url);
     var purl = url.parse(request.url, true)
     var filePath = '.' + request.url;
     if (filePath.includes('/?')) {
-// databaseConnection.connectToMongo();
+// databaseConnection.connectToMongo(function callback(response){
+// client=response;
+// console.log(client);
+// });
+
         if (filePath.includes('./info/?')) {
             console.log(purl.query.judet, purl.query.categorie, purl.query.marca, purl.query.an)
             response.writeHead(200, {'Content-Type': 'application/json'});
-
             infoService.tableQuery(purl.query.judet, purl.query.categorie, purl.query.marca, purl.query.an, function (result) {
-
                 result = JSON.stringify(result)
                 if (result == '[]') {
                     response.writeHead(204, "NO CONTENT", {'Content-Type': 'application/json'});
@@ -63,6 +65,7 @@ async function handle(request, response) {
                             result = "✔️ Comentariu trimis cu succes!"
                             console.log("result", result);
                             response.end(result);
+                            contactService.sendEmail(purl.query.email);
                         }
                     })
                 }
@@ -85,11 +88,14 @@ async function handle(request, response) {
             case ('./contact') :
                 filePath = '../front/contact.html';
                 break;
+                case ('./acasa') :
+                    filePath = '../front/home.html';
+                    break;
             default:
                 filePath = '../front/' + request.url;
         }
 
-
+    
         var extname = String(path.extname(filePath)).toLowerCase();
         var mimeTypes = {
             '.html': 'text/html',
@@ -132,7 +138,7 @@ async function handle(request, response) {
                 response.end(content, 'utf-8');
             }
         });
-
+    
     }
 }
 

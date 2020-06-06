@@ -64,6 +64,7 @@ function loadTable(head, data) {
 }
 
 function makeGetForTable() {
+    // document.getElementById("formdivs").style.top="100px";
     var info;
     let image = document.getElementById("sad")
     if (image)

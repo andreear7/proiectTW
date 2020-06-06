@@ -11,17 +11,20 @@
 </head>
 <body >
 <header class="menu">
-<a class="logo"><img src="./photos/ap.jpg" alt="APaX" class="logoimg"></a>
+  <a class="logo" href="http://127.0.0.1:1337/acasa"><img src="./photos/ap.jpg" alt="APaX" class="logoimg" ></a>
   <div class="header-right">
-    <a class="active" href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
+    <a href="http://127.0.0.1:1337/acasa">Acasă</a>
+    <a href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
     <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
     <a href="http://127.0.0.1:1337/harta">Harta</a>
      <a href="http://127.0.0.1:1337/contact">Contact</a>
 	</div>
 </header>
-<button id="theme-toggle">Switch mode</button>
+
+<div id="formdivs">
 <div class="formular">
-		Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
+    Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
+   
   <form action="/info/">
   <div class="form-judet">
     <label for="judet">In functie de judet <a id="locatie" onclick="getLocation()">sau locatie</a></label>
@@ -49,7 +52,8 @@
  </div> 
   </form>
    <button id="filtreaza" class="filtreaza" onclick="makeGetForTable()">Filtreaza</button>
-  </div>
+</div>
+<button id="theme-toggle">Switch mode</button> 
   <div class="tabelul">
    <table id="Table" >
 </table>
