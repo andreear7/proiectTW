@@ -9,7 +9,9 @@ function makePostForComment() {
     if (window.XMLHttpRequest) {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("POST", theUrl, true);
-        xmlHttp.send();
+        xmlHttp.setRequestHeader('Content-Type', 'application/json');
+       xmlHttp.send();
+    
         xmlHttp.onreadystatechange = function () {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
                 raspuns = this.responseText
