@@ -21,30 +21,37 @@
 	</div>
 </header>
 
-<div class="formular">
-		Pentru a ne da un feedback/comentariu, completati urmatorul formular:</div>
+<div class="formular-contact">
+   Contacteaza-ne</div>
+    
   <form action="/contact/">
-  <div class="form-judet">
-    <label for="judet">Email</label>
-    <input type="text" id="email" name="judet"  placeholder="Email" >
-	</div>
-  <div class="form-marca">
-    <label for="marca">Nume</label>
-    <input type="text" id="nume" name="marca"  placeholder="Nume">
-	</div>
-	<div class="form-categorie">
-    <label for="categorie" >Comentariu</label>
-   	<input type="text" id="comentariu" name="categorie" placeholder="Comentariu">
+
+  <div class="form-email">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email"  placeholder="Email" >
+  </div>
+  
+  <div class="form-nume">
+    <label for="nume">Nume</label>
+    <input type="text" id="nume" name="nume"  placeholder="Nume">
+  </div>
+  
+	<div class="form-comentariu">
+    <label for="comentariu" >Comentariu</label>
+   	<input type="text" id="comentariu" name="comentariu" placeholder="Comentariu">
 	</div>
  </div> 
+
   </form>
    <button id="trimite" class="trimite" onclick="makePostForComment()">Trimite</button>
   </div>
+
 </div>
+
 <div id="raspuns"></div>
 <h>Despre noi</h>
 <img src="./photos/andreea.jpg" alt="APaX" class="logoimg" >
-<button id="theme-toggle" class="submit-filtre" >Dark mode</button>
+<button id="theme-toggle" class="dark-mode-contact" >Dark mode</button>
  <button onclick="topFunction()" id="top" title="toTop">TOP</button>
 <div class="about"><button class="about-button">Ce este APaX?</button></div>
 

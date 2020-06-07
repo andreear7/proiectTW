@@ -1626,3 +1626,74 @@ div.form-categorie2{
 	  color:  #003399;
 	  opacity: 2;
   }
+
+  /*CONTACT*/
+  .formular-contact{
+	  text-align:center;
+	  font-size: 70px;
+	  top:25%;
+  }
+  .form-email{
+	  position: absolute;
+	  left:40%;
+	  top:30%;
+	  float: center;
+	  font-size:30px;
+  }
+  #email, #nume{
+	font-size:20px;
+	
+	text-align: center;
+}
+#comentariu{
+	font-size:20px;
+	padding:38px 33px;
+	
+	text-align: center;
+}
+  .form-nume{
+	position: absolute;
+	left:39.6%;
+	top:40%;
+	float: center;
+	font-size:30px;
+}
+.form-comentariu{
+	position: absolute;
+	left:35.1%;
+	top:50%;
+	float: center;
+	font-size:30px;
+}
+.dark-mode-contact {
+	border-color: DarkSlateGray;
+	position: absolute;
+	top: 90vh;
+	left: 1%;
+	font-size: 13px;
+	padding: 12px 24px;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #0099CC;
+	color: #e8ffca;
+  }
+  .dark-mode-contact:hover{
+	  border-radius: 20px;
+	  background-color: #e8ffca;
+	  color:  #003399;
+	  opacity: 2;
+  }
+  .trimite{
+	border-color: DarkSlateGray;
+	position: absolute;
+	top: 65%;
+	left:45%;
+	font-size: 13px;
+	padding: 12px 24px;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #0099CC;
+	color: #e8ffca;
+  }

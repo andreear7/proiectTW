@@ -19,66 +19,161 @@
     <dl>
       <dt>Autori</dt>
       <dd>
-        <a href="https://www.facebook.com/andreea.romanescu/">Romanescu Andreea-Veronica</a>
+        <span typeof="schema:Person"
+        resource="https://www.facebook.com/andreea.romanescu/">
+        <meta property="schema:givenName" content="Andreea">
+        <meta property="schema:additionalName" content="-Veronica">
+        <meta property="schema:familyName" content="Romanescu">
+        <span property="schema:name"> <a href= "https://www.facebook.com/andreea.romanescu/">Andreea-Veronica Romanescu</a></span>
+        </span>
         &amp;
-        <a href="https://www.facebook.com/reberbk001/">Pohrib Rebecca</a>
+        <span typeof="schema:Person"
+        resource="https://www.facebook.com/reberbk001/">
+        <meta property="schema:givenName" content="Rebecca">
+        <meta property="schema:additionalName" content="">
+        <meta property="schema:familyName" content="Pohrib">
+        <span property="schema:name"> <a href= "https://www.facebook.com/reberbk001/">Rebecca Pohrib</a></span>
+        </span>
       </dd>
     <dt>Sursă cod</dt>
     <dd>
       <a href="https://github.com/andreear7/proiectTW">GitHub</a>
     </dd>
   </dl>
-  </div>
-  <section id="functionalitati" role="functionalitati">
-    <h2>Funcționalitățile esențiale ale aplicației</h2>
+  </div> 
+   <div role="contentinfo">
+    <h2>Cuprins</h2>
+    <ol role="directory">
+
+      <li>
+        <a href='#functionalitati'>                         
+          Funcționalitățile aplicației
+      </a>
+          <ol role="directory">
+              <li>
+                  <a href='#despre'>                             
+                      Ce este APaX?
+                  </a>
+              </li>
+              <li>
+                  <a href='#acasa'>                        
+                      Pagina "Acasă"
+                  </a>
+              </li>
+              <li>
+                  <a href='#informatii'>                        
+                      Pagina "Vizualizare informații"
+                  </a>
+              </li>
+              <li>
+                  <a href='#statistici'>                        
+                      Pagina "Vizualizare statistici"
+                  </a>
+              </li>
+          </li>
+          <li>
+              <a href='#harta'>                        
+                  Pagina "Hartă"
+              </a>
+          </li>
+          <li>
+              <a href='#contact'>                        
+                  Pagina "Contact"
+              </a>
+          </li>
+          </ol>
+      </li>
+      <li>
+          <a href='#interactiune'>                         
+              Interacțiunea utilizatorului cu aplicația
+          </a>
+          <ol role="directory">
+            <li>
+                <a href='#sc-princ'>                        
+                    Scanariul principal- navigare "Acasă"
+                </a>
+            </li>
+            <li>
+                <a href='#sc-info'>                        
+                  Scanariul secundar- navigare "Vizualizare informații"
+                </a>
+            </li>
+            <li>
+              <a href='#sc-stat'>                        
+                Scanariul terțiar- navigare "Vizualizare statistici"
+              </a>
+            </li>
+             <li>
+            <a href='#sc-harta'>                        
+              Scanariul al patrulea- navigare "Hartă"
+            </a>
+        </li>
+        <li>
+          <a href='#sc-contact'>                        
+            Scanariul al cincilea- navigare "Contact"
+          </a>
+      </li>
+        </li>
+      </ol>
+      </li>
+      <li>
+        <a href='#motivatie'>                        
+          Motivația alegerii designului
+        </a>
+    </li>
+    </ol>
+</div>
+  <section id="functionalitati" role="functionalitati" typeof="sa:Functionalitati">
+    <h2 id="despre">Funcționalitățile esențiale ale aplicației</h2>
     <p>
        APaX (Auto Park Web Explorer) este un instrument Web de vizualizare adecvată și de comparare multi-criterială a datelor publice privind parcul auto din România pe ultimii 5 ani.
        Această aplicație permite vizualizarea atât tabelată, cât și sub formă de diagramă, a informațiilor despre parcul auto din România, asupra cărora se pot aplica diverse filtre.
        De asemenea, diagramele pot fi descărcate în formatele CSV, WebP și SVG. După vizitarea aplicației, utilizatorul poate oferi o părere (feedback).
       </p>
-       <h3>Pagina "Acasă"</h3>
+       <h3 id="acasa">Pagina "Acasă"</h3>
       <p>
  Această pagină este prima interacțiune a utilizatorului cu aplicația și permite atât navigarea către celelalte funcționalități ale aplicației, cât și către alte site-uri cu tematică auto.
       </p>
-      <h3>Pagina "Vizualizare informații"</h3>
+      <h3 id="info">Pagina "Vizualizare informații"</h3>
       <p>
  Această pagină permite vizualizarea tabelată a informațiilor, după aplicarea filtrelor dorite (județ,marcă,categorie națională și an). Din cele 4 filtre, doar cel pentru an este obligatoriu.
       </p>
-      <h3>Pagina "Vizualizare statistici"</h3>
+      <h3 id="statistici">Pagina "Vizualizare statistici"</h3>
       <p>
  Aceasă pagină permite vizualizarea sub formă de diagramă a informațiilor, după aplicarea filtrelor dorite (județ,marcă,categorie națională și descriere comercială). Din cele 4 filtre, niciunul nu este obligatoriu.
  Diagramele sunt de 3 tipuri: radială, de tip coloană sau de tip linie. Aceste diagrame vor putea fi apoi descărcate în formatele CSV, WebP sau SVG.
       </p>
-      <h3>Pagina "Hartă"</h3>
+      <h3 id="harta">Pagina "Hartă"</h3>
       <p>
  Aceasă pagină permite vizualizarea sub formă cartografică, pe baza unor servicii Web specializate (Google My Maps), a numărului total și a celor mai populare mărci de mașini (raportate la anul 2019) în funcție de județ.
       </p>
-      <h3>Pagina "Contact"</h3>
+      <h3 id="contact">Pagina "Contact"</h3>
       <p>
  Aceasă pagină permite interacționarea cu autorii aplicației printr-un comentariu sau prin vizualizarea rețelelor sociale ale acestora.
       </p>
   </section>
-  <section id="interactiune" role="interactiune">
-      <h2>Interaționarea utilizatorului cu aplicația</h2>
+  <section id="interactiune" role="interactiune"  typeof="sa:Interactiune">
+      <h2>Interacțiunea utilizatorului cu aplicația</h2>
+      <h3 id="sc-princ">Scenariul principal - utilizatorul alege navigarea către "Acasă"</h3>
       <p>Prima interacțiune cu aplicația pe care o are un utilizator este interacțiunea cu pagina principală (Acasă).  Acesta are opțiunea de a naviga către un site cu cele mai noi informații din lumea automobilelor, sau un site de unde își poate achizițona o mașină, fie pe site-ul oficial de unde APaX preia informațiile (parcul auto din România), toate aceste variante fiind accesibile prin apăsarea butonului corespunzător fiecărui site("Noutăți","Cumpără mașini","Informații oficiale").</p>
-      <h3>Scenariul 1 - utilizatorul alege navigarea către "Vizualizare informații"</h3>
+      <h3 id="sc-info">Scenariul 1 - utilizatorul alege navigarea către "Vizualizare informații"</h3>
       <p>Pe această pagină, utilizatorul are oportunitatea de a vizualiza sub formă de tabel informațiile despre parcul auto, în urma aplicării filtrelor valabile. Filtrele sunt: județ, an, descriere comercială sau marcă, și implică tastarea în căsuța aferentă filtrului a informației dorite, înafară de filtrul pentru an, unde utilizatorul are de ales dintr-o listă unul dintre anii 2015-2019 inclusiv. Utilizatorul este restricționat în a alege un an, implicit fiind selectat anul 2015, restul filtrelor fiind opționale.În cazul în care utilizatorul tastează greșit informațiile dorite, aplicația îi va întoarce un mesaj specific("Ne pare rău,nu au fost gasite rezultate conform cautărilor dumneavoastră"), însoțit de o poză.</p>
-      <h3>Scenariul 2 - utilizatorul alege navigarea către "Vizualizare statistici"</h3>
+      <h3 id="sc-stat">Scenariul 2 - utilizatorul alege navigarea către "Vizualizare statistici"</h3>
       <p>Pe această pagină, utilizatorul are oportunitatea de a vizualiza sub formă de diagrame anumite statistici rezultate în urma aplicării a diverse filtre. Filtrele sunt în funcție de județ,  marcă, descriere comercială și categorie națională. Acestea funcționează în mod similar cu cele de pe pagina "Vizualizare informații", cu mențiunea că niciun filtru nu este obligatoriu. Dacă utilizatorul introduce filtre eronate, sau dacă nu se găsesc informații în funcție de filtrele date, aplicația va întoarce mesajul "Ne pare rău,nu au fost gasite rezultate conform cautărilor dumneavoastră" însoțit de o poză sugestivă. După selectarea filtrelor, utilizatorul își alege formatul de vizionare a rezultatelor prin apăsarea butonului corespunzător: Radială, Linie sau Coloană. În urma apăsării, va apărea diagrama împreună cu o legendă. Ulterior,  utilizatorului poate alege descărcarea diagramei pe care o vizualizează în unul sau mai multe moduri, și anume,  CSV, WebP, SVG, prin apăsarea butonului aferent.
         Dacă filtrele introduse au fost eronate, ori nu s-au găsit rezultate, la descărcarea în format CSV se va descărca un CSV cu valoarea 0 pentru toți anii, la descărcarea în format WebP se va descărca poza ce se afișează în locul unei diagrame dacă nu există valori sau au fost filtre introduse greșit, iar în cazul descărcării în format SVG, se va descărca o poză cu mesajul "Ne pare rău,nu au fost gasite rezultate conform cautărilor dumneavoastră".
       </p>
-     <h3>Scenariul 3 - Utilizatorul alege navigarea către "Hartă"</h3>
+     <h3 id="sc-harta">Scenariul 3 - Utilizatorul alege navigarea către "Hartă"</h3>
      <p>
       Pe această pagină, utilizatorul are oportunitatea de a vizualiza sub formă cartografică cele mai populare mașini și numărul total de mașini din anul 2019, în funcție de județ. Acesta poate vizualiza harta ce conține un pin pe fiecare județ, și poate apropia sau depărta harta în funcție de preferințe. În bara de sus a hărții există un buton, care prin apăsare afișează o listă cu toate județele și numărul de mașini. În cazul în care apasă pe unul dintre județe, în aceeași fereastră îi va apărea o lista cu cele mai populare mașini și numărul lor.
       Dacă utilizatorul apasă pe a doua opțiune din bara de opțiuni a hărții, acesta poate distribui harta via Facebook, Twitter sau email, ori să o folosească în propriul site. Ultima opțiune din bară deschide harta într-o nouă fereastră în care are toate funcționalitățile prezente la apăsarea primei opțiuni din bară, cu adăugarea opțiunii căutării manuale, care îi permite utilizatorului să se poziționeze pe hartă în funcție de locul căutat.
     </p>
-    <h3>Scenariul 4 - Utilizatorul alege navigarea către "Contact"</h3>
+    <h3 id="sc-contact">Scenariul 4 - Utilizatorul alege navigarea către "Contact"</h3>
     <p>
       Pe această pagină, utilizatorul poate vizualiza o mică descriere a autorilor, însoțită de o poză și link-urile către profilele acestora de pe rețele sociale. Utilizatorul are oportunitatea de a oferi o părere (feedback) autorilor aplicației.  Acesta are la dispoziție câmpurile: email, nume și comentariu. Completarea tuturor câmpurilor este obligatorie, în caz contrar, va apărea un mesaj de avertizare. După introducerea comentariului, acesta va primi un email pe adresa indicată, în care i se mulțumește pentru părere(ulterior, acesta va putea comunica în mod direct, prin email-uri, cu administratorul paginii).
     </p>
     </section>
     <section id="motivatie" role="motivatie">
-      <h2>Motivație alegerii designului</h2>
+      <h2>Motivația alegerii designului</h2>
       <p>Întrucât proiectul are termen de livrare în anotimpul cald, ne-am gândit să oferim aplicației o interfață fresh și aerisită care să nu obosească utilizatorul. Pentru acestea, am utilizat nuanțe de albastru închis și deschis, complementate de nuanțe de galben lămâie și din familia roz. Toate aceste culori sunt pastelate, pentru a nu oferi utilizatorului un impact coloristic puternic la navigarea pe diverse pagini. Fontul Roboto a fost ales datorită popularității sale în lumea dezvoltatorilor grafici și datorită spațiului aerisit dintre litere ce oferă impresia unui text scris lejer și neînghesuit ( e si preferatul nostru 😉 ).
         De asemenea, ne-am gândit că ar fi potrivită și opțiunea de a vizualiza paginile in mod întunecat (Dark mode), pentru utilizatorii ce poate au o sensibilitate a ochilor, sau preferă un mediu în culori mai închise. Pagina "Acasă" deține un slideshow ce plasează utilizatorul în atmosfera automobilelor, toate pozele având nuanțe de albastru și presupunând o mașină cu un fundal spectaculos ce stimulează simțurile utilizatorului, aducând un plus de revigorare aplicației. 
 Toate marginile căsuțelor și a butoanelor sunt rotunjite și tranzițiile, în momentul trecerii peste acestea, sunt încetinite pentru a oferi un plus de stilizare adolescentină și fresh în concordanță cu restul design-ului.

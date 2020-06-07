@@ -9,5 +9,16 @@ body {
 }
 dt{
 padding:5px;
-margin-left:5%;
+margin-left:0%;
+font-size:20px;
+}
+dd{
+    margin-left:5%;
+}
+h2{
+  color:blue;
+}
+ol{
+    font-size: large;
+  color: blue;
 }
