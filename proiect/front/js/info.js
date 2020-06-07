@@ -4,6 +4,20 @@ window.onscroll = function () {
     scrollFunction()
 };
 
+function myMove() {
+    var elem = document.getElementById("filtreaza");   
+    var pos = 0;
+    var id = setInterval(frame, 5);
+    function frame() {
+      if (pos == 300) {
+        clearInterval(id);
+      } else {
+        pos++; 
+        elem.style.top = pos + "px"; 
+      
+      }
+    }
+  }
 function scrollFunction() {
     if (document.documentElement.scrollTop > 150) {
         topButton.style.display = "block";

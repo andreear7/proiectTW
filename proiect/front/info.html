@@ -11,13 +11,13 @@
 </head>
 <body >
 <header class="menu">
-  <a class="logo" href="http://127.0.0.1:1337/acasa"><img src="./photos/ap.jpg" alt="APaX" class="logoimg" ></a>
+  <a class="logo" href="http://localhost:1337/acasa"><img src="./photos/logo.jpg" alt="APaX" class="logoimg" ></a>
   <div class="header-right">
-    <a href="http://127.0.0.1:1337/acasa">Acasă</a>
-    <a href="http://127.0.0.1:1337/info">Vizualizare informatii</a>
-    <a href="http://127.0.0.1:1337/statistici">Vizualizare statistici</a>
-    <a href="http://127.0.0.1:1337/harta">Harta</a>
-     <a href="http://127.0.0.1:1337/contact">Contact</a>
+    <a href="http://localhost:1337/acasa">Acasă</a>
+    <a  href="http://localhost:1337/info">Vizualizare informații</a>
+    <a href="http://localhost:1337/statistici">Vizualizare statistici</a>
+    <a href="http://localhost:1337/harta">Hartă</a>
+    <a href="http://localhost:1337/contact">Contact</a>
 	</div>
 </header>
 
@@ -25,9 +25,9 @@
 <div class="formular">
     Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
    
-  <form action="/info/">
+  <form action="/info/" id="formular">
   <div class="form-judet">
-    <label for="judet">In functie de judet <a id="locatie" onclick="getLocation()">sau locatie</a></label>
+    <label for="judet">In functie de judet</label>
     <input type="text" id="judet" name="judet"  placeholder="Introduceti judetul" >
 	</div>
   <div class="form-marca">
@@ -49,11 +49,13 @@
       <option value="2018">2018</option>
        <option value="2019">2019</option>
     </select> 
+    
  </div> 
   </form>
-   <button id="filtreaza" class="filtreaza" onclick="makeGetForTable()">Filtreaza</button>
+   <button id="filtreaza" class="submit-filtre" onclick="makeGetForTable();">Filtrează</button>
 </div>
-<button id="theme-toggle">Switch mode</button> 
+<button id="theme-toggle" class="dark-mode-informatii" >Dark mode</button>
+<!--<button id="theme-toggle" class="submit-filtre" >Dark mode</button>-->
   <div class="tabelul">
    <table id="Table" >
 </table>
