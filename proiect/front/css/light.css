@@ -1,12 +1,11 @@
 
-
-
 body
 {
 	font-family: 'Roboto', sans-serif;
 	background-color: rgba(255,253,245,0.82);
 	color: #003399;
 }
+
 /*HOME*/
 .slides {
 	width:100%;
@@ -15,10 +14,8 @@ body
 }
 .text-acasa{
 	position: absolute;
-	top: 5%;
+	top: 7%;
 	left:40%;
-	/*transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);padding: 10px;*/
 	font-size: 40px;
 	padding: 12px 24px;
 	cursor: pointer;
@@ -72,6 +69,9 @@ body
 .buton3{
 	left:75%;
 }
+
+/*INFORMATII*/
+
 /* sursa:https://www.w3schools.com/howto/howto_css_loader.asp */
 
 #loader {
@@ -81,6 +81,7 @@ body
 	border-bottom: 16px solid blue;
 	width: 50px;
 	height: 50px;
+	margin-left:50%;
 	-webkit-animation: spin 2s linear infinite;
 	animation: spin 2s linear infinite;
   }
@@ -132,164 +133,6 @@ body
 }
 
 
-/*Flat UI colors*/
-
-.one {
-  background: #16A085;
-}
-
-.two {
-  background: #2ECC71;
-}
-
-.three {
-  background: #27AE60;
-}
-
-.four {
-  background: #3498DB;
-}
-
-.five {
-  background: #2980B9;
-}
-
-.six {
-  background: #9B59B6;
-}
-
-.seven {
-  background: #8E44AD;
-}
-
-.eight {
-  background: #34495E;
-}
-
-.nine {
-  background: #2C3E50;
-}
-
-.ten {
-  background: #22313f;
-}
-
-.eleven {
-  background: #F1C40F;
-}
-
-.twelve {
-  background: #F39C12;
-}
-
-.thirteen {
-  background: #E67E22;
-}
-
-.fourteen {
-  background: #D35400;
-}
-
-.fifteen {
-  background: #E74C3C;
-}
-
-.sixteen {
-  background: #C0392B;
-}
-
-.seventeen {
-  background: #ECF0F1;
-}
-
-.seventeen.clouds {
-  color: #BDC3C7;
-}
-
-.eighteen {
-  background: #BDC3C7;
-}
-
-.nineteen {
-  background: #95A5A6;
-}
-
-.twenty {
-  background: #7F8C8D;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-#locatie {
-font-size:12px;
-}
-select option:hover {
-	 /* box-shadow: 0 0 10px 100px rgb(246, 252, 255) inset;  */
-	 color:green; 
-}
-
-/* "#F1C40F" ,"#a55ca5","#bccd7a","#eb9743","#67b6c7" */
- #chartLegend
-{
-     position:relative;
-	 max-width: 300px;
-	 max-height: 300px;
-	 margin-left: 1400px;
-	 margin-top: -350px;
-	 vertical-align: bottom;
-	 padding-left: 20px;
-	 text-align: left;
-}
-
-ul{ 
-
-	float:right;
-	margin-top:0;
-}
-#cinci { 
-	
-	list-style:none;
-	border-left :20px solid; 
-	border-color :#F1C40F;
-padding:5px;
-/* display:none; */
-
-}
-#sase { 
-	list-style:none;
-	border-left :20px solid; 
-	border-color :#a55ca5;
-padding:5px;
-/* display:none; */
-
-}
-#sapte{ 
-	list-style:none;
-	border-left :20px solid; 
-	border-color :#bccd7a;
-padding:5px;
-/* display:none; */
-
-}
-#opt { 
-	list-style:none;
-	border-left :20px solid; 
-	border-color :#eb9743;
-padding:5px;
-/* display:none; */
-
-}
-#noua { 
-	list-style:none;
-	border-left :20px solid; 
-	border-color :#67b6c7;
-padding:5px;
-/* display:none; */
-
-}
-/*INFORMATII*/
 table tr:nth-child(odd){ 
 		background: #FFFE9F;
 	}
@@ -588,815 +431,170 @@ input[id=an] {
 	transition: width 4s;
 }
 
-@media screen and (max-width: 400px) {
-
-	div.tabelul {
-
-		position: absolute;
-		top: 750px;
-
-	}
-
-	table {
-		display: block;
-	}
-
-	table th {
-		display: block;
-	}
-
-	table td {
-		display: block;
-
-	}
-
-	table tr {
-		display: block;
-	}
-
-	div.descriere-tabel {
-		position: absolute;
-		margin-left: 0px;
-		margin-top: 530px;
-
-
-	}
-
-	logo {
-		position: absolute;
-		right: 0;
-		top: 0;
-
-	}
-
-	.header-right {
-		float: left;
-	}
-
-	.formular {
-		position: absolute;
-		float: left;
-		text-align: left;
-		display: none;
-	}
-
-
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 20%;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 35%;
-		margin-left: 0px;
-		margin-right: 0px;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 45%;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 80%;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	.submit-filtre{
-		margin-top:90%;
-		bottom:0;
-		margin-left: 0px;
-	}
-	#top{
-		margin-top:-30px;
-		margin-left: 10px;
-	}
-	.dark-mode-informatii{
-		bottom:40px;
-		position: relative;
-		margin-left:40%;
-	}
-	input[type=submit] {
-		position: relative;
-
-		margin-top: 250px;
-		margin-left: 0;
-		float: left;
-		text-align: left;
-	}
-
-	/*STATISTICI*/
-	.descarcare-button .csv{
-		margin-left: 21px;
-	}
-	 .descarcare-button .svg{
-		 margin-left: 0px;
-	 }
-	 .format-button .radiala{
-		margin-left: 21px;
-	 }
-	 .format-button .coloana{
-		margin-left: 0px;
-	 }
-	 div.form-marca2 {
-
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 10px;
-		
-		margin-right: 30%;
-
-	}
-	div.form-judet2 {
-
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 10px;
-		margin-right: 20%;
-
-	}
-	div.form-an2{
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 0px;
-		margin-right: 30%;
-	}
-	div.form-categorie2{
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 10px;
-		margin-right: 20%;
-	}
-	.dark-mode-statistici{
-		position: relative;
-		float: right;
-		margin-top: 30px;
-		margin-right: 70%;
-	}
-
-}
-/* responssive home*/
-
-@media  only screen and (max-width: 320px) {
-
-	div.tabelul {
-
-		position: absolute;
-		top: 960px;
-
-	}
-
-	div.descriere-tabel {
-		position: absolute;
-		margin-left: 0px;
-		margin-top: 730px;
-
-
-	}
-
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		top: 250px;
-
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		top: 300px;
-
-
-		margin-left: 0px;
-		margin-right: 0px;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		top: 400px;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 600px;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	input[type=submit] {
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: 400px;
-		margin-left: 0px;
-
-	}
-
-	/*statistici*/
-
-	.descarcare-button .csv{
-		margin-left: 10px;
-	}
-	 .descarcare-button .svg{
-		 margin-left: 0px;
-	 }
-	 .format-button .radiala{
-		margin-left: 10px;
-	 }
-	 .format-button .coloana{
-		margin-left: 0px;
-	 }
-	 div.form-marca2 {
-
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 10px;
-		
-		margin-right: 20%;
-
-	}
-	div.form-judet2 {
-
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 10px;
-		margin-right: 20%;
-
-	}
-	div.form-an2{
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 0px;
-		margin-right: 20%;
-	}
-	div.form-categorie2{
-		position: relative;
-		text-align: left;
-		float: right;
-		top: 10px;
-		margin-right: 20%;
-	}
-	.submit-filtre{
-		position: relative;
-		float: right;
-		margin-top: 30px;
-		margin-right: 70%;
-	}
-	
-}
-
-
-@media screen and  (min-width: 400px) and  (max-width: 549px) {
-	div.descriere-tabel {
-
-		margin-top: 400px;
-		margin-left: 0;
-
-	}
-
-	table {
-		display: block;
-	}
-
-	table th {
-		display: block;
-	}
-
-	table td {
-		display: block;
-
-	}
-
-	table tr {
-		display: block;
-	}
-
-	div.formular {
-		position: relative;
-		float: center;
-		text-align: center;
-		font-size:15px;
-		line-height: normal;
-	}
-	
-
-	.submit-filtre{
-		bottom:0;
-		margin-top:50%;
-	}
-	
-	.dark-mode-informatii{
-		
-		margin-top:3%;
-	
-
-	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 10%;
-		margin-left: 0;
-
-	}
-
-	div.form-marca {
-
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: -5%;
-		margin-left:0%;
-
-	}
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 25%;
-		margin-left: 2%;
-	}
-
-	div.form-an {
-		position: absolute;
-		text-align: left;
-		margin-left: 2%;
-		margin-top: 50%;
-	}
-
-	input[type=submit] {
-		position: relative;
-
-		margin-top: 270px;
-		margin-left: 0;
-		float: left;
-		text-align: left;
-	}
-
-  /*STATISTICI*/
-  .descarcare-button .csv{
-	margin-left: 10px;
-}
- .descarcare-button .svg{
-	 margin-left: 0px;
- }
- .descarcare-button .web{
-	margin-top:3px;
-	margin-left: 2px;
-}
- .format-button .radiala{
-	margin-left: 21px;
- }
- 
- .format-button .coloana{
-	margin-left: 0px;
- }
- div.form-marca2 {
-
-	position: relative;
-	text-align: left;
-	float: right;
-	top: 10px;
-	
-	margin-right: 20%;
-
-}
-div.form-judet2 {
-
-	position: relative;
-	text-align: match-parent;
-	float: right;
-	top: 10px;
-	margin-right: 20%;
-
-}
-div.form-an2{
-	position: relative;
-	text-align: left;
-	float: right;
-	top: 0px;
-	margin-right: 20%;
-}
-div.form-categorie2{
-	position: relative;
-	text-align: left;
-	float: right;
-	top: 10px;
-	margin-right: 20%;
-}
-.descarcare-button{
-	display: inline-flexbox;
-}
-}
-
-@media screen and  (min-width: 550px) and  (max-width: 767px) {
-	div.descriere-tabel {
-
-		margin-top: 400px;
-		margin-left: 0;
-
-	}
-
-	div.tabelul {
-		overflow-x: auto;
-	}
-
-	
-	div.formular {
-		position: relative;
-		float: center;
-		text-align: center;
-		font-size:20px;
-		line-height: normal;
-	}
-	
-
-	.submit-filtre{
-		bottom:0;
-		margin-top:40%;
-	}
-	
-	.dark-mode-informatii{
-	
-		margin-top:1%;
-	
-
-	}
-	
-
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 50px;
-		margin-left: 0;
-
-
-	}
-
-
-	div.form-marca {
-
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: -35px;
-		margin-left: 0;
-
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 150px;
-		margin-left: 0;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		margin-left: 0px;
-		margin-top: 300px;
-
-
-	}
-
-	input[type=submit] {
-		position: relative;
-
-		margin-top: 270px;
-		margin-left: 0;
-		float: left;
-		text-align: left;
-	}
-
-
-}
-
-@media screen and  (min-width: 768px) and  (max-width: 1023px) {
-
-	div.tabelul {
-
-		position: relative;
-		top: 230px;
-		overflow-x: auto;
-	}
-
-	div.descriere-tabel {
-		position: absolute;
-		margin-left: 320px;
-		margin-top: 230px;
-
-
-	}
-
-	.formular {
-		position: absolute;
-		float: center;
-		text-align: center;
-	}
-
-
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-		margin-top:1%;
-
-	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 2%;
-		margin-left: 0;
-	}
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 4%;
-		margin-left: 50%;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 10%;
-		margin-left: 1%;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 3%;
-		margin-left: 51%;
-	}
-
-	input[type=submit] {
-		position: absolute;
-
-		margin-top: 300px;
-		margin-left: 300px;
-
-	}
-	
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-	
-		margin-top:1%;
-	
-
-	}
-	
-
-
-}
-
-@media screen and  (min-width: 768px) and  (max-width: 801px){
-
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-	
-		margin-top:1%;
-	
-
-	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 2%;
-		margin-left: 0;
-
-
-	}
-
-
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 27%;
-		margin-left: 0;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 20%;
-		margin-left: 2%;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 33%;
-		margin-left: 2%;
-	}
-}
-@media screen and  (min-width: 801px) and  (max-width: 969px){
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-		margin-top:1%;
-
-	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 2%;
-		margin-left: 0;
-	}
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 20%;
-		margin-left: 0%;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 23%;
-		margin-left: 1%;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 30%;
-		margin-left: 1%;
-	}
-
-}
-@media screen and  (min-width: 1024px) and  (max-width: 1354px) {
-	div.tabelul {
-
-		position: relative;
-		top: 230px;
-		overflow-x: auto;
-	}
-
-	div.descriere-tabel {
-		position: absolute;
-		margin-left: 460px;
-		margin-top: 230px;
-
-
-	}
-
-	.formular {
-		position: absolute;
-		float: center;
-		text-align: center;
-	}
-
-
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-		margin-top:1%;
-
-	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 2%;
-		margin-left: 0;
-	}
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 4%;
-		margin-left: 50%;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 10%;
-		margin-left: 1%;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 3%;
-		margin-left: 51%;
-	}
-
-	input[type=submit] {
-		position: absolute;
-
-		margin-top: 300px;
-		margin-left: 400px;
-
-	}
-
-}
 
 
 
 /*
  VIZUALIZARE STATISTICI-formular statistici
  */
+ /*Flat UI colors*/
+
+.one {
+  background: #16A085;
+}
+
+.two {
+  background: #2ECC71;
+}
+
+.three {
+  background: #27AE60;
+}
+
+.four {
+  background: #3498DB;
+}
+
+.five {
+  background: #2980B9;
+}
+
+.six {
+  background: #9B59B6;
+}
+
+.seven {
+  background: #8E44AD;
+}
+
+.eight {
+  background: #34495E;
+}
+
+.nine {
+  background: #2C3E50;
+}
+
+.ten {
+  background: #22313f;
+}
+
+.eleven {
+  background: #F1C40F;
+}
+
+.twelve {
+  background: #F39C12;
+}
+
+.thirteen {
+  background: #E67E22;
+}
+
+.fourteen {
+  background: #D35400;
+}
+
+.fifteen {
+  background: #E74C3C;
+}
+
+.sixteen {
+  background: #C0392B;
+}
+
+.seventeen {
+  background: #ECF0F1;
+}
+
+.seventeen.clouds {
+  color: #BDC3C7;
+}
+
+.eighteen {
+  background: #BDC3C7;
+}
+
+.nineteen {
+  background: #95A5A6;
+}
+
+.twenty {
+  background: #7F8C8D;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+#locatie {
+font-size:12px;
+}
+select option:hover {
+	 /* box-shadow: 0 0 10px 100px rgb(246, 252, 255) inset;  */
+	 color:green; 
+}
+
+/* "#F1C40F" ,"#a55ca5","#bccd7a","#eb9743","#67b6c7" */
+ #chartLegend
+{
+     position:relative;
+	 max-width: 300px;
+	 max-height: 300px;
+	 margin-left: 1400px;
+	 margin-top: -350px;
+	 vertical-align: bottom;
+	 padding-left: 20px;
+	 text-align: left;
+}
+
+ul{
+	float:left;
+	position: absolute;
+	top:-200px;
+	right:200px;
+}
+#cinci { 
+	
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#F1C40F;
+padding:5px;
+/* display:none; */
+
+}
+#sase { 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#a55ca5;
+padding:5px;
+/* display:none; */
+
+}
+#sapte{ 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#bccd7a;
+padding:5px;
+/* display:none; */
+
+}
+#opt { 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#eb9743;
+padding:5px;
+/* display:none; */
+
+}
+#noua { 
+	list-style:none;
+	border-left :20px solid; 
+	border-color :#67b6c7;
+padding:5px;
+/* display:none; */
+
+}
 .formular2 {
 
 	background-color: rgba(255, 255, 170, 0.82);
@@ -1633,8 +831,8 @@ div.form-categorie2{
   /*CONTACT*/
   .formular-contact{
 	  text-align:center;
-	  font-size: 70px;
-	  top:25%;
+	  font-size: 55px;
+	  margin-top: 2%;
   }
   .form-email{
 	  position: absolute;
@@ -1642,18 +840,33 @@ div.form-categorie2{
 	  top:30%;
 	  float: center;
 	  font-size:30px;
+	  
   }
   #email, #nume{
 	font-size:20px;
-	
+	background-color: #0099CC;
 	text-align: center;
+	font-size: 22px;
+	line-height: 15px;
+	color: #e8ffca;
+	
 }
 #comentariu{
 	font-size:20px;
 	padding:38px 33px;
+	background-color: #0099CC;
+	font-size: 22px;
+	line-height: 15px;
+	color: #e8ffca;
 	
-	text-align: center;
 }
+
+ #email:hover, #nume:hover, #comentariu:hover{
+	 border-radius: 10px;
+	 background-color: #e8ffca;
+	 color:#0099CC;
+
+ }
   .form-nume{
 	position: absolute;
 	left:39.6%;
@@ -1670,9 +883,9 @@ div.form-categorie2{
 }
 .dark-mode-contact {
 	border-color: DarkSlateGray;
-	position: absolute;
-	top: 90vh;
+	position: relative;
 	left: 1%;
+	margin-bottom:2%;
 	font-size: 13px;
 	padding: 12px 24px;
 	cursor: pointer;
@@ -1690,13 +903,1198 @@ div.form-categorie2{
   .trimite{
 	border-color: DarkSlateGray;
 	position: absolute;
-	top: 65%;
-	left:45%;
-	font-size: 13px;
-	padding: 12px 24px;
+	top: 68%;
+	left:46%;
+	font-size: 20px;
+	padding: 7px 30px;
 	cursor: pointer;
-	border-radius: 5px;
+	border-radius: 10px;
 	text-align: center;
-	background-color: #0099CC;
-	color: #e8ffca;
+	background-color: #ffafe9;
+	color: #003399;
   }
+  .trimite:hover{
+	border-radius: 20px;
+	background-color: #e8ffca;
+	color:  #003399;
+	opacity: 2;
+}
+#raspuns{
+	bottom:0;
+	margin-top:26%;
+	max-width: 25%;
+	align-content: center;
+	margin-left: 38%;
+}
+.despre{
+	max-height: 50%;
+	
+}
+.despre .andreea-poza{
+	max-width: 10%;
+	max-height: 10%;
+	position: relative;
+	margin-top: 2%;
+	margin-left:10%;
+	
+}
+.despre .rebecca-poza{
+	max-width: 10%;
+	max-height: 10%;
+	position: relative;
+	margin-top:-23%;
+	margin-left:80%;
+	margin-bottom: 2%;
+}
+.despre .rebecca-descriere{
+	font-size:20px;
+	margin-left:80%;
+	margin-bottom: 2%;
+	margin-top: -1%;
+}
+.despre .andreea-descriere{
+	font-size:20px;
+	margin-left:9%;
+	margin-bottom: 2%;
+	max-width: 20%;
+	margin-top: -8%;
+}
+
+/*RESPONSSIVE*/
+@media screen and (max-width: 400px) {
+	/*info*/
+	div.tabelul {
+
+		position: absolute;
+		top: 750px;
+
+	}
+
+	table {
+		display: block;
+	}
+
+	table th {
+		display: block;
+	}
+
+	table td {
+		display: block;
+
+	}
+
+	table tr {
+		display: block;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 0px;
+		margin-top: 530px;
+
+
+	}
+
+	logo {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+	}
+
+	.header-right {
+		float: left;
+	}
+
+	.formular {
+		position: absolute;
+		float: left;
+		text-align: left;
+		display: none;
+	}
+
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 20%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 35%;
+		margin-left: 0px;
+		margin-right: 0px;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 45%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 80%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.submit-filtre{
+		margin-top:90%;
+		bottom:0;
+		margin-left: 0px;
+	}
+	#top{
+		margin-top:-30px;
+		margin-left: 10px;
+	}
+	.dark-mode-informatii{
+		bottom:40px;
+		position: relative;
+		margin-left:40%;
+	}
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 250px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+	}
+
+	/*STATISTICI*/
+	.descarcare-button .csv{
+		margin-left: 21px;
+	}
+	 .descarcare-button .svg{
+		 margin-left: 0px;
+	 }
+	 .format-button .radiala{
+		margin-left: 21px;
+	 }
+	 .format-button .coloana{
+		margin-left: 0px;
+	 }
+	 div.form-marca2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		
+		margin-right: 30%;
+
+	}
+	div.form-judet2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+
+	}
+	div.form-an2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 0px;
+		margin-right: 30%;
+	}
+	div.form-categorie2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+	}
+	.dark-mode-statistici{
+		position: relative;
+		float: right;
+		margin-top: 30px;
+		margin-right: 70%;
+	}
+	/*home*/
+	.text-acasa{
+		display:none;
+	}
+	.slides {
+		width:100%;
+		height:500px;	
+	}
+	.buton1, .buton2, .buton3, .dark-mode-home{
+		font-size:10px;
+		
+	}
+	.buton1, .buton2{
+		top:90%;
+		padding: 20px;
+	}
+	.buton3, .dark-mode-home{
+		top:80%;
+		padding: 20px;
+	}
+		
+}
+
+@media  only screen and (max-width: 320px) {
+
+	div.tabelul {
+
+		position: absolute;
+		top: 960px;
+
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 0px;
+		margin-top: 730px;
+
+
+	}
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 250px;
+
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 300px;
+
+
+		margin-left: 0px;
+		margin-right: 0px;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 400px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 600px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	input[type=submit] {
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: 400px;
+		margin-left: 0px;
+
+	}
+
+	/*statistici*/
+
+	.descarcare-button .csv{
+		margin-left: 10px;
+	}
+	 .descarcare-button .svg{
+		 margin-left: 0px;
+	 }
+	 .format-button .radiala{
+		margin-left: 10px;
+	 }
+	 .format-button .coloana{
+		margin-left: 0px;
+	 }
+	 div.form-marca2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		
+		margin-right: 20%;
+
+	}
+	div.form-judet2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+
+	}
+	div.form-an2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 0px;
+		margin-right: 20%;
+	}
+	div.form-categorie2{
+		position: relative;
+		text-align: left;
+		float: right;
+		top: 10px;
+		margin-right: 20%;
+	}
+	.submit-filtre{
+		position: relative;
+		float: right;
+		margin-top: 30px;
+		margin-right: 70%;
+	}
+	
+}
+
+
+@media screen and  (min-width: 400px) and  (max-width: 549px) {
+	div.descriere-tabel {
+
+		margin-top: 400px;
+		margin-left: 0;
+
+	}
+
+	table {
+		display: block;
+	}
+
+	table th {
+		display: block;
+	}
+
+	table td {
+		display: block;
+
+	}
+
+	table tr {
+		display: block;
+	}
+
+	div.formular {
+		position: relative;
+		float: center;
+		text-align: center;
+		font-size:15px;
+		line-height: normal;
+	}
+	
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:50%;
+	}
+	
+	.dark-mode-informatii{
+		
+		margin-top:3%;
+	
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 10%;
+		margin-left: 0;
+
+	}
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -5%;
+		margin-left:0%;
+
+	}
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 25%;
+		margin-left: 2%;
+	}
+
+	div.form-an {
+		position: absolute;
+		text-align: left;
+		margin-left: 2%;
+		margin-top: 50%;
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 270px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+	}
+
+  /*STATISTICI*/
+  ul{
+	float:left;
+	position: absolute;
+	top:-200px;
+	right:800px;
+}
+  .descarcare-button .csv{
+	margin-left: 10px;
+}
+ .descarcare-button .svg{
+	 margin-left: 0px;
+ }
+ .descarcare-button .web{
+	margin-top:3px;
+	margin-left: 2px;
+}
+ .format-button .radiala{
+	margin-left: 21px;
+ }
+ 
+ .format-button .coloana{
+	margin-left: 0px;
+ }
+ ul{
+	float:left;
+	position: absolute;
+	top:-100px;
+	right:1150px;
+}
+.dark-mode-statistici{
+	margin-bottom: 0;
+	position: absolute fixed;
+	margin-top:120%;
+}
+ div.form-marca2 {
+
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 33%;
+	margin-left: 10%;
+
+}
+div.form-judet2 {
+
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 5%;
+	margin-left: 10%;
+
+}
+div.form-an2{
+	position: absolute;
+	text-align: left;
+	float: right;
+	margin-top: 44%;
+	margin-left: 10%;
+}
+div.form-categorie2{
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 20%;
+	margin-left: 10%;
+
+}
+.diagrama{
+	margin-top:50%;
+}
+.descarcare-button{
+	display: inline-flexbox;
+}
+/*CONTACT*/
+.text-acasa{
+	font-size:20px;
+	margin-top:40%;
+}
+.slides {
+	width:100%;
+	height:550px;	
+}
+.buton1, .buton2, .buton3, .dark-mode-home{
+	font-size:10px;
+	
+}
+.buton1, .buton2{
+	top:83%;
+	padding: 20px;
+}
+.buton3, .dark-mode-home{
+	top:80%;
+	padding: 20px;
+}
+
+}
+
+@media screen and  (min-width: 550px) and  (max-width: 767px) {
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:950px;
+	}
+	.dark-mode-statistici{
+		margin-bottom: 0;
+		position: absolute fixed;
+		margin-top:55%;
+	}
+	 div.form-marca2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 26%;
+		margin-left: 10%;
+	
+	}
+	div.form-judet2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 10%;
+	
+	}
+	div.form-an2{
+		position: absolute;
+		text-align: left;
+		float: right;
+		margin-top: 34%;
+		margin-left: 10%;
+	}
+	div.form-categorie2{
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 18%;
+		margin-left: 10%;
+	
+	}
+	.diagrama{
+		margin-top:40%;
+	}
+	.descarcare-button{
+		display: inline-flexbox;
+	}
+	div.descriere-tabel {
+
+		margin-top: 400px;
+		margin-left: 0;
+
+	}
+
+	div.tabelul {
+		overflow-x: auto;
+	}
+
+	
+	div.formular {
+		position: relative;
+		float: center;
+		text-align: center;
+		font-size:20px;
+		line-height: normal;
+	}
+	
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:40%;
+	}
+	
+	.dark-mode-informatii{
+	
+		margin-top:1%;
+	
+
+	}
+	
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 50px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -35px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 150px;
+		margin-left: 0;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 300px;
+
+
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 270px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+
+
+	}
+	/*acasa*/
+.text-acasa{
+	font-size:25px;
+	margin-top:200px;
+}
+.slides {
+	width:100%;
+	height:600px;	
+}
+.buton1, .buton2, .buton3, .dark-mode-home{
+	font-size:15px;
+	
+}
+.buton1, .buton2{
+	top:80%;
+	padding: 20px;
+}
+.buton3, .dark-mode-home{
+	top:85%;
+	padding: 20px;
+}
+
+
+}
+
+@media screen and  (min-width: 768px) and  (max-width: 1023px) {
+	/*statistici*/
+	.dark-mode-statistici{
+		margin-bottom: 0;
+		position: absolute;
+		margin-top:10%;
+	}
+	 div.form-marca2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 70%;
+	
+	}
+	div.form-judet2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 10%;
+	
+	}
+	div.form-an2{
+		position: absolute;
+		text-align: left;
+		float: right;
+		margin-top: 12%;
+		margin-left: 70%;
+	}
+	div.form-categorie2{
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 12%;
+		margin-left: 10%;
+	
+	}
+	.diagrama{
+		margin-top:20%;
+	}
+	.descarcare-button{
+		display: inline-flexbox;
+	}
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:800px;
+	}
+	div.tabelul {
+
+		position: relative;
+		top: 230px;
+		overflow-x: auto;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 320px;
+		margin-top: 230px;
+
+
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:42%;
+	}
+	
+	.dark-mode-informatii{
+		margin-top:1%;
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 2%;
+		margin-left: 0;
+	}
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 4%;
+		margin-left: 50%;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 10%;
+		margin-left: 1%;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 3%;
+		margin-left: 51%;
+	}
+
+	input[type=submit] {
+		position: absolute;
+
+		margin-top: 300px;
+		margin-left: 300px;
+
+	}
+	
+	.submit-filtre{
+		bottom:0;
+		margin-top:42%;
+	}
+	
+	.dark-mode-informatii{
+	
+		margin-top:1%;
+	
+
+	}
+		/*acasa*/
+.text-acasa{
+	font-size:30px;
+	margin-top:7%;
+}
+.slides {
+	width:100%;
+	height:700px;	
+}
+.buton1, .buton2, .buton3, .dark-mode-home{
+	font-size:23px;
+	
+}
+.buton1, .buton2, .dark-mode-home{
+	top:85%;
+	padding: 20px;
+}
+.buton3{
+	top:85%;
+	padding: 15px;
+}
+
+
+	
+
+
+}
+
+@media screen and  (min-width: 768px) and  (max-width: 801px){
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:42%;
+	}
+	
+	.dark-mode-informatii{
+	
+		margin-top:1%;
+	
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 2%;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 27%;
+		margin-left: 0;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 20%;
+		margin-left: 2%;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 33%;
+		margin-left: 2%;
+	}
+}
+@media screen and  (min-width: 801px) and  (max-width: 969px){
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:42%;
+	}
+	
+	.dark-mode-informatii{
+		margin-top:1%;
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 2%;
+		margin-left: 0;
+	}
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 20%;
+		margin-left: 0%;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 23%;
+		margin-left: 1%;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 30%;
+		margin-left: 1%;
+	}
+	/*statistici*/
+	#chart{
+		height: 30%;
+	}
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:800px;
+	}
+	.dark-mode-statistici{
+		margin-bottom: 0;
+		position: absolute;
+		margin-top:17%;
+	}
+	 div.form-marca2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 70%;
+	
+	}
+	div.form-judet2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 5%;
+	
+	}
+	div.form-an2{
+		position: absolute;
+		text-align: left;
+		float: right;
+		margin-top: 14%;
+		margin-left: 70%;
+	}
+	div.form-categorie2{
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 14%;
+		margin-left: 5%;
+	
+	}
+	.diagrama{
+		margin-top:20%;
+	}
+	.descarcare-button{
+		display: inline-flexbox;
+	}
+}
+@media screen and  (min-width: 1023px) and  (max-width: 1354px) {
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:550px;
+	}
+	/*acasa*/
+	.text-acasa{
+		font-size:30px;
+		margin-top:7%;
+	}
+	.slides {
+		width:100%;
+		height:700px;	
+	}
+	.buton1, .buton2, .buton3, .dark-mode-home{
+		font-size:23px;
+		
+	}
+	.buton1, .buton2, .dark-mode-home{
+		top:85%;
+		padding: 20px;
+	}
+	.buton3{
+		top:85%;
+		padding: 15px;
+	}
+
+	/*info*/
+	div.tabelul {
+
+		position: relative;
+		top: 230px;
+		overflow-x: auto;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 460px;
+		margin-top: 230px;
+
+
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:42%;
+	}
+	
+	.dark-mode-informatii{
+		margin-top:1%;
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 2%;
+		margin-left: 0;
+	}
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 4%;
+		margin-left: 50%;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 10%;
+		margin-left: 1%;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 3%;
+		margin-left: 51%;
+	}
+
+	input[type=submit] {
+		position: absolute;
+
+		margin-top: 300px;
+		margin-left: 400px;
+
+	}
+  /*statistici*/
+.dark-mode-statistici{
+	margin-bottom: 0;
+	position: absolute;
+	margin-top:10%;
+}
+ div.form-marca2 {
+
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 5%;
+	margin-left: 70%;
+
+}
+div.form-judet2 {
+
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 5%;
+	margin-left: 10%;
+
+}
+div.form-an2{
+	position: absolute;
+	text-align: left;
+	float: right;
+	margin-top: 12%;
+	margin-left: 70%;
+}
+div.form-categorie2{
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 12%;
+	margin-left: 10%;
+
+}
+.diagrama{
+	margin-top:20%;
+}
+.descarcare-button{
+	display: inline-flexbox;
+}
+}

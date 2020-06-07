@@ -2,7 +2,7 @@ function checkPswd() {
     var confirmPassword = "admin!";
     var password = document.getElementById("pswd").value;
     if (password == confirmPassword) {
-        window.location="http://127.0.0.1:1337/administrare";
+        window.location="http://localhost:1337/administrare";
         }
     
     else{
