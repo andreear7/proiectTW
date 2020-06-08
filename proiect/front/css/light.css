@@ -75,7 +75,7 @@ body
 /* sursa:https://www.w3schools.com/howto/howto_css_loader.asp */
 
 #loader {
-	border: 16px solid #f3f3f3;
+	border: 16px solid #FFFE9F;
 	border-radius: 50%;
 	border-top: 16px solid blue;
 	border-bottom: 16px solid blue;
@@ -259,13 +259,13 @@ table {
 }
 
 table th {
-	background-color: lightBlue;
+	background-color: #0099CC;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-left: 12px;
 	padding-right: 12px;
 	border: 1px solid #ddd;
-	color: darkRed;
+	/* color: darkRed; */
 }
 
 table td {
@@ -346,7 +346,7 @@ input[type=submit] {
 	margin: 10px 610px;
 	cursor: pointer;
 	border-style: 1px solid;
-	border-color: DarkSlateGray;
+	border-color: #003399;
 	transition-duration: 0.4s;
 }
 
@@ -813,7 +813,7 @@ padding:5px;
 }
 .dark-mode-statistici {
 	border-color: DarkSlateGray;
-	position: absolute;
+	position: relative;
 	top: 1000px;
 	left: 1%;
 
