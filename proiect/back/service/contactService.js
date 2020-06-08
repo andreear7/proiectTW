@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 //https://www.w3schools.com/nodejs/nodejs_email.asp
 function sendEmail(email)
 {
@@ -22,7 +22,7 @@ var mailOptions = {
 
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
-    console.log("eroare");
+    console.log(error);
   } else {
     console.log('Email sent: ' + info.response);
   }
