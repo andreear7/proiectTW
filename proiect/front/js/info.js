@@ -78,7 +78,6 @@ function loadTable(head, data) {
 }
 
 function makeGetForTable() {
-    // document.getElementById("formdivs").style.top="100px";
     var info;
     let image = document.getElementById("sad")
     if (image)
@@ -118,6 +117,8 @@ function makeGetForTable() {
 
 }
 
+//https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const themeStylesheet = document.getElementById('theme');
@@ -139,18 +140,3 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-//nefolosite
-//geolocation api w3s
-var x = document.getElementById("locatie");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
-
-function showPosition(position) {
-    alert("am gasit locatia")
-}

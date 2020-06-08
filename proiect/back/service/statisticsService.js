@@ -23,7 +23,7 @@ async function chartsQuery(tip, judet, categorie, marca, descriere, callBack) {
         if (descriere && (!judet && !marca && !categorie))
             query = query + " \"DESCRIERE_COMERCIALA\" : \"" + descriere.toUpperCase() + "\" ";
         query = query + "}";
-        console.log(query)
+        
         query = JSON.parse(query);
         var q2015 = 0;
         var q2016 = 0;

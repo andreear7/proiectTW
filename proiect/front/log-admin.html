@@ -14,11 +14,21 @@
   <a class="logo" href="http://localhost:1337/acasa"><img src="./photos/logo.jpg" alt="APaX" class="logoimg" ></a>
 </header>
 
-<form id="form">
-    <label for="pswd">Introdu parola: </label>
-    <input type="password" id="pswd">
-    <input type="button" value="Intra" onclick="checkPswd();" />
+<form id="form"> <p class="form-admin">
+    <span><label  class="admin-text" for="pswd">Introdu parola: </label></span>
+   <span></span><input type="password" id="pswd"></span>
+   <span><input type="button" id="intra" value="Intra" onclick="checkPswd();" /></span></p>
 </form>
+<div class="dupa">
+  <button id="comenzi" onclick=introduInregistrare()>Introdu inregistrare</button>
+  <button id="comenzi" onclick=stergeInregistrare()>Sterge inregistrare</button>
+  <button id="comenzi" onclick=modificaInregistrare()>Modifica inregistrare</button>
+  <form id="operatie">
+      <label id="tip">Logheaza-te si alege tipul operatiei</label>
+      <input  type="text" id="continut">
+      <input type="button" id="trimite-admin" value="Trimite" onclick="makeOperation()" />
+  </form></div>
+  <p id="raspuns"></p>
 </body>
 <script  src="./js/administrare.js"></script>
 </html>
