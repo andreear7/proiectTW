@@ -1,15 +1,118 @@
 
-body
+body, html
 {
 	font-family: 'Roboto', sans-serif;
 	background-color: rgba(255,253,245,0.82);
 	color: #003399;
+	
+		height:100vh;
+		width:100vw;
+		margin: 0;
+		padding: 0;
+	
 }
+/*admin*/
+.admin-text{
 
+    font-size: 35px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+    color: #0099CC;
+}
+#pswd{
+    color:  #003399;
+    background-color: #fafadc;
+    text-align: center;
+
+    width:20%;
+    height:5vh;
+}
+#intra{
+    border-color: DarkSlateGray;
+
+    font-size: 15px;
+    padding: 7px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffafe9;
+    color: #003399;
+}
+.form-admin
+{
+
+
+    position:relative;
+    top:20%;
+    left:10%;
+
+}
+#comenzi
+{
+    position:relative;
+    text-align:center;
+    top:10vh;
+    margin:5vh;
+    border-color: DarkSlateGray;
+    font-size: 15px;
+    padding: 7px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffafe9;
+    color: #003399;
+
+}
+#tip{
+    position:relative;
+    float:center;
+    text-align:center;
+    left:10vh;
+    top:10vh;
+    font-size: 25px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+    color: #0099CC;
+
+}
+#trimite-admin
+{
+    border-color: DarkSlateGray;
+    position:relative;
+    top:45vh;
+    left:5vh;
+    font-size: 15px;
+    padding: 7px 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffafe9;
+    color: #003399;
+
+}
+#continut
+{
+
+    color:  #003399;
+    background-color: #fafadc;
+    text-align: center;
+   position:relative;
+   top:25vh;
+  left:5vh;
+    width:50%;
+    height:20vh;
+
+}
+/*harta*/
+iframe{
+	position: absolute; height: 100%; border: none; width:100%;
+}
 /*HOME*/
 .slides {
 	width:100%;
-	height:720px;
+	height:850px;
 	overflow: auto;
 }
 .text-acasa{
@@ -73,7 +176,9 @@ body
 /*INFORMATII*/
 
 /* sursa:https://www.w3schools.com/howto/howto_css_loader.asp */
-
+div.tabelul{
+	overflow-x: visible;
+}
 #loader {
 	border: 16px solid #FFFE9F;
 	border-radius: 50%;
@@ -314,7 +419,7 @@ div.form-marca {
 	position: absolute;
 	margin-left: 60%;
 	font-size:25px;
-	top:24%;
+	top:18%;
 	padding:10px;
 
 }
@@ -331,7 +436,7 @@ div.form-an {
 	position: absolute;
 	margin-left: 60%;
 	font-size:25px;
-	top:36%;
+	top:30%;
 	
 }
 
@@ -370,25 +475,6 @@ input[id=an] {
 	width: 210px;
 
 }
-.dark-mode-informatii {
-	border-color: DarkSlateGray;
-	position: absolute;
-	top: 90%;
-	left: 2%;
-	font-size: 13px;
-	padding: 12px 24px;
-	cursor: pointer;
-	border-radius: 5px;
-	text-align: center;
-	background-color: #0099CC;
-	color: #e8ffca;
-  }
-  .dark-mode-informatii:hover{
-	  border-radius: 20px;
-	  background-color: #e8ffca;
-	  color:  #003399;
-	  opacity: 2;
-  }
 .about {
 
 	position: fixed;
@@ -930,10 +1016,8 @@ padding:5px;
 	align-content: center;
 	margin-left: 38%;
 }
-.despre{
-	max-height: 50%;
-	
-}
+
+
 .despre .andreea-poza{
 	max-width: 10%;
 	max-height: 10%;
@@ -961,10 +1045,1158 @@ padding:5px;
 	margin-left:9%;
 	margin-bottom: 2%;
 	max-width: 20%;
-	margin-top: -8%;
+	margin-top:-6%;
 }
 
 /*RESPONSSIVE*/
+
+
+@media screen and (min-width:400px) and (max-width: 422px)
+{
+	.submit-filtre{
+		
+		margin-top:50%;
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 13%;
+		margin-left: 0;
+
+	}
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -5%;
+		margin-left:0%;
+
+	}
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 28%;
+		margin-left: 2%;
+	}
+
+	div.form-an {
+		position: absolute;
+		text-align: left;
+		margin-left: 2%;
+		margin-top: 65%;
+	}
+}
+@media  only screen and (max-width: 320px) {
+
+	div.tabelul {
+
+		position: absolute;
+		top: 960px;
+
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 0px;
+		margin-top: 730px;
+
+
+	}
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 400px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 450px;
+		margin-left: 0px;
+		margin-right: 0px;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		top: 550px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 400px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	input[type=submit] {
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: 400px;
+		margin-left: 0px;
+
+	}
+
+	/*statistici*/
+
+	.descarcare-button .csv{
+		margin-left: 10px;
+	}
+	 .descarcare-button .svg{
+		 margin-left: 0px;
+	 }
+	 .format-button .radiala{
+		margin-left: 10px;
+	 }
+	 .format-button .coloana{
+		margin-left: 0px;
+	 }
+	 div.form-marca2 {
+
+		position: relative;
+		text-align: left;
+		float: right;
+		margin-top: 10%;
+		margin-right: 20%;
+
+	}
+	div.form-judet2 {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: 10%;
+		margin-right: 20%;
+
+	}
+	div.form-an2{
+		position: relative;
+		text-align: left;
+		float: right;
+		margin-top: 10%;
+		margin-right: 20%;
+	}
+	div.form-categorie2{
+		position: relative;
+		text-align: left;
+		float: right;
+		margin-top: 12%;
+		margin-right: 20%;
+	}
+	.submit-filtre{
+		position: relative;
+		float: right;
+		margin-top: 500px;
+		margin-right: 50%;
+	}
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:1100px;
+	}
+	
+}
+
+
+@media screen and (min-width:400px) and (max-width: 422px)
+{
+	.submit-filtre{
+		
+		margin-top:70%;
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 13%;
+		margin-left: 0;
+
+	}
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -5%;
+		margin-left:0%;
+
+	}
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 30%;
+		margin-left: 2%;
+	}
+
+	div.form-an {
+		position: absolute;
+		text-align: left;
+		margin-left: 2%;
+		margin-top: 70%;
+	}
+}
+@media screen and  (min-width: 550px) and  (max-width: 766px) {
+	div.tabelul{
+		overflow-x:auto;
+	}
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:950px;
+	}
+	.dark-mode-statistici{
+		margin-bottom: 0;
+		position: absolute fixed;
+		margin-top:55%;
+	}
+	 div.form-marca2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 26%;
+		margin-left: 10%;
+	
+	}
+	div.form-judet2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 10%;
+	
+	}
+	div.form-an2{
+		position: absolute;
+		text-align: left;
+		float: right;
+		margin-top: 34%;
+		margin-left: 10%;
+	}
+	div.form-categorie2{
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 18%;
+		margin-left: 10%;
+	
+	}
+	.diagrama{
+		margin-top:40%;
+	}
+	.descarcare-button{
+		display: inline-flexbox;
+	}
+	div.descriere-tabel {
+
+		margin-top: 400px;
+		margin-left: 0;
+
+	}
+
+	div.tabelul {
+		overflow-x: auto;
+	}
+
+	
+	div.formular {
+		position: relative;
+		float: center;
+		text-align: center;
+		font-size:20px;
+		line-height: normal;
+	}
+	
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:60%;
+	}
+	
+	.dark-mode-informatii{
+	
+		margin-top:1%;
+	
+
+	}
+	
+
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 50px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -35px;
+		margin-left: 0;
+
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 150px;
+		margin-left: 0;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 300px;
+
+
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 270px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+
+
+	}
+	/*acasa*/
+.text-acasa{
+	font-size:25px;
+	margin-top:200px;
+}
+.slides {
+	width:100%;
+	height:700px;	
+}
+.buton1, .buton2, .buton3, .dark-mode-home{
+	font-size:15px;
+	
+}
+.buton1, .buton2{
+	top:80%;
+	padding: 20px;
+}
+.buton3, .dark-mode-home{
+	top:85%;
+	padding: 20px;
+}
+/*contact*/
+.formular-contact{
+	font-size:25px;
+	}
+	.form-email{
+		position: absolute;
+		left:34%;
+		top:40%;
+		float: center;
+		font-size:20px;
+		
+	}
+	#email, #comentariu, #nume{
+		font-size:20px;
+		padding:15px;
+	}
+	.form-nume{
+		position: absolute;
+		left:35%;
+		top:50%;
+		font-size:15px;
+		display: inline;
+		
+	}
+	.form-comentariu{
+		position: absolute;
+		left:28%;
+		top:60%;
+		float: center;
+		font-size:15px;
+		
+	}
+	.trimite{
+		top:70%;
+		font-size: 15px;
+	}
+	.despre .andreea-poza{
+		margin-top:30%;
+		max-width: 30%;
+		height:20%;
+	}
+	.despre .rebecca-poza{
+		max-width: 30%;
+		margin-top:-230px;
+		margin-left:70%;
+	}
+	.despre .rebecca-descriere, .despre .andreea-descriere{
+		font-size: 15px;
+	}
+	.despre .andreea-descriere{
+		margin-top:-180px;
+	
+	}
+	.dark-mode-contact{
+		margin-top:7%;
+	}
+	
+
+
+}
+
+@media screen and  (min-width: 766px) and  (max-width: 1024px) {
+	
+	/*statistici*/
+	.dark-mode-statistici{
+		margin-bottom: 0;
+		position: absolute;
+		margin-top:10%;
+	}
+	 div.form-marca2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 60%;
+	
+	}
+	div.form-judet2 {
+	
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 5%;
+		margin-left: 0%;
+	
+	}
+	div.form-an2{
+		position: absolute;
+		text-align: left;
+		float: right;
+		margin-top: 14%;
+		margin-left: 60%;
+		font-size:15px;
+	}
+	div.form-categorie2{
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 14%;
+		margin-left: 0%;
+	
+	}
+	.diagrama{
+		margin-top:20%;
+	}
+	
+	.descarcare-button{
+		display: inline-flexbox;
+	}
+	ul{
+		float:left;
+		position: absolute;
+		top:-200px;
+		right:800px;
+	}
+	div.tabelul {
+
+		position: relative;
+		top: 230px;
+		overflow-x: auto;
+	}
+
+	div.descriere-tabel {
+		position: absolute;
+		margin-left: 320px;
+		margin-top: 230px;
+
+
+	}
+
+	.formular {
+		position: absolute;
+		float: center;
+		text-align: center;
+	}
+
+
+	.submit-filtre{
+		bottom:0;
+		margin-top:42%;
+	}
+	
+	.dark-mode-informatii{
+		margin-top:1%;
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 0;
+		margin-left: 0;
+	}
+	div.form-marca {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 25%;
+		margin-left: 0%;
+
+	}
+
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 32%;
+		margin-left: 1%;
+	}
+
+	div.form-an {
+
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 44%;
+		margin-left: 1%;
+	}
+
+	input[type=submit] {
+		position: absolute;
+
+		margin-top: 300px;
+		margin-left: 300px;
+
+	}
+	
+	.submit-filtre{
+		bottom:0;
+		margin-top:50%;
+	}
+	
+		/*acasa*/
+.text-acasa{
+	font-size:30px;
+	margin-top:3%;
+}
+.slides {
+	width:100%;
+	height:850px;	
+}
+.buton1, .buton2, .buton3, .dark-mode-home{
+	font-size:23px;
+	
+}
+.buton1, .buton2, .dark-mode-home{
+	top:85%;
+	padding: 20px;
+}
+.buton3{
+	top:85%;
+	padding: 15px;
+}
+/*contact*/
+.formular-contact{
+	font-size:30px;
+	}
+	.form-email{
+		position: absolute;
+		left:34%;
+		top:30%;
+		float: center;
+		font-size:30px;
+		
+	}
+	#email, #comentariu, #nume{
+		font-size:20px;
+		padding:15px;
+	}
+	.form-nume{
+		position: absolute;
+		left:33%;
+		top:40%;
+		float: center;
+		font-size:30px;
+		
+	}
+	.form-comentariu{
+		position: absolute;
+		left:24%;
+		top:50%;
+		float: center;
+		font-size:30px;
+		
+	}
+	.trimite{
+		top:60%;
+		font-size: 20px;
+	}
+	
+	.despre .andreea-poza{
+		margin-top:30%;
+		max-width: 20%;
+		
+	}
+	.despre .rebecca-poza{
+		max-width: 20%;
+		margin-top:-200px;
+		margin-left:70%;
+	}
+	.despre .rebecca-descriere, .despre .andreea-descriere{
+		font-size: 15px;
+	}
+	.despre .andreea-descriere{
+		margin-top:-160px;
+		padding:20px;
+	
+	}
+	
+
+
+}
+@media screen and (min-width: 895px) and (max-width:1025px)
+{
+	/*info*/
+	div.form-marca{
+		margin-top: 15%;
+	}
+	div.form-categorie{
+		margin-top:27%;
+	}
+	div.form-an{
+		margin-top:10%;
+	}
+	.submit-filtre{
+		margin-top: 35%;
+	}
+	/*contact*/
+	.form-email{
+		top:15%;
+	}
+	.form-nume{
+		top:23%;
+		left:33%;
+	}
+	.form-comentariu{
+		top:30%;
+		left:26%;
+	}
+	.trimite{
+		top:40%;
+	}
+	.despre .andreea-poza{
+		margin-top:10%;
+		max-width: 20%;
+	}
+}
+@media screen and (min-width: 676px) and (max-width:787px){
+	div.form-marca{
+		margin-top:30%;
+	}
+	div.form-categorie{
+		margin-top:15%;
+	}
+	div.form-an{
+		margin-top:50%;
+	}
+		/*contact*/
+		.form-email{
+			top:30%;
+		}
+		.form-nume{
+			top:40%;
+			left:33%;
+		}
+		.form-comentariu{
+			top:50%;
+			left:22%;
+		}
+		.trimite{
+			top:60%;
+		}
+		.despre .rebecca-descriere{
+			padding-right:5%;
+		}
+		.despre .andreea-descriere{
+			padding-top: 4%;
+			padding-bottom:4%;
+		}
+		.despre .rebecca-poza{
+			margin-top: -1800px;
+			max-width: 27%;
+		}
+			.trimite{
+				top:70%;
+				font-size: 15px;
+			}
+			.despre .andreea-poza{
+				margin-top:30%;
+				max-width: 30%;
+				height:20%;
+			}
+			
+			
+}
+@media screen and (max-width: 677px){
+	.formular-contact{
+		font-size:25px;
+		}
+		.form-email{
+			position: absolute;
+			left:30%;
+			top:30%;
+			float: center;
+			font-size:20px;
+			
+		}
+		#email, #comentariu, #nume{
+			font-size:20px;
+			padding:15px;
+		}
+		.form-nume{
+			position: absolute;
+			left:32%;
+			top:37%;
+			font-size:15px;
+			display: inline;
+			
+		}
+		.form-comentariu{
+			position: absolute;
+			left:27%;
+			top:44%;
+			float: center;
+			font-size:15px;
+			
+		}
+		.trimite{
+			top:53%;
+			font-size: 15px;
+		}
+		.despre .andreea-poza{
+			margin-top:15%;
+			max-width: 15%;
+			
+		}
+		.despre .rebecca-poza{
+			max-width: 15%;
+			margin-top:-230px;
+			margin-left:70%;
+		}
+		
+		.despre .rebecca-descriere, .despre .andreea-descriere{
+			font-size: 15px;
+		}
+		.despre .andreea-descriere{
+			margin-top:-170px;
+			padding:2%;
+		}
+		.dark-mode-contact{
+			margin-top:7%;
+		}
+}
+@media screen and (max-width: 610px){
+	.formular-contact{
+		font-size:25px;
+		}
+		.form-email{
+			position: absolute;
+			left:30%;
+			top:30%;
+			float: center;
+			font-size:20px;
+			
+		}
+		#email, #comentariu, #nume{
+			font-size:20px;
+			padding:15px;
+		}
+		.form-nume{
+			position: absolute;
+			left:32%;
+			top:37%;
+			font-size:15px;
+			display: inline;
+			
+		}
+		.form-comentariu{
+			position: absolute;
+			left:27%;
+			top:44%;
+			float: center;
+			font-size:15px;
+			
+		}
+		.trimite{
+			top:53%;
+			font-size: 15px;
+		}
+		.despre .andreea-poza{
+			margin-top:30%;
+			max-width: 15%;
+			
+		}
+		.despre .rebecca-poza{
+			max-width: 15%;
+			margin-top:-300px;
+			margin-left:70%;
+		}
+		
+		.despre .rebecca-descriere, .despre .andreea-descriere{
+			font-size: 15px;
+		}
+		.despre .andreea-descriere{
+			margin-top:-190px;
+			padding:1%;
+		}
+		.dark-mode-contact{
+			margin-top:7%;
+		}
+}
+@media screen and  (min-width: 400px) and  (max-width: 549px) {
+	div.descriere-tabel {
+
+		margin-top: 400px;
+		margin-left: 0;
+
+	}
+	div.tabelul{
+		overflow-x:auto;
+	}
+
+	table {
+		display: block;
+	}
+
+	table th {
+		display: block;
+	}
+
+	table td {
+		display: block;
+
+	}
+
+	table tr {
+		display: block;
+	}
+
+	div.formular {
+		position: relative;
+		float: center;
+		text-align: center;
+		font-size:15px;
+		line-height: normal;
+	}
+	
+
+	.submit-filtre{
+		
+		margin-top:70%;
+	}
+	
+	.dark-mode-informatii{
+		
+		margin-top:3%;
+	
+
+	}
+	
+	div.form-judet {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 13%;
+		margin-left: 0;
+
+	}
+
+	div.form-marca {
+
+		position: relative;
+		text-align: left;
+		float: left;
+		margin-top: -5%;
+		margin-left:0%;
+
+	}
+
+	div.form-categorie {
+		position: absolute;
+		text-align: left;
+		float: left;
+		margin-top: 28%;
+		margin-left: 2%;
+	}
+
+	div.form-an {
+		position: absolute;
+		text-align: left;
+		margin-left: 2%;
+		margin-top: 45%;
+	}
+
+	input[type=submit] {
+		position: relative;
+
+		margin-top: 270px;
+		margin-left: 0;
+		float: left;
+		text-align: left;
+	}
+
+  /*STATISTICI*/
+  ul{
+	float:left;
+	position: absolute;
+	top:-200px;
+	right:800px;
+}
+  .descarcare-button .csv{
+	margin-left: 10px;
+}
+ .descarcare-button .svg{
+	 margin-left: 0px;
+ }
+ .descarcare-button .web{
+	margin-top:3px;
+	margin-left: 2px;
+}
+ .format-button .radiala{
+	margin-left: 21px;
+ }
+ 
+ .format-button .coloana{
+	margin-left: 0px;
+ }
+ ul{
+	float:left;
+	position: absolute;
+	top:-100px;
+	right:1150px;
+}
+.dark-mode-statistici{
+	margin-bottom: 0;
+	position: absolute fixed;
+	margin-top:120%;
+}
+ div.form-marca2 {
+
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 35%;
+	margin-left: 10%;
+
+}
+div.form-judet2 {
+
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 5%;
+	margin-left: 10%;
+
+}
+div.form-an2{
+	position: absolute;
+	text-align: left;
+	float: right;
+	margin-top: 46%;
+	margin-left: 10%;
+}
+div.form-categorie2{
+	position: absolute;
+	text-align: left;
+	float: left;
+	margin-top: 20%;
+	margin-left: 10%;
+
+}
+.diagrama{
+	margin-top:55%;
+}
+.descarcare-button{
+	display: inline-flexbox;
+}
+/*Acasa*/
+.text-acasa{
+	font-size:10px;
+	margin-top:40%;
+
+}
+.slides {
+	width:100%;
+	height:760px;	
+}
+.buton1, .buton2, .buton3, .dark-mode-home{
+	font-size:10px;
+	
+}
+.buton1, .buton2{
+	top:83%;
+	padding: 20px;
+}
+.buton3, .dark-mode-home{
+	top:80%;
+	padding: 20px;
+}
+/*contact*/
+.formular-contact{
+	font-size:25px;
+	}
+	.form-email{
+		position: absolute;
+		left:30%;
+		top:30%;
+		float: center;
+		font-size:20px;
+		
+	}
+	#email, #comentariu, #nume{
+		font-size:20px;
+		padding:15px;
+	}
+	.form-nume{
+		position: absolute;
+		left:32%;
+		top:37%;
+		font-size:15px;
+		display: inline;
+		
+	}
+	.form-comentariu{
+		position: absolute;
+		left:27%;
+		top:44%;
+		float: center;
+		font-size:15px;
+		
+	}
+	.trimite{
+		top:53%;
+		font-size: 15px;
+	}
+	.despre .andreea-poza{
+		margin-top:30%;
+		max-width: 15%;
+		
+	}
+	.despre .rebecca-poza{
+		max-width: 15%;
+		margin-top:-300px;
+		margin-left:70%;
+	}
+	
+	.despre .rebecca-descriere, .despre .andreea-descriere{
+		font-size: 15px;
+	}
+	.despre .andreea-descriere{
+		margin-top:-190px;
+		padding:1%;
+	}
+	.dark-mode-contact{
+		margin-top:7%;
+	}.formular-contact{
+		font-size:25px;
+		}
+		.form-email{
+			position: absolute;
+			left:30%;
+			top:30%;
+			float: center;
+			font-size:20px;
+			
+		}
+		#email, #comentariu, #nume{
+			font-size:20px;
+			padding:15px;
+		}
+		.form-nume{
+			position: absolute;
+			left:32%;
+			top:37%;
+			font-size:15px;
+			display: inline;
+			
+		}
+		.form-comentariu{
+			position: absolute;
+			left:27%;
+			top:44%;
+			float: center;
+			font-size:15px;
+			
+		}
+		.trimite{
+			top:53%;
+			font-size: 15px;
+		}
+		.despre .andreea-poza{
+			margin-top:50%;
+			max-width: 15%;
+			
+		}
+		.despre .rebecca-poza{
+			max-width: 15%;
+			margin-top:-350px;
+			margin-left:70%;
+		}
+		
+		.despre .rebecca-descriere, .despre .andreea-descriere{
+			font-size: 12px;
+		}
+		.despre .andreea-descriere{
+			margin-top:-160px;
+			padding-top:6%;
+		}
+		
+
+}
 @media screen and (max-width: 400px) {
 	/*info*/
 	div.tabelul {
@@ -1060,7 +2292,7 @@ padding:5px;
 	}
 
 	.submit-filtre{
-		margin-top:90%;
+		margin-top:400px;
 		bottom:0;
 		margin-left: 0px;
 	}
@@ -1162,32 +2394,256 @@ padding:5px;
 	}
 	/*contact*/
 	.formular-contact{
-		display: none;
+			font-size:25px;
+			}
+			.form-email{
+				position: absolute;
+				left:10%;
+				top:40%;
+				float: center;
+				font-size:20px;
+				
+			}
+			#email, #comentariu, #nume{
+				font-size:20px;
+				padding:10px;
+			}
+			.form-nume{
+				position: absolute;
+				left:16%;
+				top:52%;
+				font-size:15px;
+				display: inline;
+				
+			}
+			.form-comentariu{
+				position: absolute;
+				left:5%;
+				top:45%;
+				float: center;
+				font-size:15px;
+				
+			}
+			.trimite{
+				top:64%;
+				font-size: 15px;
+			}
+			.despre .andreea-poza{
+				margin-top:70%;
+				max-width: 15%;
+				
+			}
+			.despre .rebecca-poza{
+				max-width: 15%;
+				margin-top:-480px;
+				margin-left:70%;
+			}
+			
+			.despre .rebecca-descriere, .despre .andreea-descriere{
+				font-size: 12px;
+			}
+			.despre .andreea-descriere{
+				margin-top:-195px;
+				padding-top:2%;
+			}
+			
+		
+		
+}
+@media  screen and  (max-height: 670px){
+	.text-acasa{
+		display:none;
+	}
+	.slides {
+		width:100%;
+		height:460px;	
+	}
+	.buton1, .buton2, .buton3, .dark-mode-home{
+		font-size:13px;
+		
+	}
+	.buton1, .buton2{
+		top:105%;
+		padding: 10px;
+		
+	}
+	.buton3{margin-right:20px;}
+	.buton1{margin-left:-20px;}
+	.buton2{margin-left:20px;}
+	.buton3, .dark-mode-home{
+		top:100%;
+		padding: 10px;
+	}
+	div.form-marca{
+		margin-top:70%;
+		font-size:18px;
+	}
+	div.form-judet{
+		margin-top:25%;
+		font-size:18px;
+	}
+	div.form-categorie{
+		margin-top:50%;
+		font-size:18px;
+	}
+	div.form-an{
+		margin-top:110%;
+		font-size:18px;
+	}
+	.submit-filtre{
+		font-size:16px;
+		margin-bottom:300px;
+		margin-top:80%;
+	}
+	/*contact*/
+	.formular-contact{
+		display:none;
 		}
 		.form-email{
 			position: absolute;
-			left:20%;
-			top:40%;
+			left:10%;
+			top:60%;
 			float: center;
-			font-size:15px;
+			font-size:20px;
 			
 		}
 		#email, #comentariu, #nume{
-			font-size:15px;
+			font-size:20px;
 			padding:10px;
 		}
 		.form-nume{
 			position: absolute;
-			left:20%;
-			top:50%;
+			left:16%;
+			top:72%;
 			font-size:15px;
 			display: inline;
 			
 		}
 		.form-comentariu{
 			position: absolute;
-			left:20%;
-			top:60%;
+			left:5%;
+			top:82%;
+			float: center;
+			font-size:15px;
+			
+		}
+		.trimite{
+			top:95%;
+			font-size: 15px;
+			margin-left: -23px;
+		}
+		.despre .andreea-poza{
+			margin-top:40%;
+			max-width: 20%;
+			
+		}
+		.despre .rebecca-poza{
+			max-width: 20%;
+			margin-top:-480px;
+			margin-left:70%;
+		}
+		
+		.despre .rebecca-descriere, .despre .andreea-descriere{
+			font-size: 12px;
+		}
+		.despre .andreea-descriere{
+			margin-top:-205px;
+			padding-top:1%;
+			font-size:11px;
+			padding-bottom: 3%;
+		}
+}
+@media  screen and  (min-height: 670px) and (max-height: 741px){
+	/*harta*/
+	.harta{
+	max-height: 1000px;
+	}
+	
+	/*statistici*/
+	div.form-marca2{
+		margin-top:40%;
+	}
+	div.form-an2{
+		margin-top:60%;
+	}
+	
+	.diagrama{
+		margin-top:70%;
+	}
+	.text-acasa{
+		font-size:20px;
+		top:10%;
+	}
+	.slides {
+		width:100%;
+		height:620px;	
+	}
+	.buton1, .buton2, .buton3, .dark-mode-home{
+		font-size:15px;
+		
+	}
+	.buton1, .buton2{
+		top:105%;
+		padding: 10px;
+		
+	}
+	.buton1{margin-left:-20px;}
+	.buton2{margin-left:20px;}
+	
+	.buton3, .dark-mode-home{
+		top:95%;
+		padding: 10px;
+	}
+	/*info*/
+	div.form-marca{
+		margin-top:70%;
+		font-size:18px;
+	}
+	div.form-judet{
+		margin-top:25%;
+		font-size:18px;
+	}
+	div.form-categorie{
+		margin-top:50%;
+		font-size:18px;
+	}
+	div.form-an{
+		margin-top:115%;
+		font-size:18px;
+	}
+	.submit-filtre{
+		font-size:16px;
+		margin-bottom:30px;
+		margin-top:20%;
+	}
+	/*contact*/
+	.formular-contact{
+		display:none;
+		}
+		.form-email{
+			position: absolute;
+			left:10%;
+			top:30%;
+			float: center;
+			font-size:20px;
+			
+		}
+		#email, #comentariu, #nume{
+			font-size:20px;
+			padding:10px;
+		}
+		.form-nume{
+			position: absolute;
+			left:16%;
+			top:42%;
+			font-size:15px;
+			display: inline;
+			
+		}
+		.form-comentariu{
+			position: absolute;
+			left:5%;
+			top:55%;
 			float: center;
 			font-size:15px;
 			
@@ -1195,828 +2651,223 @@ padding:5px;
 		.trimite{
 			top:70%;
 			font-size: 15px;
+			margin-left:-20px;
 		}
 		.despre .andreea-poza{
-			margin-top:60%;
-			max-width: 30%;
-			height:20%;
+			margin-top:40%;
+			max-width: 20%;
+			
 		}
 		.despre .rebecca-poza{
-			max-width: 30%;
-			margin-top:-120px;
+			max-width: 20%;
+			margin-top:-480px;
+			margin-left:70%;
 		}
+		
 		.despre .rebecca-descriere, .despre .andreea-descriere{
-			font-size: 15px;
+			font-size: 12px;
 		}
 		.despre .andreea-descriere{
-			margin-top:-86%;
-		
+			margin-top:-205px;
+			padding-top:5%;
+			font-size:11px;
+			bottom: 0%;
 		}
-		.dark-mode-contact{
-			margin-top:7%;
+}
+@media  screen and  (min-height: 740px) and (max-height: 741px){
+	/*contact*/
+	.formular-contact{
+		display:none;
+		}
+		.form-email{
+			position: absolute;
+			left:10%;
+			top:50%;
+			float: center;
+			font-size:20px;
+			
+		}
+		#email, #comentariu, #nume{
+			font-size:20px;
+			padding:10px;
+		}
+		.form-nume{
+			position: absolute;
+			left:16%;
+			top:62%;
+			font-size:15px;
+			display: inline;
+			
+		}
+		.form-comentariu{
+			position: absolute;
+			left:5%;
+			top:75%;
+			float: center;
+			font-size:15px;
+			
+		}
+		.trimite{
+			top:85%;
+			font-size: 15px;
+			margin-left:-25px;
+		}
+		.despre .andreea-poza{
+			margin-top:40%;
+			max-width: 20%;
+			
+		}
+		.despre .rebecca-poza{
+			max-width: 20%;
+			margin-top:-480px;
+			margin-left:70%;
 		}
 		
-		
+		.despre .rebecca-descriere, .despre .andreea-descriere{
+			font-size: 12px;
+		}
+		.despre .andreea-descriere{
+			margin-top:-205px;
+			padding-top:2%;
+			font-size:10px;
+			bottom: 0%;
+		}
+		/*info*/
+		div.form-marca2{
+			margin-top:10%;
+		}
+		div.form-an2{
+			margin-top:10%;
+		}
 }
-
-@media  only screen and (max-width: 320px) {
-
-	div.tabelul {
-
-		position: absolute;
-		top: 960px;
-
+@media  screen and  (max-height: 375px){
+	.text-acasa{
+		display:none;
 	}
-
-	div.descriere-tabel {
-		position: absolute;
-		margin-left: 0px;
-		margin-top: 730px;
-
-
+	.slides {
+		width:100%;
+		height:320px;	
 	}
-
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		top: 250px;
-
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		top: 300px;
-
-
-		margin-left: 0px;
-		margin-right: 0px;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		top: 400px;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 600px;
-		margin-left: 0px;
-		margin-right: 0px;
-	}
-
-	input[type=submit] {
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: 400px;
-		margin-left: 0px;
-
-	}
-
-	/*statistici*/
-
-	.descarcare-button .csv{
-		margin-left: 10px;
-	}
-	 .descarcare-button .svg{
-		 margin-left: 0px;
-	 }
-	 .format-button .radiala{
-		margin-left: 10px;
-	 }
-	 .format-button .coloana{
-		margin-left: 0px;
-	 }
-	 div.form-marca2 {
-
-		position: relative;
-		text-align: left;
-		float: right;
-		margin-top: 10%;
-		margin-right: 20%;
-
-	}
-	div.form-judet2 {
-
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: 10%;
-		margin-right: 20%;
-
-	}
-	div.form-an2{
-		position: relative;
-		text-align: left;
-		float: right;
-		margin-top: 10%;
-		margin-right: 20%;
-	}
-	div.form-categorie2{
-		position: relative;
-		text-align: left;
-		float: right;
-		margin-top: 12%;
-		margin-right: 20%;
-	}
-	.submit-filtre{
-		position: relative;
-		float: right;
-		margin-top: 30px;
-		margin-right: 70%;
-	}
-	ul{
-		float:left;
-		position: absolute;
-		top:-200px;
-		right:1100px;
-	}
-	
-}
-
-
-@media screen and  (min-width: 400px) and  (max-width: 549px) {
-	div.descriere-tabel {
-
-		margin-top: 400px;
-		margin-left: 0;
-
-	}
-
-	table {
-		display: block;
-	}
-
-	table th {
-		display: block;
-	}
-
-	table td {
-		display: block;
-
-	}
-
-	table tr {
-		display: block;
-	}
-
-	div.formular {
-		position: relative;
-		float: center;
-		text-align: center;
+	.buton1, .buton2, .buton3, .dark-mode-home{
 		font-size:15px;
-		line-height: normal;
+		
 	}
+	.buton1, .buton2{
+		top:140%;
+		padding: 10px;
+		
+	}
+	.buton1{margin-left:-20px;}
+	.buton2{margin-left:20px;}
 	
+	.buton3, .dark-mode-home{
+		top:130%;
+		padding: 10px;
+	}
 
-	.submit-filtre{
-		bottom:0;
+}
+@media  screen and (min-height: 811px) and (max-height: 813px){
+	.text-acasa{
+		font-size:25px;
+		top:10%;
+	}
+	.slides {
+		width:100%;
+		height:620px;	
+	}
+	.buton1, .buton2, .buton3, .dark-mode-home{
+		font-size:20px;
+		
+	}
+	.buton1, .buton2{
+		top:105%;
+		padding: 15px;
+		
+	}
+	.buton1{margin-left:-50px;}
+	.buton2{margin-left:25px;}
+	.buton3{margin-right:40px;}
+	.buton3, .dark-mode-home{
+		top:95%;
+		padding: 15px;
+	}
+	div.form-marca{
+		margin-top:70%;
+		font-size:18px;
+	}
+	div.form-judet{
+		margin-top:25%;
+		font-size:18px;
+	}
+	div.form-categorie{
 		margin-top:50%;
+		font-size:18px;
 	}
-	
-	.dark-mode-informatii{
-		
-		margin-top:3%;
-	
-
+	div.form-an{
+		margin-top:110%;
+		font-size:18px;
 	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 10%;
-		margin-left: 0;
-
-	}
-
-	div.form-marca {
-
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: -5%;
-		margin-left:0%;
-
-	}
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 25%;
-		margin-left: 2%;
-	}
-
-	div.form-an {
-		position: absolute;
-		text-align: left;
-		margin-left: 2%;
-		margin-top: 50%;
-	}
-
-	input[type=submit] {
-		position: relative;
-
-		margin-top: 270px;
-		margin-left: 0;
-		float: left;
-		text-align: left;
-	}
-
-  /*STATISTICI*/
-  ul{
-	float:left;
-	position: absolute;
-	top:-200px;
-	right:800px;
-}
-  .descarcare-button .csv{
-	margin-left: 10px;
-}
- .descarcare-button .svg{
-	 margin-left: 0px;
- }
- .descarcare-button .web{
-	margin-top:3px;
-	margin-left: 2px;
-}
- .format-button .radiala{
-	margin-left: 21px;
- }
- 
- .format-button .coloana{
-	margin-left: 0px;
- }
- ul{
-	float:left;
-	position: absolute;
-	top:-100px;
-	right:1150px;
-}
-.dark-mode-statistici{
-	margin-bottom: 0;
-	position: absolute fixed;
-	margin-top:120%;
-}
- div.form-marca2 {
-
-	position: absolute;
-	text-align: left;
-	float: left;
-	margin-top: 33%;
-	margin-left: 10%;
-
-}
-div.form-judet2 {
-
-	position: absolute;
-	text-align: left;
-	float: left;
-	margin-top: 5%;
-	margin-left: 10%;
-
-}
-div.form-an2{
-	position: absolute;
-	text-align: left;
-	float: right;
-	margin-top: 44%;
-	margin-left: 10%;
-}
-div.form-categorie2{
-	position: absolute;
-	text-align: left;
-	float: left;
-	margin-top: 20%;
-	margin-left: 10%;
-
-}
-.diagrama{
-	margin-top:50%;
-}
-.descarcare-button{
-	display: inline-flexbox;
-}
-/*Acasa*/
-.text-acasa{
-	font-size:10px;
-	margin-top:40%;
-
-}
-.slides {
-	width:100%;
-	height:760px;	
-}
-.buton1, .buton2, .buton3, .dark-mode-home{
-	font-size:10px;
-	
-}
-.buton1, .buton2{
-	top:83%;
-	padding: 20px;
-}
-.buton3, .dark-mode-home{
-	top:80%;
-	padding: 20px;
-}
-/*contact*/
-.formular-contact{
-display: none;
-}
-.form-email{
-	position: absolute;
-	left:30%;
-	top:40%;
-	float: center;
-	font-size:15px;
-	
-}
-#email, #comentariu, #nume{
-	font-size:15px;
-}
-.form-nume{
-	position: absolute;
-	left:30%;
-	top:50%;
-	font-size:15px;
-	display: inline;
-	
-}
-.form-comentariu{
-	position: absolute;
-	left:20%;
-	top:60%;
-	float: center;
-	font-size:15px;
-	
-}
-.trimite{
-	top:80%;
-}
-.despre .rebecca-descriere, .despre .andreea-descriere{
-	font-size: 15px;
-}
-.despre .andreea-descriere{
-	margin-top:-50%;
-
-}
-.dark-mode-contact{
-	margin-top:7%;
-}
-
-}
-
-@media screen and  (min-width: 550px) and  (max-width: 767px) {
-	ul{
-		float:left;
-		position: absolute;
-		top:-200px;
-		right:950px;
-	}
-	.dark-mode-statistici{
-		margin-bottom: 0;
-		position: absolute fixed;
-		margin-top:55%;
-	}
-	 div.form-marca2 {
-	
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 26%;
-		margin-left: 10%;
-	
-	}
-	div.form-judet2 {
-	
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 5%;
-		margin-left: 10%;
-	
-	}
-	div.form-an2{
-		position: absolute;
-		text-align: left;
-		float: right;
-		margin-top: 34%;
-		margin-left: 10%;
-	}
-	div.form-categorie2{
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 18%;
-		margin-left: 10%;
-	
-	}
-	.diagrama{
-		margin-top:40%;
-	}
-	.descarcare-button{
-		display: inline-flexbox;
-	}
-	div.descriere-tabel {
-
-		margin-top: 400px;
-		margin-left: 0;
-
-	}
-
-	div.tabelul {
-		overflow-x: auto;
-	}
-
-	
-	div.formular {
-		position: relative;
-		float: center;
-		text-align: center;
-		font-size:20px;
-		line-height: normal;
-	}
-	
-
 	.submit-filtre{
-		bottom:0;
-		margin-top:40%;
+		font-size:16px;
+		margin-bottom:300px;
+		margin-top:90%;
 	}
-	
-	.dark-mode-informatii{
-	
-		margin-top:1%;
-	
-
-	}
-	
-
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 50px;
-		margin-left: 0;
-
-
-	}
-
-
-	div.form-marca {
-
-		position: relative;
-		text-align: left;
-		float: left;
-		margin-top: -35px;
-		margin-left: 0;
-
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 150px;
-		margin-left: 0;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		margin-left: 0px;
-		margin-top: 300px;
-
-
-	}
-
-	input[type=submit] {
-		position: relative;
-
-		margin-top: 270px;
-		margin-left: 0;
-		float: left;
-		text-align: left;
-
-
-	}
-	/*acasa*/
-.text-acasa{
-	font-size:25px;
-	margin-top:200px;
-}
-.slides {
-	width:100%;
-	height:600px;	
-}
-.buton1, .buton2, .buton3, .dark-mode-home{
-	font-size:15px;
-	
-}
-.buton1, .buton2{
-	top:80%;
-	padding: 20px;
-}
-.buton3, .dark-mode-home{
-	top:85%;
-	padding: 20px;
-}
-/*contact*/
-.formular-contact{
-	font-size:25px;
-	}
-	.form-email{
-		position: absolute;
-		left:34%;
-		top:40%;
-		float: center;
-		font-size:20px;
-		
-	}
-	#email, #comentariu, #nume{
-		font-size:20px;
-		padding:15px;
-	}
-	.form-nume{
-		position: absolute;
-		left:35%;
-		top:50%;
-		font-size:15px;
-		display: inline;
-		
-	}
-	.form-comentariu{
-		position: absolute;
-		left:28%;
-		top:60%;
-		float: center;
-		font-size:15px;
-		
-	}
-	.trimite{
-		top:70%;
-		font-size: 15px;
-	}
-	.despre .andreea-poza{
-		margin-top:30%;
-		max-width: 30%;
-		height:20%;
-	}
-	.despre .rebecca-poza{
-		max-width: 30%;
-		margin-top:-230px;
-		margin-left:70%;
-	}
-	.despre .rebecca-descriere, .despre .andreea-descriere{
-		font-size: 15px;
-	}
-	.despre .andreea-descriere{
-		margin-top:-180px;
-	
-	}
-	.dark-mode-contact{
-		margin-top:7%;
-	}
-	
-
-
-}
-
-@media screen and  (min-width: 768px) and  (max-width: 1023px) {
-	/*statistici*/
-	.dark-mode-statistici{
-		margin-bottom: 0;
-		position: absolute;
-		margin-top:10%;
-	}
-	 div.form-marca2 {
-	
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 5%;
-		margin-left: 70%;
-	
-	}
-	div.form-judet2 {
-	
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 5%;
-		margin-left: 10%;
-	
-	}
-	div.form-an2{
-		position: absolute;
-		text-align: left;
-		float: right;
-		margin-top: 12%;
-		margin-left: 70%;
-	}
-	div.form-categorie2{
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 12%;
-		margin-left: 10%;
-	
-	}
-	.diagrama{
-		margin-top:20%;
-	}
-	.descarcare-button{
-		display: inline-flexbox;
-	}
-	ul{
-		float:left;
-		position: absolute;
-		top:-200px;
-		right:800px;
-	}
-	div.tabelul {
-
-		position: relative;
-		top: 230px;
-		overflow-x: auto;
-	}
-
-	div.descriere-tabel {
-		position: absolute;
-		margin-left: 320px;
-		margin-top: 230px;
-
-
-	}
-
-	.formular {
-		position: absolute;
-		float: center;
-		text-align: center;
-	}
-
-
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-		margin-top:1%;
-
-	}
-	
-	div.form-judet {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 2%;
-		margin-left: 0;
-	}
-	div.form-marca {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 4%;
-		margin-left: 50%;
-
-	}
-
-
-	div.form-categorie {
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 10%;
-		margin-left: 1%;
-	}
-
-	div.form-an {
-
-		position: absolute;
-		text-align: left;
-		float: left;
-		margin-top: 3%;
-		margin-left: 51%;
-	}
-
-	input[type=submit] {
-		position: absolute;
-
-		margin-top: 300px;
-		margin-left: 300px;
-
-	}
-	
-	.submit-filtre{
-		bottom:0;
-		margin-top:42%;
-	}
-	
-	.dark-mode-informatii{
-	
-		margin-top:1%;
-	
-
-	}
-		/*acasa*/
-.text-acasa{
-	font-size:30px;
-	margin-top:7%;
-}
-.slides {
-	width:100%;
-	height:700px;	
-}
-.buton1, .buton2, .buton3, .dark-mode-home{
-	font-size:23px;
-	
-}
-.buton1, .buton2, .dark-mode-home{
-	top:85%;
-	padding: 20px;
-}
-.buton3{
-	top:85%;
-	padding: 15px;
-}
-/*contact*/
-.formular-contact{
-	font-size:30px;
-	}
-	.form-email{
-		position: absolute;
-		left:34%;
-		top:30%;
-		float: center;
-		font-size:30px;
-		
-	}
-	#email, #comentariu, #nume{
-		font-size:20px;
-		padding:15px;
-	}
-	.form-nume{
-		position: absolute;
-		left:33%;
-		top:40%;
-		float: center;
-		font-size:30px;
-		
-	}
-	.form-comentariu{
-		position: absolute;
-		left:24%;
-		top:50%;
-		float: center;
-		font-size:30px;
-		
-	}
-	.trimite{
-		top:60%;
-		font-size: 20px;
-	}
-	.despre .andreea-poza{
-		margin-top:30%;
-		max-width: 20%;
-		
-	}
-	.despre .rebecca-poza{
-		max-width: 20%;
-		margin-top:-200px;
-		margin-left:70%;
-	}
-	.despre .rebecca-descriere, .despre .andreea-descriere{
-		font-size: 15px;
-	}
-	.despre .andreea-descriere{
-		margin-top:-130px;
-	
-	}
-	.dark-mode-contact{
-		margin-top:7%;
-	}
-
-
+		/*contact*/
+		.formular-contact{
+			display:none;
+			}
+			.form-email{
+				position: absolute;
+				left:10%;
+				top:50%;
+				float: center;
+				font-size:20px;
+				
+			}
+			#email, #comentariu, #nume{
+				font-size:20px;
+				padding:10px;
+			}
+			.form-nume{
+				position: absolute;
+				left:14%;
+				top:57%;
+				font-size:15px;
+				display: inline;
+				
+			}
+			.form-comentariu{
+				position: absolute;
+				left:5%;
+				top:65%;
+				float: center;
+				font-size:15px;
+				
+			}
+			.trimite{
+				top:72%;
+				font-size: 15px;
+				margin-left:-23px;
+			}
+			.despre .andreea-poza{
+				margin-top:40%;
+				max-width: 20%;
+				
+			}
+			.despre .rebecca-poza{
+				max-width: 20%;
+				margin-top:-480px;
+				margin-left:70%;
+			}
+			
+			.despre .rebecca-descriere, .despre .andreea-descriere{
+				font-size: 10px;
+			}
+			.despre .andreea-descriere{
+				margin-top:-205px;
+				padding-top:15%;
+				font-size:10px;
+				
+			}
 }
 

@@ -33,7 +33,7 @@ function topFunction() {
 function noData() {
 
     let table = document.querySelector("table");
-    table.innerHTML = "Ne pare rau,nu au fost gasite rezultate conform cautarilor dumneavoastra."
+    table.innerHTML = "Ne pare rău, nu au fost găsite rezultate conform căutarilor dumneavoastră!"
     var image = document.createElement("img")
     image.id = "sad"
     image.src = './photos/sad.jpg'
@@ -117,7 +117,6 @@ function makeGetForTable() {
     }
 
 }
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const themeStylesheet = document.getElementById('theme');
@@ -137,20 +136,3 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', themeStylesheet.href)
     })
 })
-
-
-//nefolosite
-//geolocation api w3s
-var x = document.getElementById("locatie");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
-
-function showPosition(position) {
-    alert("am gasit locatia")
-}

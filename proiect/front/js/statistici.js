@@ -1403,7 +1403,7 @@ function noData() {
         "</svg>";
     obj.setSvgFile(svg);
     reprezinta = document.getElementById("reprezinta")
-    reprezinta.innerHTML = "Ne pare rau,nu au fost gasite rezultate conform cautarilor dumneavoastra."
+    reprezinta.innerHTML = "Ne pare rău, nu au fost găsite rezultate conform căutarilor dumneavoastră!"
     document.getElementById("cinci").innerText = "2015 : 0"
     document.getElementById("sase").innerText = "2016 : 0"
     document.getElementById("sapte").innerText = "2017 : 0"
@@ -1787,15 +1787,8 @@ var Piechart = function (options) {
             var pieRadius = Math.min(this.canvas.width / 2, this.canvas.height / 2);
             var labelX = this.canvas.width / 2 + (pieRadius / 2) * Math.cos(start_angle + slice_angle / 2);
             var labelY = this.canvas.height / 2 + (pieRadius / 2) * Math.sin(start_angle + slice_angle / 2);
-            // let dasharray=val*360/total_value;
-            // let procent=dasharray*100/360;
-            // let x=500 * Math.cos( Math.PI * procent*3,6 / 180 );
-            // let y=500 * Math.sin( Math.PI * procent*3,6 / 180 );
-            // svgPie=svgPie+ "\n" +"<path d=\" M 0,0 L 250 , 0 A 250 ,250  0 1,1 " + x + "," + y +" Z \" fill=\""+ this.colors[color_index%this.colors.length]+  " \"  stroke=\"black\" />"
-            // svgPie=svgPie+"\n <circle cx = "+"\""+"250"+"\" cy= \""+"250"+"\" r=\""+"250"+"\" stroke-dasharray = \""+ dasharray +" 360\" fill = \"transparent\" stroke=\""+ this.colors[color_index%this.colors.length] + "\"  transform=\"rotate(-90) translate(-20)\"/>"
             drawPieSlice(this.ctx, this.canvas.width / 2, this.canvas.height / 2, Math.min(this.canvas.width / 2, this.canvas.height / 2),
                 start_angle, start_angle + slice_angle, this.colors[color_index % this.colors.length]);
-
             var labelText = Math.round(100 * val / total_value);
             this.ctx.fillStyle = "black";
             this.ctx.font = " 20px Arial";
