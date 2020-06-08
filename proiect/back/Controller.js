@@ -53,11 +53,9 @@ async function handle(request, response) {
             }
             else
             {
-                if (filePath.includes('./contact/?')) {
-                    console.log(purl.query.email, purl.query.nume, purl.query.comentariu)
-                  
-   
-                    contactService.insert(purl.query.email, purl.query.nume, purl.query.comentariu , function (result) {
+                if (filePath.includes('./contact/?') && request.method=='POST') {
+                    
+                  contactService.insert(purl.query.email, purl.query.nume, purl.query.comentariu , function (result) {
                     
                         if (result == 0) {
                             response.writeHead(400, "BAD REQUEST", {'Content-Type': 'text/plain'});
@@ -73,64 +71,64 @@ async function handle(request, response) {
                 }
                 else
                 { if (filePath.includes('./administrare/?')) {
-                    if(purl.query.operatie=="insert")
-{console.log("freeeeggegee",purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an );
-    adminService.insert( purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an ,function (result) {
+                    if(purl.query.operatie=="insert" && request.method=='POST')
+{
+    adminService.insert( purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an , purl.query.total ,function (result) {
  if(result==1)
- { console.log("succes")
+ { 
     response.writeHead(201, "CREATED" ,{'Content-Type': 'text/plain'});
     result = "✔️ Inregistrare introdusa cu succes!"
     response.end(result)
  }
  else
- { console.log("eroare")
+ { 
     response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
     response.end("✖️ EROARE!")
  }
 });
-}//if insert
+}
 
 
 
-if(purl.query.operatie=="update")
-{console.log("freeeeggegee",purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an );
-    adminService.update( purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an ,function (result) {
+if(purl.query.operatie=="update" && request.method=='PUT')
+{
+    adminService.update(purl.query.id, purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an , purl.query.total , function (result) {
  if(result==1)
- { console.log("succes")
-    response.writeHead(201, "OK" ,{'Content-Type': 'text/plain'});
-    result = "✔️ Inregistrare introdusa cu succes!"
+ { 
+    response.writeHead(200, "OK" ,{'Content-Type': 'text/plain'});
+    result = "✔️ Inregistrare modificata cu succes!"
     response.end(result)
  }
  else
- { console.log("eroare")
+ { 
     response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
     response.end("✖️ EROARE!")
  }
 });
-}//if insert
+}
 
 
-if(purl.query.operatie=="delete")
-{console.log("freeeeggegee",purl.query.id,purl.query.an);
+if(purl.query.operatie=="delete" && request.method=='DELETE')
+{
     adminService.deletee( purl.query.id ,purl.query.an, function (result) {
  if(result==1)
- { console.log("succes")
+ { 
     response.writeHead(200, "OK" ,{'Content-Type': 'text/plain'});
     result = "✔️ Inregistrare stearsa cu succes!"
     response.end(result)
  }
  else
- { console.log("eroare")
+ {
     response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
     response.end("✖️ EROARE!")
  }
 });
-}//if insert
+}
 
 
 
-}//if contact
-}//else
+}
+}
 
 
             }

@@ -1,8 +1,9 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
+var ObjectId = require('mongodb').ObjectId;
 // const databaseConnection = require('../databaseConnection')
 
-async function insert(judet, categorieN,categorieC, marca, descriere,an,  callBack) {
+async function insert(judet, categorieN,categorieC, marca, descriere,an, total, callBack) {
     const client = new MongoClient(url, {useUnifiedTopology: true});
     try {
         await client.connect();
@@ -39,10 +40,14 @@ async function insert(judet, categorieN,categorieC, marca, descriere,an,  callBa
             query = query + ", " + " \"MARCA\" : \"" + marca.toUpperCase() + "\" ";
         if (marca && !categorieC && !judet)
             query = query + " \"MARCA\" : \"" + marca.toUpperCase() + "\" ";
-        if (descriere && (judet || marca || categorie))
+        if (descriere && (judet || marca || categorieC))
             query = query + ", " + " \"DESCRIERE_COMERCIALA\" : \"" + descriere.toUpperCase() + "\" ";
-        if (descriere && (!judet && !marca && !categorie))
+        if (descriere && (!judet && !marca && !categorieC))
             query = query + " \"DESCRIERE_COMERCIALA\" : \"" + descriere.toUpperCase() + "\" ";
+         if (total && (judet || marca || categorieC ||descriere || categorieN))
+            query = query + ", " + " \"TOTAL_VEHICULE\" : " + total  ;
+            if (total && (!judet && !marca &&  !categorieC && !descriere && !categorieN))
+            query = query  + " \"TOTAL_VEHICULE\" : " + total  ;
         query = query + "}";
         inregistrare = JSON.parse(query);
         
@@ -59,7 +64,7 @@ async function insert(judet, categorieN,categorieC, marca, descriere,an,  callBa
 }
 
 
-async function update(judet, categorieN,categorieC, marca, descriere,an,  callBack) {
+async function update(id,judet, categorieN,categorieC, marca, descriere,an, total, callBack) {
     const client = new MongoClient(url, {useUnifiedTopology: true});
     try {
         await client.connect();
@@ -100,10 +105,14 @@ async function update(judet, categorieN,categorieC, marca, descriere,an,  callBa
             query = query + ", " + " \"DESCRIERE_COMERCIALA\" : \"" + descriere.toUpperCase() + "\" ";
         if (descriere && (!judet && !marca && !categorie))
             query = query + " \"DESCRIERE_COMERCIALA\" : \"" + descriere.toUpperCase() + "\" ";
+        if (total && (judet || marca || categorieC ||descriere || categorieN))
+            query = query + ", " + " \"TOTAL_VEHICULE\" : " + total  ;
+         if (total && (!judet && !marca &&  !categorieC && !descriere && !categorieN))
+            query = query  + " \"TOTAL_VEHICULE\" : " + total  ;
         query = query + "}";
         inregistrare = JSON.parse(query);
         
-        client.db("TW").collection(colectie).updateOne(inregistrare, function(err, res) {  
+        client.db("TW").collection(colectie).updateOne({ _id: new ObjectId(id) }, { $set: inregistrare }, function(err, res) {  
             if (err) throw err;  
             client.close();  
             return callBack(1);
@@ -119,7 +128,6 @@ async function deletee(id, an, callBack) {
     const client = new MongoClient(url, {useUnifiedTopology: true});
     try {
         await client.connect();
-console.log("sunt in delete")
         var colectie = "colectie";
         switch (an) {
             case "2015":
@@ -138,22 +146,8 @@ console.log("sunt in delete")
                 colectie = 'an-2019';
                 break;
         }
-        // var query= "{\"_id\": \"ObjectId(\"" + id + "\")}\"";
-        var query= "{\"_id\":{ \"ObjectId\":\" "+id +"\"} }";
-        // var query = "{\"_id\":\""+id +"\"} ";
-        query = JSON.parse(JSON.stringify(query))
         
-        console.log("queryu,atoo" ,query);
-        // query=JSON.stringify(query);
-        query=JSON.parse(query);
-        console.log(typeof(query))
-        console.log("queryu,atoo" ,query);
-        // var query = { _id : ObjectId ( 
-
-        // )}
-        
-        
-        client.db("TW").collection(colectie.toString()).deleteOne(query, function(err, res) {  
+        client.db("TW").collection(colectie.toString()).deleteOne({ _id: new ObjectId(id) }, function(err, res) {  
             if (err) throw err;  
             client.close();  
             return callBack(1);
