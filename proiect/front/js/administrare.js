@@ -38,10 +38,11 @@ function makeOperation()
         var categorieC=json.CATEGORIE_COMUNITARA;
         var descriere=json.DESCRIERE_COMERCIALA;
         var marca=json.MARCA;
-        console.log(marca,an,judet)
+        var total=json.TOTAL_VEHICULE;
+        
     
         var theUrl = "/administrare/?operatie=insert&judet=" + judet + "&an=" + an + "&categorieN=" + categorieN+
-        "&categorieC=" + categorieC + "&descriere=" + descriere + "&marca=" + marca;
+        "&categorieC=" + categorieC + "&descriere=" + descriere + "&marca=" + marca + "&total=" + total;
     
         if (window.XMLHttpRequest) {
             var xmlHttp = new XMLHttpRequest();
@@ -50,12 +51,12 @@ function makeOperation()
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
                     raspuns = this.responseText
-                    document.getElementById("raspuns").style.backgroundColor="green";
+                    document.getElementById("raspuns").style.backgroundColor="palegreen";
                     document.getElementById("raspuns").innerHTML=raspuns;
                 } else {
                     if (xmlHttp.readyState == 4 && xmlHttp.status == 500) {
                          raspuns = this.responseText;
-                         document.getElementById("raspuns").style.backgroundColor="red";
+                         document.getElementById("raspuns").style.backgroundColor="tomato";
                         document.getElementById("raspuns").innerHTML=raspuns;                
                     }
                 }
@@ -69,30 +70,31 @@ function makeOperation()
         var json=document.getElementById("continut").value;
         console.log(json)
         json=JSON.parse(json);
+        var id=json.ID;
         var judet = json.JUDET;
         var an=json.AN;
         var categorieN=json.CATEGORIE_NATIONALA;
         var categorieC=json.CATEGORIE_COMUNITARA;
         var descriere=json.DESCRIERE_COMERCIALA;
         var marca=json.MARCA;
-        console.log(marca,an,judet)
+        var total=json.TOTAL_VEHICULE;
     
-        var theUrl = "/administrare/?operatie=update&judet=" + judet + "&an=" + an + "&categorieN=" + categorieN+
-        "&categorieC=" + categorieC + "&descriere=" + descriere + "&marca=" + marca;
+        var theUrl = "/administrare/?operatie=update&id=" + id + "&judet=" + judet + "&an=" + an + "&categorieN=" + categorieN+
+        "&categorieC=" + categorieC + "&descriere=" + descriere + "&marca=" + marca + "&total=" + total;
     
         if (window.XMLHttpRequest) {
             var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("POST", theUrl, true);
+            xmlHttp.open("PUT", theUrl, true);
             xmlHttp.send();
             xmlHttp.onreadystatechange = function () {
-                if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                     raspuns = this.responseText
-                    document.getElementById("raspuns").style.backgroundColor="green";
+                    document.getElementById("raspuns").style.backgroundColor="palegreen";
                     document.getElementById("raspuns").innerHTML=raspuns;
                 } else {
                     if (xmlHttp.readyState == 4 && xmlHttp.status == 500) {
                          raspuns = this.responseText;
-                         document.getElementById("raspuns").style.backgroundColor="red";
+                         document.getElementById("raspuns").style.backgroundColor="tomato";
                         document.getElementById("raspuns").innerHTML=raspuns;                
                     }
                 }
@@ -114,17 +116,17 @@ function makeOperation()
     
         if (window.XMLHttpRequest) {
             var xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("POST", theUrl, true);
+            xmlHttp.open("DELETE", theUrl, true);
             xmlHttp.send();
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                     raspuns = this.responseText
-                    document.getElementById("raspuns").style.backgroundColor="green";
+                    document.getElementById("raspuns").style.backgroundColor="palegreen";
                     document.getElementById("raspuns").innerHTML=raspuns;
                 } else {
                     if (xmlHttp.readyState == 4 && xmlHttp.status == 500) {
                          raspuns = this.responseText;
-                         document.getElementById("raspuns").style.backgroundColor="red";
+                         document.getElementById("raspuns").style.backgroundColor="tomato";
                         document.getElementById("raspuns").innerHTML=raspuns;                
                     }
                 }

@@ -1,3 +1,20 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+
+var chart = document.getElementById("chart")
+    chart.width = 500;
+    chart.height = 500;
+    ctx = chart.getContext('2d')
+    let image = new Image();
+    image.src = './photos/charts.png';
+    image.onload = function () {
+        ctx.clearRect(0, 0, chart.width, chart.height)
+        ctx.drawImage(image, 0, 0)
+    }
+});
+
+
+
 //https://raw.githubusercontent.com/gliffy/canvas2svg/master/canvas2svg.js
 /*!!
  *  Canvas 2 Svg v1.0.19

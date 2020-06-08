@@ -15,12 +15,12 @@ function makePostForComment() {
         xmlHttp.onreadystatechange = function () {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 201) {
                 raspuns = this.responseText
-                  document.getElementById("raspuns").style.backgroundColor="green"
+                  document.getElementById("raspuns").style.backgroundColor="palegreen"
                 document.getElementById("raspuns").innerHTML=raspuns;
             } else {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 400) {
                      raspuns = this.responseText;
-                     document.getElementById("raspuns").style.backgroundColor="red"
+                     document.getElementById("raspuns").style.backgroundColor="tomato"
                     document.getElementById("raspuns").innerHTML=raspuns;                   
                 }
             }
