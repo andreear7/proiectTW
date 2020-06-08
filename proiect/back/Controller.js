@@ -7,20 +7,29 @@ const infoService = require('./service/InfoService')
 const adminService = require('./service/adminService')
 const contactService = require('./service/ContactService')
 const statisticsService = require('./service/StatisticsService')
-const databaseConnection = require('./databaseConnection')
-var client;
+
 async function handle(request, response) {
     console.log('request ', request.url);
     var purl = url.parse(request.url, true)
     var filePath = '.' + request.url;
     if (filePath.includes('/?')) {
-// databaseConnection.connectToMongo(function callback(response){
-// client=response;
-// console.log(client);
-// });
+
+        if (filePath.includes('./administrare/?name')) {
+            adminService.logIn(purl.query.name, purl.query.password, function (result) {
+
+                if (result == 0) {
+                    response.writeHead(204, "NO CONTENT", {'Content-Type': 'text/plain'});
+                    response.end("gresit")
+                } else {
+                    response.writeHead(200, "OK", {'Content-Type': 'text/plain'});
+                    response.end("corect")
+
+                }
+            });
+        }
+
 
         if (filePath.includes('./info/?')) {
-            console.log(purl.query.judet, purl.query.categorie, purl.query.marca, purl.query.an)
             response.writeHead(200, {'Content-Type': 'application/json'});
             infoService.tableQuery(purl.query.judet, purl.query.categorie, purl.query.marca, purl.query.an, function (result) {
                 result = JSON.stringify(result)
@@ -35,7 +44,7 @@ async function handle(request, response) {
 
         } else {
             if (filePath.includes('./statistici/?')) {
-                console.log(purl.query.tip, purl.query.judet, purl.query.categorie, purl.query.marca, purl.query.descriere)
+               
 
                 statisticsService.chartsQuery(purl.query.tip, purl.query.judet, purl.query.categorie, purl.query.marca, purl.query.descriere, function (result) {
                     if (result == 0) {
@@ -45,95 +54,79 @@ async function handle(request, response) {
                         response.writeHead(200, {'Content-Type': 'application/json'});
 
                         result = JSON.stringify(result)
-                        console.log("result", result);
+                        
                         response.end(result);
                     }
                 })
 
-            }
-            else
-            {
-                if (filePath.includes('./contact/?') && request.method=='POST') {
-                    
-                  contactService.insert(purl.query.email, purl.query.nume, purl.query.comentariu , function (result) {
-                    
+            } else {
+                if (filePath.includes('./contact/?') && request.method == 'POST') {
+
+                    contactService.insert(purl.query.email, purl.query.nume, purl.query.comentariu, function (result) {
+
                         if (result == 0) {
                             response.writeHead(400, "BAD REQUEST", {'Content-Type': 'text/plain'});
                             response.end("✖️ Toate campurile sunt obligatorii!")
                         } else {
-                            response.writeHead(201, "CREATED" ,{'Content-Type': 'text/plain'});
+                            response.writeHead(201, "CREATED", {'Content-Type': 'text/plain'});
                             result = "✔️ Comentariu trimis cu succes!"
-                            console.log("result", result);
+                           
                             response.end(result);
                             contactService.sendEmail(purl.query.email);
                         }
                     })
+                } else {
+                    if (filePath.includes('./administrare/?')) {
+                        if (purl.query.operatie == "insert" && request.method == 'POST') {
+                            adminService.insert(purl.query.judet, purl.query.categorieN, purl.query.categorieC, purl.query.marca, purl.query.descriere, purl.query.an, purl.query.total, function (result) {
+                                if (result == 1) {
+                                    response.writeHead(201, "CREATED", {'Content-Type': 'text/plain'});
+                                    result = "✔️ Inregistrare introdusa cu succes!"
+                                    response.end(result)
+                                } else {
+                                    response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
+                                    response.end("✖️ EROARE!")
+                                }
+                            });
+                        }
+
+
+                        if (purl.query.operatie == "update" && request.method == 'PUT') {
+                            adminService.update(purl.query.id, purl.query.judet, purl.query.categorieN, purl.query.categorieC, purl.query.marca, purl.query.descriere, purl.query.an, purl.query.total, function (result) {
+                                if (result == 1) {
+                                    response.writeHead(200, "OK", {'Content-Type': 'text/plain'});
+                                    result = "✔️ Inregistrare modificata cu succes!"
+                                    response.end(result)
+                                } else {
+                                    response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
+                                    response.end("✖️ EROARE!")
+                                }
+                            });
+                        }
+
+
+                        if (purl.query.operatie == "delete" && request.method == 'DELETE') {
+                            adminService.deletee(purl.query.id, purl.query.an, function (result) {
+                                if (result == 1) {
+                                    response.writeHead(200, "OK", {'Content-Type': 'text/plain'});
+                                    result = "✔️ Inregistrare stearsa cu succes!"
+                                    response.end(result)
+                                } else {
+                                    response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
+                                    response.end("✖️ EROARE!")
+                                }
+                            });
+                        }
+
+
+                    }
                 }
-                else
-                { if (filePath.includes('./administrare/?')) {
-                    if(purl.query.operatie=="insert" && request.method=='POST')
-{
-    adminService.insert( purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an , purl.query.total ,function (result) {
- if(result==1)
- { 
-    response.writeHead(201, "CREATED" ,{'Content-Type': 'text/plain'});
-    result = "✔️ Inregistrare introdusa cu succes!"
-    response.end(result)
- }
- else
- { 
-    response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
-    response.end("✖️ EROARE!")
- }
-});
-}
-
-
-
-if(purl.query.operatie=="update" && request.method=='PUT')
-{
-    adminService.update(purl.query.id, purl.query.judet, purl.query.categorieN , purl.query.categorieC, purl.query.marca, purl.query.descriere , purl.query.an , purl.query.total , function (result) {
- if(result==1)
- { 
-    response.writeHead(200, "OK" ,{'Content-Type': 'text/plain'});
-    result = "✔️ Inregistrare modificata cu succes!"
-    response.end(result)
- }
- else
- { 
-    response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
-    response.end("✖️ EROARE!")
- }
-});
-}
-
-
-if(purl.query.operatie=="delete" && request.method=='DELETE')
-{
-    adminService.deletee( purl.query.id ,purl.query.an, function (result) {
- if(result==1)
- { 
-    response.writeHead(200, "OK" ,{'Content-Type': 'text/plain'});
-    result = "✔️ Inregistrare stearsa cu succes!"
-    response.end(result)
- }
- else
- {
-    response.writeHead(500, "INTERNAL SERVER ERROR", {'Content-Type': 'text/plain'});
-    response.end("✖️ EROARE!")
- }
-});
-}
-
-
-
-}
-}
 
 
             }
         }
     } else {
+
 
         switch (filePath) {
             case ('./info') :
@@ -148,20 +141,17 @@ if(purl.query.operatie=="delete" && request.method=='DELETE')
             case ('./contact') :
                 filePath = '../front/contact.html';
                 break;
-                case ('./acasa') :
-                    filePath = '../front/home.html';
-                    break;
-                     case ('./administrare') :
-                    filePath = '../front/administrare.html';
-                    break;
-                    case ('./log-admin') :
-                    filePath = '../front/log-admin.html';
-                    break;
+            case ('./acasa') :
+                filePath = '../front/home.html';
+                break;
+            case ('./log-admin') :
+                filePath = '../front/log-admin.html';
+                break;
             default:
                 filePath = '../front/' + request.url;
         }
 
-    
+
         var extname = String(path.extname(filePath)).toLowerCase();
         var mimeTypes = {
             '.html': 'text/html',
@@ -185,6 +175,7 @@ if(purl.query.operatie=="delete" && request.method=='DELETE')
         var contentType = mimeTypes[extname];
 
         fs.readFile(filePath, function (error, content) {
+
             if (error) {
                 if (error.code == 'ENOENT') {
                     fs.readFile('./404.html', function (error, content) {
@@ -204,7 +195,7 @@ if(purl.query.operatie=="delete" && request.method=='DELETE')
                 response.end(content, 'utf-8');
             }
         });
-    
+
     }
 }
 

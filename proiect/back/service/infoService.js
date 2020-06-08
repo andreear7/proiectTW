@@ -18,7 +18,6 @@ async function tableQuery(judet, categorie, marca, an, callBack) {
         if (marca && !judet)
             query = query + " \"MARCA\" : \"" + marca.toUpperCase() + "\" ";
         query = query + "}";
-        console.log(query)
         query = JSON.parse(query);
         var colectie = "colectie";
         switch (an) {

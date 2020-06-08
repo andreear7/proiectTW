@@ -78,7 +78,6 @@ function loadTable(head, data) {
 }
 
 function makeGetForTable() {
-    // document.getElementById("formdivs").style.top="100px";
     var info;
     let image = document.getElementById("sad")
     if (image)
@@ -117,6 +116,9 @@ function makeGetForTable() {
     }
 
 }
+
+//https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const themeStylesheet = document.getElementById('theme');
@@ -136,3 +138,5 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', themeStylesheet.href)
     })
 })
+
+
