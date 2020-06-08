@@ -12,46 +12,45 @@
 </head>
 
 <body>
-<!--<button> Vizualizare Informatii </button><button> Vizualizare statistici</button><button> Harta </button>
--->
 <header>
     <!--sursa w3s
     -->
     <a class="logo" href="http://localhost:1337/acasa"><img src="./photos/logo.jpg" alt="APaX" class="logoimg" ></a>
     <div class="header-right">
+        <a id="theme-toggle" style="font-size:12px;">Schimbă mod</a>
         <a href="http://localhost:1337/acasa">Acasă</a>
         <a  href="http://localhost:1337/info">Vizualizare informații</a>
         <a href="http://localhost:1337/statistici">Vizualizare statistici</a>
         <a href="http://localhost:1337/harta">Hartă</a>
         <a href="http://localhost:1337/contact">Contact</a>
+
     </div>
 </header>
 
-
 <div class="formular2">
 
-    Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:
+    Pentru a filtra datele vizualizate, introduceți în căsuțele afișate datele corespunzătoare:
 </div>
 
 <form class="form-statistici" action="/info/">
     <div class="form-judet2">
-        <label id="oras">In functie de judet</label>
-        <input type="text" id="judet" name="orasCautare" placeholder="Introduceti judetul" class="oras">
+        <label id="oras">În funcție de județ</label>
+        <input type="text" id="judet" name="orasCautare" placeholder="Introduceți județul" class="oras">
     </div>
 
     <div class="form-marca2">
-        <label for="marca">In functie de marca</label>
-        <input type="text" id="marca" name="marcaCautare" placeholder="Introduceti marca" class="marca">
+        <label for="marca">În funcție de marca</label>
+        <input type="text" id="marca" name="marcaCautare" placeholder="Introduceți marca" class="marca">
     </div>
 
     <div class="form-categorie2">
-        <label for="categorie">In functie de categorie</label>
-        <input type="text" id="categorie" name="categorieCautare" placeholder="Introduceti categoria" class="categorie">
+        <label for="categorie">În funcție de categorie</label>
+        <input type="text" id="categorie" name="categorieCautare" placeholder="Introduceți categoria" class="categorie">
     </div>
 
     <div class="form-an2">
-        <label for="descriere">In functie de descrierea comerciala</label>
-        <input type="text" id="descriere" name="descriereCautare" placeholder="Introduceti descrierea" class="an">
+        <label for="descriere">În funcție de descrierea comerciala</label>
+        <input type="text" id="descriere" name="descriereCautare" placeholder="Introduceți descrierea" class="an">
     </div>
 </form>
 
@@ -91,7 +90,7 @@
         <img src="" id="wee">
         <div id="svg"></div>
 </section>
-<button id="theme-toggle" class="dark-mode-statistici">Dark mode</button>
+
 <main>
     <div class="about">
         <button class="about-button">Ce este APax?</button>

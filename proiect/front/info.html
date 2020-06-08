@@ -13,6 +13,7 @@
 <header class="menu">
   <a class="logo" href="http://localhost:1337/acasa"><img src="./photos/logo.jpg" alt="APaX" class="logoimg" ></a>
   <div class="header-right">
+    <a id="theme-toggle" style="font-size:12px;">Schimbă mod</a>
     <a href="http://localhost:1337/acasa">Acasă</a>
     <a  href="http://localhost:1337/info">Vizualizare informații</a>
     <a href="http://localhost:1337/statistici">Vizualizare statistici</a>
@@ -23,25 +24,25 @@
 
 <div id="formdivs">
 <div class="formular">
-    Pentru a filtra datele vizualizate, introduceti in casutele afisate datele corespunzatoare:</div>
+    Pentru a filtra datele vizualizate, introduceți în căsuțele afișate datele corespunzătoare:</div>
    
   <form action="/info/" id="formular">
   <div class="form-judet">
-    <label for="judet">In functie de judet</label>
-    <input type="text" id="judet" name="judet"  placeholder="Introduceti judetul" >
+    <label for="judet">În funcție de județ</label>
+    <input type="text" id="judet" name="judet"  placeholder="Introduceți judetul" >
 	</div>
   <div class="form-marca">
-    <label for="marca">In functie de marca</label>
-    <input type="text" id="marca" name="marca"  placeholder="Introduceti marca">
+    <label for="marca">În funcție de marca</label>
+    <input type="text" id="marca" name="marca"  placeholder="Introduceți marca">
 	</div>
 
 	<div class="form-categorie">
-    <label for="categorie" >In functie de categorie</label>
-   	<input type="text" id="categorie" name="categorie" placeholder="Introduceti categoria">
+    <label for="categorie" >În funcție de categorie</label>
+   	<input type="text" id="categorie" name="categorie" placeholder="Introduceți categoria">
 	</div>
  
   <div class="form-an">
-    <label for="an" >In functie de an</label>
+    <label for="an" >În funcție de an</label>
      <select id="an" name="an" class="an">
       <option value="2015">2015</option>
       <option value="2016">2016</option>
@@ -59,7 +60,6 @@
    <table id="Table" >
 </table>
 </div>
-<button id="theme-toggle" class="dark-mode-informatii" >Dark mode</button>
  <button onclick="topFunction()" id="top" title="toTop">TOP</button>
 <div class="about"><button class="about-button">Ce este APaX?</button></div>
 

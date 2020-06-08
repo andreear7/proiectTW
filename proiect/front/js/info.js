@@ -33,7 +33,7 @@ function topFunction() {
 function noData() {
 
     let table = document.querySelector("table");
-    table.innerHTML = "Ne pare rau,nu au fost gasite rezultate conform cautarilor dumneavoastra."
+    table.innerHTML = "Ne pare rău, nu au fost găsite rezultate conform căutarilor dumneavoastră!"
     var image = document.createElement("img")
     image.id = "sad"
     image.src = './photos/sad.jpg'
