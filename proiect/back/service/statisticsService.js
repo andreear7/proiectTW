@@ -49,12 +49,8 @@ async function chartsQuery(tip, judet, categorie, marca, descriere, callBack) {
         })
         client.db("TW").collection('an-2019').find(query).count(function (err, result) {
             if (err) throw err;
-            q2019 = result;
-            // client.db("TW").collection('an-2018').find(query).count(function(err, result){
-            //     if(err) throw err;
-            //     q2018=result;
-            constructJSON(q2015, q2016, q2017, q2018, q2019, callBack)
-            // })
+            q2019 = result;      
+            constructJSON(q2015, q2016, q2017, q2018, q2019, callBack)         
         })
 
         function constructJSON(q2015, q2016, q2017, q2018, q2019, callBack) {

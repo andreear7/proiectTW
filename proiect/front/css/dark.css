@@ -24,8 +24,6 @@ position: absolute; height: 100%; border: none; width:100%;
 	position: absolute;
 	top: 5%;
 	left:40%;
-	/*transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);padding: 10px;*/
 	font-size: 40px;
 	padding: 12px 24px;
 	cursor: pointer;
@@ -112,7 +110,6 @@ div.tabelul{
 
   .bar-chart {
 	margin:auto;
-	/* width: 100%; */
 	height: 100px;
   }
 
@@ -142,93 +139,6 @@ div.tabelul{
   float: left;
 }
 
-
-/*Flat UI colors*/
-
-.one {
-  background: #16A085;
-}
-
-.two {
-  background: #2ECC71;
-}
-
-.three {
-  background: #27AE60;
-}
-
-.four {
-  background: #3498DB;
-}
-
-.five {
-  background: #2980B9;
-}
-
-.six {
-  background: #9B59B6;
-}
-
-.seven {
-  background: #8E44AD;
-}
-
-.eight {
-  background: #34495E;
-}
-
-.nine {
-  background: #2C3E50;
-}
-
-.ten {
-  background: #22313f;
-}
-
-.eleven {
-  background: #F1C40F;
-}
-
-.twelve {
-  background: #F39C12;
-}
-
-.thirteen {
-  background: #E67E22;
-}
-
-.fourteen {
-  background: #D35400;
-}
-
-.fifteen {
-  background: #E74C3C;
-}
-
-.sixteen {
-  background: #C0392B;
-}
-
-.seventeen {
-  background: #ECF0F1;
-}
-
-.seventeen.clouds {
-  color: #BDC3C7;
-}
-
-.eighteen {
-  background: #BDC3C7;
-}
-
-.nineteen {
-  background: #95A5A6;
-}
-
-.twenty {
-  background: #7F8C8D;
-}
-
 .dark-mode {
   background-color: black;
   color: white;
@@ -237,11 +147,10 @@ div.tabelul{
 font-size:12px;
 }
 select option:hover {
-	 /* box-shadow: 0 0 10px 100px rgb(246, 252, 255) inset;  */
+
 	 color:green; 
 }
 
-/* "#F1C40F" ,"#a55ca5","#bccd7a","#eb9743","#67b6c7" */
  #chartLegend
 {
      position:relative;
@@ -356,7 +265,6 @@ input[id=an]{
 	padding: 10px 10px;
 	cursor:pointer;
 	color: #fafadc;
-  	border-style: 1px solid;
   	border-color: DarkSlateGray;
 }
 #top:hover{
@@ -419,7 +327,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	position: relative;
-	float: center;
   margin: auto;
   color: black;
 }
@@ -511,7 +418,6 @@ input[type=submit] {
 	padding: 10px 20px;
 	margin: 10px 610px;
 	cursor: pointer;
-	border-style: 1px solid;
 	border-color: DarkSlateGray;
 	transition-duration: 0.4s;
 }
@@ -928,7 +834,6 @@ input[id=an] {
 
 	div.formular {
 		position: relative;
-		float: center;
 		text-align: center;
 		font-size:15px;
 		line-height: normal;
@@ -1042,7 +947,7 @@ div.form-categorie2{
 	margin-right: 20%;
 }
 .descarcare-button{
-	display: inline-flexbox;
+	display: inline;
 }
 }
 
@@ -1061,7 +966,6 @@ div.form-categorie2{
 	
 	div.formular {
 		position: relative;
-		float: center;
 		text-align: center;
 		font-size:20px;
 		line-height: normal;
@@ -1153,7 +1057,6 @@ div.form-categorie2{
 
 	.formular {
 		position: absolute;
-		float: center;
 		text-align: center;
 	}
 
@@ -1345,7 +1248,6 @@ div.form-categorie2{
 
 	.formular {
 		position: absolute;
-		float: center;
 		text-align: center;
 	}
 
@@ -1467,7 +1369,7 @@ div.form-categorie2{
 	margin-left: 10px;
 }
  div.form-marca2 {
-	margin-left: 1050px;
+	margin-left: 1400px;
 	margin-top: -50px;
 	font-size: 20px;
 }
@@ -1478,7 +1380,7 @@ div.form-categorie2{
 	margin-left: 10px;
 }
  div.form-an2 {
-	margin-left: 1000px;
+	margin-left: 1255px;
 	margin-top: -50px;
 	font-size: 20px;
 }
@@ -1649,7 +1551,6 @@ div.form-categorie2{
 	position: absolute;
 	left:40%;
 	top:30%;
-	float: center;
 	font-size:30px;
 	
 }
@@ -1682,14 +1583,12 @@ div.form-categorie2{
   position: absolute;
   left:39.6%;
   top:40%;
-  float: center;
   font-size:30px;
 }
 .form-comentariu{
   position: absolute;
   left:35.1%;
   top:50%;
-  float: center;
   font-size:30px;
 }
 .dark-mode-contact {
@@ -1996,7 +1895,7 @@ div.form-categorie2{
 	}
 	.dark-mode-statistici{
 		margin-bottom: 0;
-		position: absolute fixed;
+		position: absolute;
 		margin-top:55%;
 	}
 	 div.form-marca2 {
@@ -2036,7 +1935,7 @@ div.form-categorie2{
 		margin-top:40%;
 	}
 	.descarcare-button{
-		display: inline-flexbox;
+		display: inline;
 	}
 	div.descriere-tabel {
 
@@ -2052,7 +1951,6 @@ div.form-categorie2{
 	
 	div.formular {
 		position: relative;
-		float: center;
 		text-align: center;
 		font-size:20px;
 		line-height: normal;
@@ -2152,7 +2050,6 @@ div.form-categorie2{
 		position: absolute;
 		left:34%;
 		top:40%;
-		float: center;
 		font-size:20px;
 		
 	}
@@ -2172,7 +2069,6 @@ div.form-categorie2{
 		position: absolute;
 		left:28%;
 		top:60%;
-		float: center;
 		font-size:15px;
 		
 	}
@@ -2252,7 +2148,7 @@ div.form-categorie2{
 	}
 	
 	.descarcare-button{
-		display: inline-flexbox;
+		display: inline;
 	}
 	ul{
 		float:left;
@@ -2277,7 +2173,6 @@ div.form-categorie2{
 
 	.formular {
 		position: absolute;
-		float: center;
 		text-align: center;
 	}
 
@@ -2350,12 +2245,12 @@ div.form-categorie2{
 	height:850px;	
 }
 .buton1, .buton2, .buton3, .dark-mode-home{
-	font-size:23px;
+	font-size:20px;
 	
 }
 .buton1, .buton2, .dark-mode-home{
 	top:85%;
-	padding: 20px;
+	padding: 15px;
 }
 .buton3{
 	top:85%;
@@ -2369,7 +2264,6 @@ div.form-categorie2{
 		position: absolute;
 		left:34%;
 		top:30%;
-		float: center;
 		font-size:30px;
 		
 	}
@@ -2381,7 +2275,6 @@ div.form-categorie2{
 		position: absolute;
 		left:33%;
 		top:40%;
-		float: center;
 		font-size:30px;
 		
 	}
@@ -2389,7 +2282,6 @@ div.form-categorie2{
 		position: absolute;
 		left:24%;
 		top:50%;
-		float: center;
 		font-size:30px;
 		
 	}
@@ -2511,7 +2403,6 @@ div.form-categorie2{
 			position: absolute;
 			left:30%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2531,7 +2422,6 @@ div.form-categorie2{
 			position: absolute;
 			left:27%;
 			top:44%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -2569,7 +2459,6 @@ div.form-categorie2{
 			position: absolute;
 			left:30%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2589,7 +2478,6 @@ div.form-categorie2{
 			position: absolute;
 			left:27%;
 			top:44%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -2649,7 +2537,6 @@ div.form-categorie2{
 
 	div.formular {
 		position: relative;
-		float: center;
 		text-align: center;
 		font-size:15px;
 		line-height: normal;
@@ -2743,7 +2630,7 @@ div.form-categorie2{
 }
 .dark-mode-statistici{
 	margin-bottom: 0;
-	position: absolute fixed;
+	position: absolute;
 	margin-top:120%;
 }
  div.form-marca2 {
@@ -2783,7 +2670,7 @@ div.form-categorie2{
 	margin-top:55%;
 }
 .descarcare-button{
-	display: inline-flexbox;
+	display: inline;
 }
 /*Acasa*/
 .text-acasa{
@@ -2815,7 +2702,6 @@ div.form-categorie2{
 		position: absolute;
 		left:30%;
 		top:30%;
-		float: center;
 		font-size:20px;
 		
 	}
@@ -2835,7 +2721,6 @@ div.form-categorie2{
 		position: absolute;
 		left:27%;
 		top:44%;
-		float: center;
 		font-size:15px;
 		
 	}
@@ -2870,7 +2755,6 @@ div.form-categorie2{
 			position: absolute;
 			left:30%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2890,7 +2774,6 @@ div.form-categorie2{
 			position: absolute;
 			left:27%;
 			top:44%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -3122,7 +3005,6 @@ div.form-categorie2{
 				position: absolute;
 				left:10%;
 				top:40%;
-				float: center;
 				font-size:20px;
 				
 			}
@@ -3142,7 +3024,6 @@ div.form-categorie2{
 				position: absolute;
 				left:5%;
 				top:45%;
-				float: center;
 				font-size:15px;
 				
 			}
@@ -3225,7 +3106,6 @@ div.form-categorie2{
 			position: absolute;
 			left:10%;
 			top:60%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -3245,7 +3125,6 @@ div.form-categorie2{
 			position: absolute;
 			left:5%;
 			top:82%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -3346,7 +3225,6 @@ div.form-categorie2{
 			position: absolute;
 			left:10%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -3366,7 +3244,6 @@ div.form-categorie2{
 			position: absolute;
 			left:5%;
 			top:55%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -3405,7 +3282,6 @@ div.form-categorie2{
 			position: absolute;
 			left:10%;
 			top:50%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -3425,7 +3301,6 @@ div.form-categorie2{
 			position: absolute;
 			left:5%;
 			top:75%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -3460,6 +3335,9 @@ div.form-categorie2{
 		}
 		div.form-an2{
 			margin-top:10%;
+		}
+		.submit-filtre{
+			margin-top:90%;
 		}
 }
 @media  screen and  (max-height: 375px){
@@ -3542,7 +3420,6 @@ div.form-categorie2{
 				position: absolute;
 				left:10%;
 				top:50%;
-				float: center;
 				font-size:20px;
 				
 			}
@@ -3562,7 +3439,6 @@ div.form-categorie2{
 				position: absolute;
 				left:5%;
 				top:65%;
-				float: center;
 				font-size:15px;
 				
 			}

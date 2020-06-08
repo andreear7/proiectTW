@@ -1323,7 +1323,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     //https://www.youtube.com/watch?v=YoVJWZrS2WU
     function downloadWEBP() {
-        console.log("webp")
         var canvas = document.getElementById("chart")
         const a = document.createElement("a")
         document.body.appendChild(a)
@@ -1335,7 +1334,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     function setLegend(n15, n16, n17, n18, n19) {
-        console.log("legenda")
         var cinci = document.getElementById("cinci")
         cinci.innerHTML = "2015 : " + n15;
         var sase = document.getElementById("sase")
@@ -1381,12 +1379,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 ",  \"2019\" : " + q2019 + "}"
         }
         info = JSON.parse(info)
-        console.log(info)
         return info;
     }
     
     function noData() {
-        console.log("no data")
         var svg = "<svg width=\"500\" height=\"400\" xmlns=\"http://www.w3.org/2000/svg\">" +
             "<g>" +
             "<title>background</title>" +
@@ -1457,7 +1453,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
     
                     info = this.responseText
-                    console.log("inf" + info);
                     info = prepareInfo(info, tip)
                     var chart = document.getElementById("chart")
                     var ctx = chart.getContext("2d")
@@ -1469,7 +1464,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.appendChild(svgChart)
                     lineChart(info, ctx, svgChart)
                     obj.setSvgFile(ctx.getSerializedSvg(true));
-                    console.log("svgfile" + this.svgFile)
                     document.body.removeChild(svgChart)
     
                 }
@@ -1500,8 +1494,6 @@ document.addEventListener('DOMContentLoaded', () => {
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                     info = this.responseText
-                    console.log("inf" + info);
-    
                     info = prepareInfo(info, tip)
                     var chart = document.getElementById("chart")
                     var ctx = chart.getContext("2d")
@@ -1512,7 +1504,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.appendChild(svgChart)
                     barChart(info, ctx, svgChart)
                     obj.setSvgFile(ctx.getSerializedSvg(true));
-                    console.log("svgfile" + this.svgFile)
                     document.body.removeChild(svgChart)
                 }
                 if ((xmlHttp.readyState == 4 && xmlHttp.status == 204)) {
@@ -1538,7 +1529,6 @@ document.addEventListener('DOMContentLoaded', () => {
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                     info = this.responseText
-                    console.log("inf" + info);
                     info = prepareInfo(info, tip)
                     let chart = document.getElementById("chart")
                     let ctx = chart.getContext("2d")
@@ -1550,7 +1540,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.appendChild(svgChart)
                     pieChart(info, ctx, svgChart)
                     obj.setSvgFile(ctx.getSerializedSvg(true));
-                    console.log("svgfile" + this.svgFile)
                     document.body.removeChild(svgChart)
     
                 }
@@ -1755,10 +1744,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function drawPieSlice(ctx, centerX, centerY, radius, startAngle, endAngle, color) {
     
         ctx.fillStyle = color;
-        ctx.beginPath();
-        // this.svgPie=this.svgPie+"<path d=\" M "+"0"+" , "+"0"+"\n"
+        ctx.beginPath();  
         ctx.moveTo(centerX, centerY);
-        // this.svgPie=this.svgPie+"A "+ "1 " +"1"+" 0 "+ radius + " "+startAngle+ " "+ endAngle +  "\" stroke=\"black\" fill=\""+color+ "\"/>"
         ctx.arc(centerX, centerY, radius, startAngle, endAngle);
         ctx.closePath();
         ctx.fill();
@@ -1786,12 +1773,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 var pieRadius = Math.min(this.canvas.width / 2, this.canvas.height / 2);
                 var labelX = this.canvas.width / 2 + (pieRadius / 2) * Math.cos(start_angle + slice_angle / 2);
                 var labelY = this.canvas.height / 2 + (pieRadius / 2) * Math.sin(start_angle + slice_angle / 2);
-                // let dasharray=val*360/total_value;
-                // let procent=dasharray*100/360;
-                // let x=500 * Math.cos( Math.PI * procent*3,6 / 180 );
-                // let y=500 * Math.sin( Math.PI * procent*3,6 / 180 );
-                // svgPie=svgPie+ "\n" +"<path d=\" M 0,0 L 250 , 0 A 250 ,250  0 1,1 " + x + "," + y +" Z \" fill=\""+ this.colors[color_index%this.colors.length]+  " \"  stroke=\"black\" />"
-                // svgPie=svgPie+"\n <circle cx = "+"\""+"250"+"\" cy= \""+"250"+"\" r=\""+"250"+"\" stroke-dasharray = \""+ dasharray +" 360\" fill = \"transparent\" stroke=\""+ this.colors[color_index%this.colors.length] + "\"  transform=\"rotate(-90) translate(-20)\"/>"
                 drawPieSlice(this.ctx, this.canvas.width / 2, this.canvas.height / 2, Math.min(this.canvas.width / 2, this.canvas.height / 2),
                     start_angle, start_angle + slice_angle, this.colors[color_index % this.colors.length]);
     

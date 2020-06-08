@@ -1,7 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
-// const databaseConnection = require('../databaseConnection')
-
 async function tableQuery(judet, categorie, marca, an, callBack) {
     const client = new MongoClient(url, {useUnifiedTopology: true});
     try {

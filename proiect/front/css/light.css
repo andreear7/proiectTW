@@ -1,5 +1,4 @@
 
-
 body
 {
 	font-family: 'Roboto', sans-serif;
@@ -49,7 +48,7 @@ body
     left:10%;
 
 }
-#comenzi
+.comenzi
 {
     position:relative;
     text-align:center;
@@ -67,7 +66,6 @@ body
 }
 #tip{
     position:relative;
-    float:center;
     text-align:center;
     left:10vh;
     top:10vh;
@@ -144,7 +142,7 @@ iframe{
 	border-radius: 20px;
 	background-color: #e8ffca;
 	color:  #003399;
-	opacity: 2;
+	opacity: 1;
 }
 .buton1, .buton2, .buton3{
 	position: absolute;
@@ -164,7 +162,7 @@ iframe{
 	border-radius: 20px;
 	background-color: #e8ffca;
 	color:  #003399;
-	opacity: 2;
+	opacity: 1;
 	text-align: center;
 }
 .buton2{
@@ -208,7 +206,6 @@ div.tabelul{
 
   .bar-chart {
 	margin:auto;
-	/* width: 100%; */
 	height: 100px;
   }
 
@@ -294,7 +291,6 @@ input[id=an]{
 	padding: 10px 10px;
 	cursor:pointer;
 	color: #fafadc;
-  	border-style: 1px solid;
   	border-color: DarkSlateGray;
 }
 #top:hover{
@@ -359,7 +355,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	position: relative;
-	float: center;
 	margin: auto;
 
 }
@@ -451,7 +446,6 @@ input[type=submit] {
 	padding: 10px 20px;
 	margin: 10px 610px;
 	cursor: pointer;
-	border-style: 1px solid;
 	border-color: #003399;
 	transition-duration: 0.4s;
 }
@@ -505,17 +499,17 @@ input[id=an] {
 
 }
 
-.about-button:hover {
+.about-button:active {
 	position: relative;
 	bottom: 50px;
 	width: 100%;
 	height: 50px;
-	transition: 10s;
+	transition: 0.2s;
 
 
 }
 
-.about-button:hover:after {
+.about-button:active:after {
 	content: '  APaX este un instrument Web de vizualizare adecvata si de comparare multi-criteriala a datelor publice privind parcul auto din Romania pe ultimii 5 ani. ';
 	text-align: right;
 	width: 100%;
@@ -528,92 +522,6 @@ input[id=an] {
 /*
  VIZUALIZARE STATISTICI-formular statistici
  */
- /*Flat UI colors*/
-
-.one {
-  background: #16A085;
-}
-
-.two {
-  background: #2ECC71;
-}
-
-.three {
-  background: #27AE60;
-}
-
-.four {
-  background: #3498DB;
-}
-
-.five {
-  background: #2980B9;
-}
-
-.six {
-  background: #9B59B6;
-}
-
-.seven {
-  background: #8E44AD;
-}
-
-.eight {
-  background: #34495E;
-}
-
-.nine {
-  background: #2C3E50;
-}
-
-.ten {
-  background: #22313f;
-}
-
-.eleven {
-  background: #F1C40F;
-}
-
-.twelve {
-  background: #F39C12;
-}
-
-.thirteen {
-  background: #E67E22;
-}
-
-.fourteen {
-  background: #D35400;
-}
-
-.fifteen {
-  background: #E74C3C;
-}
-
-.sixteen {
-  background: #C0392B;
-}
-
-.seventeen {
-  background: #ECF0F1;
-}
-
-.seventeen.clouds {
-  color: #BDC3C7;
-}
-
-.eighteen {
-  background: #BDC3C7;
-}
-
-.nineteen {
-  background: #95A5A6;
-}
-
-.twenty {
-  background: #7F8C8D;
-}
-
 .dark-mode {
   background-color: black;
   color: white;
@@ -622,11 +530,9 @@ input[id=an] {
 font-size:12px;
 }
 select option:hover {
-	 /* box-shadow: 0 0 10px 100px rgb(246, 252, 255) inset;  */
 	 color:green; 
 }
 
-/* "#F1C40F" ,"#a55ca5","#bccd7a","#eb9743","#67b6c7" */
  #chartLegend
 {
      position:relative;
@@ -651,7 +557,7 @@ ul{
 	border-left :20px solid; 
 	border-color :#F1C40F;
 padding:5px;
-/* display:none; */
+
 
 }
 #sase { 
@@ -659,7 +565,7 @@ padding:5px;
 	border-left :20px solid; 
 	border-color :#a55ca5;
 padding:5px;
-/* display:none; */
+
 
 }
 #sapte{ 
@@ -667,7 +573,7 @@ padding:5px;
 	border-left :20px solid; 
 	border-color :#bccd7a;
 padding:5px;
-/* display:none; */
+
 
 }
 #opt { 
@@ -675,7 +581,7 @@ padding:5px;
 	border-left :20px solid; 
 	border-color :#eb9743;
 padding:5px;
-/* display:none; */
+
 
 }
 #noua { 
@@ -683,7 +589,7 @@ padding:5px;
 	border-left :20px solid; 
 	border-color :#67b6c7;
 padding:5px;
-/* display:none; */
+
 
 }
 .formular2 {
@@ -746,7 +652,7 @@ padding:5px;
 	margin-left: 10px;
 }
  div.form-marca2 {
-	margin-left: 1050px;
+	margin-left: 1400px;
 	margin-top: -50px;
 	font-size: 20px;
 }
@@ -757,7 +663,7 @@ padding:5px;
 	margin-left: 10px;
 }
  div.form-an2 {
-	margin-left: 1000px;
+	margin-left: 1255px;
 	margin-top: -50px;
 	font-size: 20px;
 }
@@ -929,7 +835,6 @@ padding:5px;
 	  position: absolute;
 	  left:40%;
 	  top:30%;
-	  float: center;
 	  font-size:30px;
 	  
   }
@@ -962,14 +867,12 @@ padding:5px;
 	position: absolute;
 	left:39.6%;
 	top:40%;
-	float: center;
 	font-size:30px;
 }
 .form-comentariu{
 	position: absolute;
 	left:35.1%;
 	top:50%;
-	float: center;
 	font-size:30px;
 }
 .dark-mode-contact {
@@ -1273,11 +1176,6 @@ padding:5px;
 		top:-200px;
 		right:950px;
 	}
-	.dark-mode-statistici{
-		margin-bottom: 0;
-		position: absolute fixed;
-		margin-top:55%;
-	}
 	 div.form-marca2 {
 	
 		position: absolute;
@@ -1315,7 +1213,7 @@ padding:5px;
 		margin-top:40%;
 	}
 	.descarcare-button{
-		display: inline-flexbox;
+		display: inline;
 	}
 	div.descriere-tabel {
 
@@ -1331,7 +1229,6 @@ padding:5px;
 	
 	div.formular {
 		position: relative;
-		float: center;
 		text-align: center;
 		font-size:20px;
 		line-height: normal;
@@ -1431,7 +1328,6 @@ padding:5px;
 		position: absolute;
 		left:34%;
 		top:40%;
-		float: center;
 		font-size:20px;
 		
 	}
@@ -1451,7 +1347,6 @@ padding:5px;
 		position: absolute;
 		left:28%;
 		top:60%;
-		float: center;
 		font-size:15px;
 		
 	}
@@ -1531,7 +1426,7 @@ padding:5px;
 	}
 	
 	.descarcare-button{
-		display: inline-flexbox;
+		display: inline;
 	}
 	ul{
 		float:left;
@@ -1556,7 +1451,6 @@ padding:5px;
 
 	.formular {
 		position: absolute;
-		float: center;
 		text-align: center;
 	}
 
@@ -1629,12 +1523,12 @@ padding:5px;
 	height:850px;	
 }
 .buton1, .buton2, .buton3, .dark-mode-home{
-	font-size:23px;
+	font-size:20px;
 	
 }
 .buton1, .buton2, .dark-mode-home{
 	top:85%;
-	padding: 20px;
+	padding: 15px;
 }
 .buton3{
 	top:85%;
@@ -1648,7 +1542,6 @@ padding:5px;
 		position: absolute;
 		left:34%;
 		top:30%;
-		float: center;
 		font-size:30px;
 		
 	}
@@ -1660,7 +1553,6 @@ padding:5px;
 		position: absolute;
 		left:33%;
 		top:40%;
-		float: center;
 		font-size:30px;
 		
 	}
@@ -1668,7 +1560,6 @@ padding:5px;
 		position: absolute;
 		left:24%;
 		top:50%;
-		float: center;
 		font-size:30px;
 		
 	}
@@ -1790,7 +1681,6 @@ padding:5px;
 			position: absolute;
 			left:30%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -1810,7 +1700,6 @@ padding:5px;
 			position: absolute;
 			left:27%;
 			top:44%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -1848,7 +1737,6 @@ padding:5px;
 			position: absolute;
 			left:30%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -1868,7 +1756,6 @@ padding:5px;
 			position: absolute;
 			left:27%;
 			top:44%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -1928,7 +1815,6 @@ padding:5px;
 
 	div.formular {
 		position: relative;
-		float: center;
 		text-align: center;
 		font-size:15px;
 		line-height: normal;
@@ -2020,11 +1906,6 @@ padding:5px;
 	top:-100px;
 	right:1150px;
 }
-.dark-mode-statistici{
-	margin-bottom: 0;
-	position: absolute fixed;
-	margin-top:120%;
-}
  div.form-marca2 {
 
 	position: absolute;
@@ -2062,7 +1943,7 @@ div.form-categorie2{
 	margin-top:55%;
 }
 .descarcare-button{
-	display: inline-flexbox;
+	display: inline;
 }
 /*Acasa*/
 .text-acasa{
@@ -2094,7 +1975,6 @@ div.form-categorie2{
 		position: absolute;
 		left:30%;
 		top:30%;
-		float: center;
 		font-size:20px;
 		
 	}
@@ -2114,7 +1994,6 @@ div.form-categorie2{
 		position: absolute;
 		left:27%;
 		top:44%;
-		float: center;
 		font-size:15px;
 		
 	}
@@ -2149,7 +2028,6 @@ div.form-categorie2{
 			position: absolute;
 			left:30%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2169,7 +2047,6 @@ div.form-categorie2{
 			position: absolute;
 			left:27%;
 			top:44%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -2401,7 +2278,6 @@ div.form-categorie2{
 				position: absolute;
 				left:10%;
 				top:40%;
-				float: center;
 				font-size:20px;
 				
 			}
@@ -2421,7 +2297,6 @@ div.form-categorie2{
 				position: absolute;
 				left:5%;
 				top:45%;
-				float: center;
 				font-size:15px;
 				
 			}
@@ -2504,7 +2379,6 @@ div.form-categorie2{
 			position: absolute;
 			left:10%;
 			top:60%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2524,7 +2398,6 @@ div.form-categorie2{
 			position: absolute;
 			left:5%;
 			top:82%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -2625,7 +2498,6 @@ div.form-categorie2{
 			position: absolute;
 			left:10%;
 			top:30%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2645,7 +2517,6 @@ div.form-categorie2{
 			position: absolute;
 			left:5%;
 			top:55%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -2684,7 +2555,6 @@ div.form-categorie2{
 			position: absolute;
 			left:10%;
 			top:50%;
-			float: center;
 			font-size:20px;
 			
 		}
@@ -2704,7 +2574,6 @@ div.form-categorie2{
 			position: absolute;
 			left:5%;
 			top:75%;
-			float: center;
 			font-size:15px;
 			
 		}
@@ -2739,6 +2608,9 @@ div.form-categorie2{
 		}
 		div.form-an2{
 			margin-top:10%;
+		}
+		.submit-filtre{
+			margin-top:90%;
 		}
 }
 @media  screen and  (max-height: 375px){
@@ -2821,7 +2693,6 @@ div.form-categorie2{
 				position: absolute;
 				left:10%;
 				top:50%;
-				float: center;
 				font-size:20px;
 				
 			}
@@ -2841,7 +2712,6 @@ div.form-categorie2{
 				position: absolute;
 				left:5%;
 				top:65%;
-				float: center;
 				font-size:15px;
 				
 			}

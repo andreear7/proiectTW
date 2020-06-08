@@ -16,19 +16,20 @@
 
 <form id="form"> <p class="form-admin">
     <span><label  class="admin-text" for="pswd">Introdu parola: </label></span>
-   <span></span><input type="password" id="pswd"></span>
+   <span><input type="password" id="pswd"></span>
    <span><input type="button" id="intra" value="Intra" onclick="checkPswd();" /></span></p>
 </form>
 <div class="dupa">
-  <button id="comenzi" onclick=introduInregistrare()>Introdu inregistrare</button>
-  <button id="comenzi" onclick=stergeInregistrare()>Sterge inregistrare</button>
-  <button id="comenzi" onclick=modificaInregistrare()>Modifica inregistrare</button>
+  <button class="comenzi" onclick=introduInregistrare()>Introdu inregistrare</button>
+  <button class="comenzi" onclick=stergeInregistrare()>Sterge inregistrare</button>
+  <button class="comenzi" onclick=modificaInregistrare()>Modifica inregistrare</button>
   <form id="operatie">
       <label id="tip">Logheaza-te si alege tipul operatiei</label>
       <input  type="text" id="continut">
       <input type="button" id="trimite-admin" value="Trimite" onclick="makeOperation()" />
   </form></div>
   <p id="raspuns"></p>
+  <script  src="./js/administrare.js"></script>
 </body>
-<script  src="./js/administrare.js"></script>
+
 </html>

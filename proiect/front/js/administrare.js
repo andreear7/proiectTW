@@ -54,7 +54,6 @@ function makeOperation() {
     var tip = document.getElementById("tip").innerHTML;
     if (tip.includes("introduci")) {
         var json = document.getElementById("continut").value;
-        console.log(json)
         json = JSON.parse(json);
         var judet = json.JUDET;
         var an = json.AN;
@@ -91,7 +90,6 @@ function makeOperation() {
 
     if (tip.includes("modifici")) {
         var json = document.getElementById("continut").value;
-        console.log(json)
         json = JSON.parse(json);
         var id = json.ID;
         var judet = json.JUDET;
@@ -127,13 +125,9 @@ function makeOperation() {
 
     if (tip.includes("stergi")) {
         var json = document.getElementById("continut").value;
-        console.log(json)
         json = JSON.parse(json);
         var idd = json.ID;
         var an = json.AN;
-
-        console.log(idd)
-
         var theUrl = "/administrare/?operatie=delete&id=" + idd + "&an=" + an;
 
         if (window.XMLHttpRequest) {
