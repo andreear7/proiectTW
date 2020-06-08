@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Raport tehnic</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+</head>
+
+<header>
+    <div class="banner">
+      <img src="logo.jpg" width="180" height="150" alt="APaX logo">
+    </div>
+    <h1>Raport tehnic</h1>
+  </header>
+
+  <div role="contentinfo">
+    <dl>
+      <dt>Autori</dt>
+      <dd>
+        <span typeof="schema:Person"
+        resource="https://www.facebook.com/andreea.romanescu/">
+        <meta property="schema:givenName" content="Andreea">
+        <meta property="schema:additionalName" content="-Veronica">
+        <meta property="schema:familyName" content="Romanescu">
+        <span property="schema:name"> <a href= "https://www.facebook.com/andreea.romanescu/">Andreea-Veronica Romanescu</a></span>
+        </span>
+        &amp;
+        <span typeof="schema:Person"
+        resource="https://www.facebook.com/reberbk001/">
+        <meta property="schema:givenName" content="Rebecca">
+        <meta property="schema:additionalName" content="">
+        <meta property="schema:familyName" content="Pohrib">
+        <span property="schema:name"> <a href= "https://www.facebook.com/reberbk001/">Rebecca Pohrib</a></span>
+        </span>
+      </dd>
+    <dt>Sursă cod</dt>
+    <dd>
+      <a href="https://github.com/andreear7/proiectTW">GitHub</a>
+    </dd>
+  </dl>
+  </div> 
+   <div role="contentinfo">
+    <h2>Cuprins</h2>
+    <ol role="directory">
+
+      <li>
+        <a href='#functionalitati'>                         
+            Funcționalitățile esențiale ale aplicației
+      </a>
+         
+              <li>
+                  <a href='#tehnologii'>                             
+                    Tehnologii utilizate in APaX
+                  </a>
+              </li>
+              
+            </li>
+         
+                <li>
+                    <a href='#arhitectura'> Arhitectura </a>
+                </li>
+
+              <li>
+                  <a href='#progres'>                        
+                      Progres
+                  </a>
+                  <ol role="directory">
+
+                      <li> 
+                        <a href='#inceput'>
+                        Început </a>
+                      </li>
+                       <li> 
+                        <a href='#lucru'>
+                        Perioada de lucru </a>
+                      </li>
+                      <li> 
+                        <a href='#sfarsit'>
+                            Sfârșit </a>
+                      </li>
+                  </ol>
+              </li>
+                  <li> 
+                    <a href='#atributii'>                        
+                        Atribuții individuale
+                    </a>
+                  </li>
+
+             </ol>
+</div>
+  <section id="despre">
+    <h2 id="functionalitati">Funcționalitățile esențiale ale aplicației</h2>
+    <p>
+       APaX (Auto Park Web Explorer) este un instrument Web de vizualizare adecvată și de comparare multi-criterială a datelor publice privind parcul auto din România pe ultimii 5 ani.
+       Această aplicație permite vizualizarea atât tabelată, cât și sub formă de diagramă, a informațiilor despre parcul auto din România, asupra cărora se pot aplica diverse filtre.
+       De asemenea, diagramele pot fi descărcate în formatele CSV, WebP și SVG. După vizitarea aplicației, utilizatorul poate oferi o părere (feedback).
+      </p>
+      </section>
+
+      <section >
+        
+        <h2 id="tehnologii"> Tehnologii utilizate in APaX</h2>
+        <p>
+         Aplicația scrisă în <b><code>JavaScript</code></b>, <b><code>HTML 5</code></b> și <b><code>CSS</code></b>, respectând suita de tehnologii <b><code>Ajax</code></b>.
+        </p>
+        <p>
+          <b><code>MongoDB</code></b>(aliniată paradigmei <code>NoSQL</code>) este folosită pentru gestionarea datelor folosite în aplicație.
+        </p>
+        </section>
+        <section >
+           
+            <h2 id="arhitectura">Arhitectura</h2>
+            <p>
+               <b><code>Model View Controller</code></b> este folosit pentru a separa
+               reprezentarea informațiilor din interacțiunea cu utilizatorul de
+               informațiile în sine. În continuare, prezentăm arhitectura aplicației:
+            </p>
+            <ul>
+              <li><b><code>Modelul</code></b> este responsabil cu gestionarea datelor din aplicație: face legătura cu baza de date, răspunde la cereri care vin din 
+              <code>View</code> și instrucțiunilor care vin din <code>Controller</code>, reprezentând partea de "Business logic". </li>
+              <li><b><code>View-urile</code></b> au rolul de a afișa datele primite de la
+               <code>Controller</code> și reprezintă ceea ce utilizatorul vede.</li>
+              <li><b><code>Controller-ul</code></b> preia datele trimise de către utilizator, le trimite <code>Modelelor</code>, primește răspunsul
+                de la acestea și îl trimite <code>View-urilor</code>. Comunicarea dintre server și client se face prin <code>HTTP</code>: clientul trimite o cerere (request), iar serverul îi întoarce un răspuns ( response). 
+                Cererea și răspunsul sunt trimise sub diferite forme, consimțite prin protocolul <code>HTTP</code>.
+              </li>
+              
+            </ul>
+           
+              <h3>Diagrame</h3>
+              <img src="diagrama.png" alt="diagrama"/>
+              <img src="usecase.png" alt="diagrama usecase"/>
+          <section id="progres" role="progres">
+          
+            <h2>Progresul</h2>
+            <h3 id="inceput">Început</h3>
+            <p>
+               Povestea APaX a început acum ~ 4 luni, când ne-am ales proiectul deoarece suntem deschise la noi provocări, iar tematica auto
+               ne este de interes (ne place să avem mașini 😉).
+            </p>
+            <h3 id="lucru">Perioada de lucru</h3>
+          <p>După discuții îndelungate, am hotărât cum să arate situl, ce funcționalități să aibă și ce tehnologii să folosim.
+              Apoi am început cu implementarea interfeței: la început situl nostru avea doar 3 pagini: "Vizualizare informații","Vizualizare statistici" și "Hartă", iar designul era unul diferit.
+Apoi am avut o pauză de gândire și cercetare (nu eram familizate cu conceptele noi implicate). După această pauză, ne-am apucat serios de lucrat: Rebecca pe front, Andreea pe back. Pe toată perioada de lucru
+am folosit, ca și sistem de stocare şi management online al codului-sursă, <a href="https://github.com/">GitHub</a> și am avut 
+discuții periodice pe <a href="https://discord.com/">Discord</a>, respectând distanțarea socială.</p>
+<p>În acest timp am extins <b>interfața</b>: am adăugat 2 pagini noi("Acasă" și "Contact") și am definitivat funcționalitățile
+fiecărei pagini: "Vizualizare informații" afișează în format tabelar rezultatele unei căutări filtrate de utilizator, pagina "Vizualizare statistici" afișează sub formă de diagrame
+statisticile pe ani în funcție de anumite filtre, care vor putea fi apoi descărcate în diferite formate, pagina "Hartă" prezintă o hartă cu totalul de mașini și mărcile
+cele mai populare din fiecare județ(din anul 2019), pagina "Contact" oferă utilizatorului posibilitatea de a-și împărtăși opinia despre sit și pagina "Acasă" permite redirecționarea către
+pagini folositoare din domeniul auto și navigarea către restul sitului. Pe lângă extindere, am și regândit și schimbat designul.
+Pe lângă paginile vizibile pentru utilizator, există și o pagină pentru administratori. Pentru a intra pe această pagină, aceștia vor trebui să-și introducă parola, apoi vor fi redirecționați 
+către pagina de administrare. Pe această pagină administratorul va putea introduce,șterge sau modifica o înregistrare.
+Am implementat <b>partea de server</b>: serverul în sine, controller-ul unde serverul va primi cereri și, pentru fiecare pagină, câte un fișier de "business logic" care va rezolva cererile. Răspunsurile vor fi apoi
+trimise către client de către controller. În plus, am implementat și o suită de teste cu ajutorul <a href="https://jasmine.github.io/2.0/introduction.html">Jasmine</a> cu care ne-am validat serverul.
+          </p>
+          
+          <h3 id="sfarsit">Sfârșit</h3>
+          <p>
+ Acum, la sfârșitul acestui semestru, am reușit să implementăm tot ce ne-am propus (un sit cu un design plăcut, ușor de utilizat, complet funcțional), dobândind noi cunoștințe.
+          </p>
+</section>
+<section id="atributii" role="atributii">
+           
+    <h2>Atribuții individuale</h2>
+    <p>
+       Cu toate că proiectul este unul de echipă, fiecare a avut atribuțiile sale individuale:
+    </p>
+    <h4>Andreea</h4>
+    <ol role="directory" class="atributii">
+
+        <li>
+            Server în întregime
+       
+            <ol role="directory" class="atributii">
+                <li>                         
+                 Controller
+                </li>
+                <li>
+                   Business logic
+                </li>
+                <li>
+                    Baza de date
+                </li>
+                <li>
+                   Teste
+                </li>
+                </ol>
+                
+            </li>
+
+
+            <li>
+                Client
+                <ol role="directory" class="atributii">
+                    <li>
+                        Funcții pentru diagrame
+                    </li>
+                    <li>
+                        Funcții pentru tabel
+                    </li>
+                    <li>
+                        Funcții pentru export diagrame
+                    </li>
+
+                    <li> 
+                        Hartă
+                    </li>
+                    <li>
+                        Funcții pentru comunicarea cu serverul
+                    </li>
+            </ol>
+        </li>
+        </ol>
+
+
+        <h4>Rebecca</h4>
+    <ol role="directory" class="atributii">
+
+        <li>
+           Client
+       
+            <ol role="directory" class="atributii">
+                <li>
+                   Design
+                    <ol role="directory" class="atributii">
+                <li>                         
+                   HTML
+                </li> 
+                <li>
+                   CSS
+                </li>
+                </ol>
+
+                <li>
+                   Responsiveness
+                </li>
+                <li>
+                    Logo
+                </li>
+               
+                </ol>
+                
+            </li>
+
+    
+  </section>
+
+  </html>

@@ -1,0 +1,42 @@
+
+img{
+width:40%;
+height:50%;
+padding:10px;
+}
+
+
+.atributii {
+  color:black;
+  font-size:medium;
+}
+
+
+code {
+  font-size:15px;
+}
+
+
+body {
+    font-family: "Roboto";
+   padding:20px;
+  
+}
+.banner{
+    float:right;
+}
+dt{
+padding:5px;
+margin-left:0%;
+font-size:20px;
+}
+dd{
+    margin-left:5%;
+}
+h2{
+  color:blue;
+}
+ol{
+    font-size: large;
+  color: blue;
+}
